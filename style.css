@@ -1,7 +1,9 @@
 /* Reference https://getbem.com/ "BEM — is a methodology that helps you to create reusable components and code sharing in front‑end development" */
 
+/* Choice of font to be utilize. */
 @import url('https://fonts.googleapis.com/css3?family=Lato:ital,wght@0,400;1,700&display=swap');
 
+/* Font Style. */
 * {
     font-family: 'Lato', serif;
     padding: 0;
@@ -9,13 +11,57 @@
     box-sizing: border-box;
 }
 
+/* Header Styles. */
 h1, h2, h3, h4, h5, h6, span {
     color: #242424;
     text-align: center;
     line-height: 1.25;
 }
 
+/* Paragraph Style. */
 p {
     line-height: 1.5;
     font-size: 16px;
+}
+
+/* Default list style (set to none in order to remove the page bullets. */
+li {
+    list-style: none;
+}
+
+/* Navigation Menu Styles. */
+nav {
+    height: 100px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* How the list was made to line up vs. being stack upon one another. */
+.nav__link--list {
+    display: flex;
+}
+
+/* Anchor styles. */
+.nav__link--anchor {
+    margin: 0 12px;
+    color: #242424;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Contact Button Style.*/
+.nav__link--anchor-primary {
+    background-color: #6030b1;
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: white;
+    transition: all 300ms ease;
+}
+
+.nav__link--anchor-primary:hover {
+    background-color: #5d3eff;
 }
