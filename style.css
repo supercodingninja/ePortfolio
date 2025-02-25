@@ -18,6 +18,13 @@ h1, h2, h3, h4, h5, h6, span {
     line-height: 1.25;
 }
 
+/* Signature Header */
+.about-me__info--subtitle {
+    background: linear-gradient(to right, #544478, #71713a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Paragraph Style. */
 p {
     line-height: 1.5;
@@ -55,7 +62,7 @@ nav {
 
 /* Contact Button Style.*/
 .nav__link--anchor-primary {
-    background-color: #6030b1;
+    background: linear-gradient(to right, #71713a, #544478);
     padding: 8px 20px;
     border-radius: 50px;
     color: white;
@@ -63,14 +70,17 @@ nav {
 }
 
 .nav__link--anchor-primary:hover {
-    background-color: #5d3eff;
+    background: rgb(84,68,120);
+background: linear-gradient(90deg, rgba(84,68,120,0.7687861271676301) 18%, rgba(0,0,0,1) 63%);
 }
 
 .personal__logo {
     font-size: 24px;
-    color: #6030b1;
     margin: 0 12px;
     font-weight: bold;
+    background: linear-gradient(to right, #71713a, #544478, #71713a, #544478);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*  About Me */
@@ -107,3 +117,9 @@ nav {
     width: 100%;
 }
 
+.emph {
+    font-weight: 600;
+    background: linear-gradient(to right, #71713a, #544478);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
