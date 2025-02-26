@@ -64,66 +64,6 @@ section: :nth-child(even) {
 }
 
 /*=================== Specific Styles Section ==================*/
-/*----- Navigation Menu Styles -----*
-/* How the list was made to line up vs. being stack upon one another. */
-.nav__link--list {
-    display: flex;
-}
-
-/* Anchor styles. */
-.nav__link--anchor {
-    margin: 0 12px;
-    color: #242424;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-/* Contact Button Style.*/
-.nav__link--anchor-primary {
-    background: linear-gradient(to right, #71713a, #544478);
-    padding: 8px 20px;
-    border-radius: 50px;
-    color: white;
-    transition: all 300ms ease;
-}
-
-.nav__link--anchor-primary:hover {
-    background: rgb(84,68,120);
-    background: linear-gradient(90deg, rgba(84,68,120,0.7687861271676301) 18%, rgba(0,0,0,1) 63%);
-}
-
-.personal__logo {
-    font-size: 24px;
-    margin: 0 12px;
-    font-weight: bold;
-    background: linear-gradient(to right, #71713a, #544478, #71713a, #544478);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.row {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Since David stated we could make this any color that we want, I just went ahead with a neon glow effect. Ref. https://prismic.io/blog/css-text-animations#8-neon-glow */
-.text--neon {
-    color: #fff;
-    font-weight: 700;
-    text-shadow: 0 0 5px #71713a, 0 0 10px #71713a, 0 0 20px #71713a, 0 0 40px #71713a, 0 0 80px #71713a;
-    animation: glow .82s infinite alternate;
-}
-
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 30px #71713a, 0 0 8px #ADD8E6, 0 0 27px #71713a, 0 0 43px #ADD8E6, 0 0 182px #71713a;
-    }
-    100% {
-        text-shadow: 0 0 60px #FFA500, 0 0 8px #6030b1, 0 0 27px #FFA500, 0 0 43px #6030b1, 0 0 182px #FFA500;
-    }
-}
-
 /*----- About Me Section. -----*/
 /* Signature Header <h2> */
 .about-me__info--subtitle {
@@ -200,4 +140,72 @@ section: :nth-child(even) {
 .about-me__img {
     width: 95%;
     height: 65%;
+}
+
+/*----- Navigation Menu Styles -----*
+/* How the list was made to line up vs. being stack upon one another. */
+.nav__link--list {
+    display: flex;
+}
+
+/* Anchor styles. */
+.nav__link--anchor {
+    margin: 0 12px;
+    color: #242424;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Contact Button Style.*/
+.nav__link--anchor-primary {
+    background: linear-gradient(to right, #71713a, #544478);
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: white;
+    transition: all 300ms ease;
+}
+
+.nav__link--anchor-primary:hover {
+    background: rgb(84,68,120);
+    background: linear-gradient(90deg, rgba(84,68,120,0.7687861271676301) 18%, rgba(0,0,0,1) 63%);
+}
+
+.personal__logo {
+    font-size: 24px;
+    margin: 0 12px;
+    font-weight: bold;
+    background: linear-gradient(to right, #71713a, #544478, #71713a, #544478);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.row {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Since David stated we could make this any color that we want, I just went ahead with a neon glow effect. Ref. https://prismic.io/blog/css-text-animations#8-neon-glow */
+.text--neon {
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 0 5px #71713a, 0 0 10px #71713a, 0 0 20px #71713a, 0 0 40px #71713a, 0 0 80px #71713a;
+    animation: glow .82s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 30px #71713a, 0 0 8px #ADD8E6, 0 0 27px #71713a, 0 0 43px #ADD8E6, 0 0 182px #71713a;
+    }
+    100% {
+        text-shadow: 0 0 60px #FFA500, 0 0 8px #6030b1, 0 0 27px #FFA500, 0 0 43px #6030b1, 0 0 182px #FFA500;
+    }
+}
+
+/*----- Tech Stach Section -----*/
+.language__img--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
 }
