@@ -22,8 +22,9 @@ h1 {
     font-size: 36px;
 }
 
-/* Signature Header */
+/* Signature Header <h2> */
 .about-me__info--subtitle {
+    padding: 7px;
     background: linear-gradient(to right, #544478, #71713a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -153,13 +154,20 @@ nav {
     
     /* Zoomed Picture In. */
     transform: scale(1.23);
-    padding-bottom: 18px;
+    padding-bottom: 8px;
     align-items: center;
 }
 
 .about-me__info--para {
     font-size: 20px;
-    margin-bottom: 28px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.about-me__links {
+    font-size: 24px;
+    text-decoration: none;
+    padding: 0 12px;
 }
 
 .emph {
