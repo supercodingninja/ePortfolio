@@ -1,5 +1,6 @@
 /* Reference https://getbem.com/ "BEM — is a methodology that helps you to create reusable components and code sharing in front‑end development" */
 
+/*===== Generic Styles Section (One Size Fits All Section) =====*/
 /* Choice of font to be utilize. */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
@@ -11,11 +12,24 @@
     box-sizing: border-box;
 }
 
+.container {
+    padding: 50px 0px;
+}
+
 /* Header Styles. */
 h1, h2, h3, h4, h5, h6, span {
     color: #242424;
     text-align: center;
     line-height: 1.25;
+}
+
+
+.flex {
+    display: flex;
+}
+
+.flex-1{
+    flex: 1;
 }
 
 h1 {
@@ -33,37 +47,6 @@ li {
     list-style: none;
 }
 
-.flex {
-    display: flex;
-}
-
-.flex-1{
-    flex: 1;
-}
-
-.row {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Since David stated we could make this any color that we want, I just went ahead with a neon glow effect. Ref. https://prismic.io/blog/css-text-animations#8-neon-glow */
-.text--neon {
-    color: #fff;
-    font-weight: 700;
-    text-shadow: 0 0 5px #71713a, 0 0 10px #71713a, 0 0 20px #71713a, 0 0 40px #71713a, 0 0 80px #71713a;
-    animation: glow .82s infinite alternate;
-}
-
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 30px #71713a, 0 0 8px #ADD8E6, 0 0 27px #71713a, 0 0 43px #ADD8E6, 0 0 182px #71713a;
-    }
-    100% {
-        text-shadow: 0 0 60px #FFA500, 0 0 8px #6030b1, 0 0 27px #FFA500, 0 0 43px #6030b1, 0 0 182px #FFA500;
-    }
-}
-
 /* Navigation Menu Styles. */
 nav {
     height: 100px;
@@ -75,6 +58,13 @@ nav {
     align-items: center;
 }
 
+/* EXCELLENT For Reusable Code: it does the all of the even sections (2...4...6, etc.) providing a contrast between the sections when hovered over. */
+section: :nth-child(even) {
+    background-color:#f8f8f8;
+}
+
+/*=================== Specific Styles Section ==================*/
+/*----- Navigation Menu Styles -----*
 /* How the list was made to line up vs. being stack upon one another. */
 .nav__link--list {
     display: flex;
@@ -111,7 +101,30 @@ nav {
   -webkit-text-fill-color: transparent;
 }
 
-/*  About Me Section. */
+.row {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Since David stated we could make this any color that we want, I just went ahead with a neon glow effect. Ref. https://prismic.io/blog/css-text-animations#8-neon-glow */
+.text--neon {
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 0 5px #71713a, 0 0 10px #71713a, 0 0 20px #71713a, 0 0 40px #71713a, 0 0 80px #71713a;
+    animation: glow .82s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 30px #71713a, 0 0 8px #ADD8E6, 0 0 27px #71713a, 0 0 43px #ADD8E6, 0 0 182px #71713a;
+    }
+    100% {
+        text-shadow: 0 0 60px #FFA500, 0 0 8px #6030b1, 0 0 27px #FFA500, 0 0 43px #6030b1, 0 0 182px #FFA500;
+    }
+}
+
+/*----- About Me Section. -----*/
 /* Signature Header <h2> */
 .about-me__info--subtitle {
     padding: 7px;
@@ -187,4 +200,4 @@ nav {
 .about-me__img {
     width: 95%;
     height: 65%;
-  }
+}
