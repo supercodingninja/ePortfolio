@@ -22,14 +22,6 @@ h1 {
     font-size: 36px;
 }
 
-/* Signature Header <h2> */
-.about-me__info--subtitle {
-    padding: 7px;
-    background: linear-gradient(to right, #544478, #71713a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 /* Paragraph Style. */
 p {
     line-height: 1.5;
@@ -119,7 +111,15 @@ nav {
   -webkit-text-fill-color: transparent;
 }
 
-/*  About Me */
+/*  About Me Section. */
+/* Signature Header <h2> */
+.about-me__info--subtitle {
+    padding: 7px;
+    background: linear-gradient(to right, #544478, #71713a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .about-me {
     min-height: 100vh;
     display: flex;
@@ -160,14 +160,15 @@ nav {
 
 .about-me__info--para {
     font-size: 20px;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: 2px;
+    margin-bottom: 16px;
 }
 
 .about-me__links {
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
-    padding: 7px 21px 0px 21px;
+    /* I like the color already associated here. */
+    padding: 0px 16px;
 }
 
 .emph {
@@ -176,3 +177,14 @@ nav {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.about-me__img--container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.about-me__img {
+    width: 100%;
+    height: 65%;
+  }
