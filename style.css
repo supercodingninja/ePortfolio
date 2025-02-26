@@ -135,7 +135,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 600px;
+    max-width: 625px;
     margin: 0 auto;
     text-align: center;
 }
@@ -146,7 +146,7 @@ nav {
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 8px 16px rgba(0,0,0, 0.16);
-    margin-bottom: 28px;
+    margin-bottom: 12px;
 }
 
 .about-me__picture {
@@ -167,7 +167,7 @@ nav {
 .about-me__links {
     font-size: 24px;
     text-decoration: none;
-    padding: 0 12px;
+    padding: 0 250px;
 }
 
 .emph {
