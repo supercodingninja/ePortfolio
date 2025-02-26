@@ -204,20 +204,22 @@ h1 {
 
 /*----- Tech Stach Section -----*/
 .LANGUAGE {
-    /* width: 25%; */
+    width: 25%;
 }
 
 .language__img--wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;*/
+    width: 50px;
     height: 50px;
+    padding-bottom: 100px;
 }
 
 .language__list {
     display: flex;
     width: 100%;
+    padding-top: 60px;
 }
 
 .language__list--Contatiner {
@@ -227,4 +229,31 @@ h1 {
     max-width: 625px;
     margin: 0 auto;
     text-align: center;
+}
+
+.ZOOM {
+        /* Zoomed icon in: so that size is not compromised, and so the end user can read icon. */
+        transform: scale(1.25);
+        align-items: center;
+}
+
+.ZOOM2 {
+    /* Zoomed icon in: so that size is not compromised, and so the end user can read icon. */
+    transform: scale(1.45);/*padding-bottom: 8px;*/
+    align-items: center;
+    padding-top: 8px;
+}
+
+.ZOOM2 {
+    /* Zoomed icon in: so that size is not compromised, and so the end user can read icon. */
+    transform: scale(1.35);/*padding-bottom: 8px;*/
+    align-items: center;
+    padding-top: 8px;
+}
+
+/* AI Chatbot Icon I had to make. */
+.groovy {
+    background: linear-gradient(to right, #71713a, #544478, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7d852b, #f9a825, #ff5722, #544478);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
