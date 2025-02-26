@@ -204,22 +204,26 @@ h1 {
 
 /*----- Tech Stach Section -----*/
 .LANGUAGE {
-    width: 25%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 
 .language__img--wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
-    padding-bottom: 100px;
+    width: 150px;
+    height: 100px;
+    padding-bottom: /*100px*/ 25px 16px;
 }
 
 .language__img {
     width: 100%;
-    max-width: 100px;
+    max-width: 150px;
     transition: all 300ms ease;
+    padding: 12px;
 }
 
 .language__img:hover {
@@ -230,44 +234,24 @@ h1 {
 
 .language__list {
     display: flex;
+    justify-content: center;
     width: 100%;
-    padding-top: 60px;
+    padding-top: 10px;
+    flex-wrap: wrap;
 }
 
-.language__list--Contatiner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 625px;
-    margin: 0 auto;
-    text-align: center;
+.language__name {
+    position: absolute;
+    bottom: 0;
+    transform: scale(0);
+    transition: all 300ms;
+    font-size: 20px;
+    opacity: 0;
 }
 
-.ZOOM {
-        /* Zoomed icon in: so that size is not compromised, and so the end user can read icon. */
-        transform: scale(1.25);
-        align-items: center;
-}
-
-.ZOOM2 {
-    /* Zoomed icon in: so that size is not compromised, and so the end user can read icon. */
-    transform: scale(1.45);/*padding-bottom: 8px;*/
-    align-items: center;
-    padding-top: 8px;
-}
-
-.ZOOM3 {
-    /* Zoomed icon in: so that size is not compromised, and so the end user can read icon. */
-    transform: scale(1.35);/*padding-bottom: 8px;*/
-    align-items: center;
-    padding-top: 8px;
-}
-
-.ZOOM4 {
-    /* Zoomed icon in: so that size is not compromised, and so the end user can read icon. */
-    transform: scale(1.55);/*padding-bottom: 8px;*/
-    align-items: center;
-    padding-top: 8px;
+.LANGUAGE:hover .language__name {
+    transform: scale(1);
+    opacity: 1;
 }
 
 /* AI Chatbot Icon I had to make. */
