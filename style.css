@@ -18,6 +18,10 @@ h1, h2, h3, h4, h5, h6, span {
     line-height: 1.25;
 }
 
+h1 {
+    font-size: 36px;
+}
+
 /* Signature Header */
 .about-me__info--subtitle {
     background: linear-gradient(to right, #544478, #71713a);
@@ -31,9 +35,40 @@ p {
     font-size: 16px;
 }
 
-/* Default list style (set to none in order to remove the page bullets. */
+/* Default list style (set to none in order to remove the page bullets). */
 li {
     list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1{
+    flex: 1;
+}
+
+.row {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Since David stated we could make this any color that we want, I just went ahead with a neon glow effect. Ref. https://prismic.io/blog/css-text-animations#8-neon-glow */
+.text--neon {
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 0 5px #71713a, 0 0 10px #71713a, 0 0 20px #71713a, 0 0 40px #71713a, 0 0 80px #71713a;
+    animation: glow .82s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 30px #71713a, 0 0 8px #ADD8E6, 0 0 27px #71713a, 0 0 43px #ADD8E6, 0 0 182px #71713a;
+    }
+    100% {
+        text-shadow: 0 0 60px #FFA500, 0 0 8px #6030b1, 0 0 27px #FFA500, 0 0 43px #6030b1, 0 0 182px #FFA500;
+    }
 }
 
 /* Navigation Menu Styles. */
@@ -71,7 +106,7 @@ nav {
 
 .nav__link--anchor-primary:hover {
     background: rgb(84,68,120);
-background: linear-gradient(90deg, rgba(84,68,120,0.7687861271676301) 18%, rgba(0,0,0,1) 63%);
+    background: linear-gradient(90deg, rgba(84,68,120,0.7687861271676301) 18%, rgba(0,0,0,1) 63%);
 }
 
 .personal__logo {
@@ -115,6 +150,16 @@ background: linear-gradient(90deg, rgba(84,68,120,0.7687861271676301) 18%, rgba(
 
 .about-me__picture {
     width: 100%;
+    
+    /* Zoomed Picture In. */
+    transform: scale(1.23);
+    padding-bottom: 18px;
+    align-items: center;
+}
+
+.about-me__info--para {
+    font-size: 20px;
+    margin-bottom: 28px;
 }
 
 .emph {
