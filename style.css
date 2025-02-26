@@ -165,9 +165,9 @@ nav {
 }
 
 .about-me__links {
-    font-size: 24px;
+    font-size: 25px;
     text-decoration: none;
-    padding: 0 250px;
+    padding: 7px 21px 0px 21px;
 }
 
 .emph {
