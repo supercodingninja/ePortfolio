@@ -63,7 +63,7 @@ section::nth-child(even) {
 /* Signature Header <h2> */
 .about-me__info--subtitle {
     padding: 7px;
-    background: linear-gradient(to right, #544478, #71713a);
+    background: linear-gradient(to right, #71713a, #544478);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -119,6 +119,7 @@ section::nth-child(even) {
     padding: 0px 16px;
 }
 
+/* Bold and Colored letterimg in Intro. paragraph in "About Me" Section. */
 .emph {
     font-weight: 600;
     background: linear-gradient(to right, #71713a, #544478);
@@ -186,20 +187,11 @@ h1 {
 }
 
 /* Since David stated we could make this any color that we want, I just went ahead with a neon glow effect. Ref. https://prismic.io/blog/css-text-animations#8-neon-glow */
-.text--neon {
-    color: #fff;
-    font-weight: 700;
-    text-shadow: 0 0 5px #71713a, 0 0 10px #71713a, 0 0 20px #71713a, 0 0 40px #71713a, 0 0 80px #71713a;
-    animation: glow .82s infinite alternate;
-}
-
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 30px #71713a, 0 0 8px #ADD8E6, 0 0 27px #71713a, 0 0 43px #ADD8E6, 0 0 182px #71713a;
-    }
-    100% {
-        text-shadow: 0 0 60px #FFA500, 0 0 8px #6030b1, 0 0 27px #FFA500, 0 0 43px #6030b1, 0 0 182px #FFA500;
-    }
+.text--purple {
+    padding: 7px;
+    background: linear-gradient(to right, #544478, #71713a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*----- Tech Stach Section -----*/
@@ -249,6 +241,11 @@ h1 {
     opacity: 0;
 }
 
+.LANGUAGE:hover .language__name {
+    transform: scale(1);
+    opacity: 1;
+}
+
 .AI {
     position: absolute;
     top: 0;
@@ -258,7 +255,7 @@ h1 {
     opacity: 0;
 }
 
-.LANGUAGE:hover .language__name {
+.AI:hover .language__name {
     transform: scale(1);
     opacity: 1;
 }
