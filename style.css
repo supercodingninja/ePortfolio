@@ -195,6 +195,22 @@ h1 {
 }
 
 /*----- Tech Stach Section -----*/
+/* Improving Icon's Size Depraction. */
+.zoom {
+  transform: scale(2);
+  padding-top: 8px;
+}
+
+.zoom2 {
+    transform: scale(1.5);
+    padding-top: 8px;
+}
+
+.zoom3 {
+    transform: scale(-1.5);
+    padding-top: 8px;
+}
+
 .LANGUAGE {
     width: 50%;
     display: flex;
