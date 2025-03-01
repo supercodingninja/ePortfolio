@@ -1,3 +1,5 @@
+/* The Successful People NEVER quit. */
+
 /* Reference https://getbem.com/ "BEM — is a methodology that helps you to create reusable components and code sharing in front‑end development" */
 
 /*============================= Generic Styles Section (One Size Fits All Section) =============================*/
@@ -105,8 +107,8 @@ nav {
 }
 
 /* EXCELLENT For Reusable Code: it does the all of the even sections (2...4...6, etc.) providing a contrast between the sections when hovered over. */
-section::nth-child(even) {
-    background-color:#f8f8f8;
+section:nth-child(even) {
+    background-color:#0f0c97;
 }
 
 /*=============================================== Specific Styles Section ===============================================*/
