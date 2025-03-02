@@ -108,9 +108,18 @@ nav {
 
 /* EXCELLENT For Reusable Code: it does the all of the even sections (2...4...6, etc.) providing a contrast between the sections when hovered over. */
 section:nth-child(even) {
-    background-color:#0f0c97;
+    background-image:url('./assets/gif/earth.gif');
+    opacity: 0.9;
+    background-size:100%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
 }
 
+.section__title {
+    margin-bottom: 20px;
+}
 /*=============================================== Specific Styles Section ===============================================*/
 /*============ About Me Section. ============*/
 /* My Signature Header <h2> */
@@ -169,7 +178,6 @@ section:nth-child(even) {
 .about-me__links {
     font-size: 20px;
     text-decoration: none;
-    /* I like the color already associated here. */
     padding: 0px 16px;
 }
 
@@ -262,12 +270,18 @@ section:nth-child(even) {
 /* What I Had To Do, In Order To Counter The Size Depraction, To My Choice of Icons Used (found all over the web, divers libraries regarding links, which may have their own restrictive CSS properties, etc.). */
 /* Tech Stack Header. */
 .ts1 {
+    opacity: 1;
+    /* Ref. https://developer.mozilla.org/en-US/docs/Web/CSS/z-index */
+    z-index: 7;
     font-size: 32px;
     margin: 0 12px;
-    font-weight: bold;
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet);
+    font-weight: 900;
+    /* I tried an experiment, and once I saw what it was doing, I then decided to keep going until I was satisfied with the result. */
+    background: linear-gradient(to right, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+border-radius: 45px;
+box-shadow: 0px 45px 45px 45px rgba(255, 164, 46, 0.9);
 }
 
 .zoom {
@@ -312,14 +326,17 @@ section:nth-child(even) {
     padding-top: 0;
 }
 
-.LANGUAGE {
+.LnT {
+    opacity: 1;
+    font-weight: 900;
     width: 50%;
     display: flex;
     justify-content: center;
     position: relative;
+    
 }
 
-.language__img--wrapper {
+.language__tools__img--wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -328,20 +345,20 @@ section:nth-child(even) {
     padding-bottom: /*100px*/ 20px 16px;
 }
 
-.language__img {
+.language__tools__img {
     width: 100%;
     max-width: 100px;
     transition: all 300ms ease;
     padding: 12px;
 }
 
-.language__img:hover {
+.language__tools__img:hover {
     filter:brightness(80%);
     opacity: 0.86;
     transform: scale(0.9);
 }
 
-.language__list {
+.language__tools__list {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -349,7 +366,7 @@ section:nth-child(even) {
     flex-wrap: wrap;
 }
 
-.language__name {
+.language__tools__name {
     position: absolute;
     display: inline;
     bottom: 0;
@@ -359,7 +376,7 @@ section:nth-child(even) {
     opacity: 0;
 }
 
-.LANGUAGE:hover .language__name {
+.LANGUAGE:hover .language__tools__name {
     transform: scale(1);
     opacity: 1;
 }
@@ -384,7 +401,7 @@ section:nth-child(even) {
     opacity: 0;
 }
 
-.topSpace:hover .language__name {
+.topSpace:hover .language__tools__name {
     transform: scale(1);
     opacity: 1;
 }
@@ -406,14 +423,15 @@ section:nth-child(even) {
     opacity: 1; 
 }
 
-.topSpace2:hover .language__name {
+.topSpace2:hover .language__tools__name {
     transform: scale(3);
     opacity: 1;
 }
 
 /* AI Chatbot Icon I had to make, so that I could include A NEW TECHNOLOGY that I learned within my Tech Stack!  I'm pretty proud of myslef for how it came out; and I am trying to learn a better transition style/way for it to be almost instant/quicker: I want the two different files I save for the AI Chatbot icon to appear as if the robot just suddenly started speaking to you when you hovered over.  What I am most proud of myelf is how I made the "Click Me" work!  If they do not go through all of my projects (because this will be at the end of my stack), then they will see this first (who can't resist pressing buttons and clicking hyperlinks on a site you've already deemed safe). */
 .groovy {
-    background: linear-gradient(to right, #71713a, #544478, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7d852b, #f9a825, #ff5722, #544478);
+    font-size: xx-large;
+    background: linear-gradient(to right, #000700, red, #000700, orange,#000700, yellow,#000700, green,#000700, blue,#000700, indigo,#000700, violet);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
