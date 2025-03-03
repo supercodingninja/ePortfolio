@@ -17,29 +17,11 @@
 .hover-container:hover .hide-me {
     visibility: visible;
     opacity: 1;
-    transition: transform 500ms ease, 
+    transition: transform 500ms ease;
     font-size: 16px;
     margin: 0 12px;
     font-weight: bold;
     background: linear-gradient(to right, orange, blue);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hover-container2:hover .hide-me {
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    transform: translateY(-50%);
-    max-width: 100%;
-    z-index: 3;
-    opacity: 0;
-    transition: transform 300ms ease, opacity 1ms;
-    visibility: visible;
-    opacity: 1; 
-    font-size: 20px;
-    font-weight: bold;
-    background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -106,9 +88,9 @@ nav {
     align-items: center;
 }
 
-/* EXCELLENT For Reusable Code: it does the all of the even sections (2...4...6, etc.) providing a contrast between the sections when hovered over. */
+/* BACKGROUND FOR CONTAINER: EXCELLENT For Reusable Code: this one does the all of the even sections (2...4...6, etc.) providing a contrast between the sections when hovered over. */
 section:nth-child(even) {
-    background-image:url('./assets/gif/earth.gif');
+    background-image:url('./assets/img/section__bg.jpeg');
     opacity: 0.9;
     background-size:100%;
     background-repeat: repeat-y;
@@ -117,9 +99,6 @@ section:nth-child(even) {
     width:100%;
 }
 
-.section__title {
-    margin-bottom: 20px;
-}
 /*=============================================== Specific Styles Section ===============================================*/
 /*============ About Me Section. ============*/
 /* My Signature Header <h2> */
@@ -169,7 +148,7 @@ section:nth-child(even) {
     align-items: center;
 }
 
-.about-me__info--para {
+.about-me__info--paragraph {
     font-size: 20px;
     margin-top: 2px;
     margin-bottom: 16px;
@@ -268,128 +247,102 @@ section:nth-child(even) {
 }
 
 /*============ Tech Stack Section ============*/
-/* What I Had To Do, In Order To Counter The Size Depraction, To My Choice of Icons Used (found all over the web, divers libraries regarding links, which may have their own restrictive CSS properties, etc.). */
+/* #techStack {} */
+
 /* Tech Stack Header. */
-.ts1 {
-    opacity: 1;
-    /* Ref. https://developer.mozilla.org/en-US/docs/Web/CSS/z-index */
-    z-index: 7;
-    font-size: 32px;
-    margin: 0 12px;
-    font-weight: 900;
-    /* I tried an experiment, and once I saw what it was doing, I then decided to keep going until I was satisfied with the result. */
-    background: linear-gradient(to right, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange, whitesmoke, orange);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-border-radius: 45px;
-box-shadow: 0px 45px 45px 45px rgba(255, 164, 46, 0.9);
-}
-
-.zoom {
-  transform: scale(2);
-  padding-top: 8px;
-}
-
-.zoom2 {
-    transform: scale(1.5);
-    padding-top: 8px;
-}
-
-.zoom3 {
-    transform: scale(3);
-    padding-top: 8px;
-}
-
-.zoom4 {
-    transform: scale(-1.5);
-    padding-top: 8px;
-}
-
-.zoom5 {
-    transform: scale(2);
-    padding-top: 4px;
-    display: inline;
-}
-
-.zoom6 {
-    transform: scale(1.2);
-    padding-top: 12px;
-}
-
-.zoom7 {
-    transform: scale(1.4);
-    padding-top: 12px;
-}
-
-.travis {
-    font-size: larger;
-    transform: scale(1);
-    padding-top: 0;
-}
-
-.LnT {
-    /*opacity: 1;
-    font-weight: 900;*/
-    width: 25%;
-    display: flex;
-    justify-content: center;
+.tech__section__title {
     position: relative;
-    
+    /* Ref. https://blog.webdevsimplified.com/2022-08/css-viewport-units/#:~:text=vw%20stands%20for%20Viewport%20Width,the%20width%20of%20your%20viewport. */
+    width: 10vi; /* 250px */
+    /* Ref. https://developer.mozilla.org/en-US/docs/Web/CSS/z-index */
+    font-size: 32px;
+    /* Remember that the syntax for box-shadow is: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];  Ref. https://css-tricks.com/almanac/properties/b/box-shadow/ */
+    /* Other Ref. https://www.w3schools.com/css/css3_shadows_box.asp#:~:text=Set%20the%20Spread%20Radius%20of,the%20size%20of%20the%20shadow. */
+    box-shadow: 3px 3px 3px 3px rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,0.6363139005602241) 0%, rgba(9,9,121,0.6223082983193278) 35%, rgba(65,72,74,0.6727284663865547) 100%); border-radius: 45px;
 }
 
-.language__tools__img--wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* width: 150px;
-    height: 125px; */
-    padding-bottom: 25px 16px;
+/* Ref. Effect https://www.w3schools.com/howto/howto_css_glowing_text.asp */
+.whenUgotDaGlow {
+    background: linear-gradient(to top, #F99242, dark orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  text-align: center;
+  -webkit-animation: glow 0.7s ease-in-out infinite alternate;
+  -moz-animation: glow 0.7s ease-in-out infinite alternate;
+  animation: glow 0.7s ease-in-out infinite alternate;
 }
 
-.language__tools__img {
-    width: 100%;
-    max-width: 100px;
-    transition: all 300ms ease;
-    /* padding: 12px; */
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 .9px #4169e3, 0 0 .9px #F99245, 0 0 .9px white;
+  }
+  to {
+    text-shadow: 0 0 .82px white, 0 0 .82px #F99245, 0 0 .82px #4169e1;
+  }
 }
 
-.language__tools__img:hover {
-    filter:brightness(80%);
-    opacity: 0.86;
-    transform: scale(0.9);
-}
-
-.languages__tools__list {
+.tech__list {
     display: flex;
     justify-content: center;
     width: 100%;
     flex-wrap: wrap;
 }
 
-.language__tools__name {
-    position: absolute;
-    /*display: inline;*/
-    bottom: 0;
-    transform: scale(0);
-    transition: all 300ms ease;
-    font-size: 20px;
-    opacity: 0;
+.addTech {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 
-.LANGUAGE:hover .language__tools__name {
-    transform: scale(1);
-    opacity: 1;
+.tech__img--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 16px;
 }
 
-.cloud {
+.tech__img {
+    width: 100%;
+    max-width: 100px;
+    transition: all 300ms;
+}
+
+.addTech:hover .tech__img {
+    filter: brightness(80%);
+    opacity: 0.86;
+    transform: scale(0.9);
+}
+
+.tech__name {
     position: absolute;
     bottom: 0;
     transform: scale(2);
     transition: all 300ms ease;
-    font-size: 24px;
     opacity: 0;
+    font-weight: 900;
+    font-size: 24px;
 }
 
+
+.groovy {
+    background: linear-gradient(to right, #000700, red, #000700, orange,#000700, yellow,#000700, green,#000700, blue,#000700, indigo,#000700, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.addTech:hover .tech__name {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.addTech:hover .tech__name {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* AI Chatbot Icon I had to make, so that I could include A NEW TECHNOLOGY that I learned within my Tech Stack!  I'm pretty proud of myslef for how it came out; and I am trying to learn a better transition style/way for it to be almost instant/quicker: I want the two different files I save for the AI Chatbot icon to appear as if the robot just suddenly started speaking to you when you hovered over.  What I am most proud of myelf is how I made the "Click Me" work!  If they do not go through all of my projects (because this will be at the end of my stack), then they will see this first (who can't resist pressing buttons and clicking hyperlinks on a site you've already deemed safe). */
 .topSpace {
     position: absolute;
     align-items: center;
@@ -401,39 +354,15 @@ box-shadow: 0px 45px 45px 45px rgba(255, 164, 46, 0.9);
     opacity: 0;
 }
 
-.topSpace:hover .language__tools__name {
+.topSpace:hover .tech__name {
     transform: scale(1);
     opacity: 1;
-}
-
-.topSpace2 {
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    transform: scale(1);
-    transition: all 3ms ease;
-    font-size: 12px;
-    opacity: 0;
 }
 
 .ai {
     transform: scale(1);
     transition: all 1ms ease;
     opacity: 1; 
-}
-
-.topSpace2:hover .language__tools__name {
-    transform: scale(3);
-    opacity: 1;
-}
-
-/* AI Chatbot Icon I had to make, so that I could include A NEW TECHNOLOGY that I learned within my Tech Stack!  I'm pretty proud of myslef for how it came out; and I am trying to learn a better transition style/way for it to be almost instant/quicker: I want the two different files I save for the AI Chatbot icon to appear as if the robot just suddenly started speaking to you when you hovered over.  What I am most proud of myelf is how I made the "Click Me" work!  If they do not go through all of my projects (because this will be at the end of my stack), then they will see this first (who can't resist pressing buttons and clicking hyperlinks on a site you've already deemed safe). */
-.groovy {
-    font-size: xx-large;
-    background: linear-gradient(to right, #000700, red, #000700, orange,#000700, yellow,#000700, green,#000700, blue,#000700, indigo,#000700, violet);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /*============ Project Styles ============*/
