@@ -251,7 +251,6 @@ section:nth-child(even) {
 
 /* Tech Stack Header. */
 .tech__section__title {
-    position: relative;
     /* Ref. https://blog.webdevsimplified.com/2022-08/css-viewport-units/#:~:text=vw%20stands%20for%20Viewport%20Width,the%20width%20of%20your%20viewport. */
     width: 10vi; /* 250px */
     /* Ref. https://developer.mozilla.org/en-US/docs/Web/CSS/z-index */
@@ -322,12 +321,17 @@ section:nth-child(even) {
     transition: all 300ms ease;
     opacity: 0;
     font-weight: 900;
-    font-size: 24px;
+    font-size: 28px;
 }
-
 
 .groovy {
     background: linear-gradient(to right, #000700, red, #000700, orange,#000700, yellow,#000700, green,#000700, blue,#000700, indigo,#000700, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.alt2groovy {
+    background: linear-gradient(to right, red, yellow, green);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -350,11 +354,16 @@ section:nth-child(even) {
     top: 0;
     transform: scale(0);
     transition: all 300ms ease;
-    font-size: 20px;
+    font-size: 24px;
     opacity: 0;
 }
 
 .topSpace:hover .tech__name {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.topSpace .hide-me:hover .tech__name {
     transform: scale(1);
     opacity: 1;
 }
@@ -364,6 +373,18 @@ section:nth-child(even) {
     transition: all 1ms ease;
     opacity: 1; 
 }
+
+.expess {
+    height: 65%;
+    width: 100%;
+    /* I actually stumbled upon this playing around; and then I looked up the information to learn what I did to cause this effect, exactly. Ref. https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text */
+    transform: scale(1, -1);
+    align-items: center;
+    padding-top: 8px;
+    box-shadow: 3px 3px 3px 3px rgb(2,0,36);
+    background: radial-gradient(circle, rgba(65, 105, 227, 1.0) 0%, rgba(249, 146, 69, 1.0) 35%, rgba(61, 66, 68, 0.673) 100%); border-radius: 50px;
+}
+
 
 /*============ Project Styles ============*/
 /* Projects' Header */
