@@ -351,11 +351,6 @@ section:nth-child(even) {
     opacity: 1;
 }
 
-.topSpace:hover .tech__name {
-    transform: scale(1);
-    opacity: 1;
-}
-
 .ai {
     transform: scale(1);
     transition: all 1ms ease;
