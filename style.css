@@ -161,15 +161,17 @@ section:nth-child(even) {
 }
 
 .about-me__img--container {
-    flex: 1;
+    flex: 2;
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
 
 .about-me__img {
-    width: 95%;
-    height: 65%;
+    width: 70%;
+    height: 100%;
+    justify-content: center;
 }
 
 /* Specific Header 1 Style Given.  In the tutorial David Bragg led for us to along with him (pause to do our thing, etc.), so it does not affect any other <h1> tags. */
