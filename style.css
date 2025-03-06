@@ -383,7 +383,7 @@ section:nth-child(even) {
     font-size: 32px;
     margin: 0 0 0 7px;
     font-weight: bold;
-    background: linear-gradient(to right, blue, orange, blue, orange, blue, orange, blue, orange, blue, orange, blue, orange, blue, orange, blue, orange, blue, orange);
+    background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -507,6 +507,28 @@ h4:hover:before {
     -webkit-animation: glow 0.3s ease-in-out infinite alternate;
     -moz-animation: glow 0.3s ease-in-out infinite alternate;
     animation: glow 0.3s ease-in-out infinite alternate;
+    text-decoration: none;
+}
+
+.glow2 {
+    background: linear-gradient(to top, #F99242, darkorange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    -webkit-animation: glow 0.7s ease-in-out infinite alternate;
+    -moz-animation: glow 0.7s ease-in-out infinite alternate;
+    animation: glow 0.7s ease-in-out infinite alternate;
+    text-decoration: none;
+}
+
+.glow3 {
+    background: linear-gradient(to top, #F99242, darkorange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    -webkit-animation: glow 0.9s ease-in-out infinite alternate;
+    -moz-animation: glow 0.9s ease-in-out infinite alternate;
+    animation: glow 0.9s ease-in-out infinite alternate;
     text-decoration: none;
 }
 
