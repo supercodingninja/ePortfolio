@@ -251,7 +251,7 @@ section:nth-child(even) {
 
 /* Ref. Effect https://www.w3schools.com/howto/howto_css_glowing_text.asp */
 .whenUgotDaGlow {
-    background: linear-gradient(to top, #F99242, dark orange);
+    background: linear-gradient(to top, #F99242, darorange);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
@@ -488,11 +488,15 @@ h4:hover:before {
     unicode-bidi: bidi-override;
     direction: rtl;
     font-size: 28px;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
 }
 
 .technolgies:first-letter {
     color: #ffeb4b;
     font-weight: bold;
+    font-size: 16px;
 }
 
 .glow {
@@ -503,6 +507,7 @@ h4:hover:before {
     -webkit-animation: glow 0.3s ease-in-out infinite alternate;
     -moz-animation: glow 0.3s ease-in-out infinite alternate;
     animation: glow 0.3s ease-in-out infinite alternate;
+    text-decoration: none;
 }
 
 @-webkit-keyframes glow {
@@ -532,6 +537,7 @@ h4:hover:before {
     background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-decoration: none;
 }
 
 .project:last-child {
