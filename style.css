@@ -132,16 +132,10 @@ section:nth-child(even) {
     align-items: center;
 }
 
-.about-me__info--paragraph {
+.about-me__info--passage {
     font-size: 20px;
     margin-top: 2px;
     margin-bottom: 16px;
-}
-
-.about-me__links {
-    font-size: 20px;
-    text-decoration: none;
-    padding: 0px 16px;
 }
 
 /* Bold and Colored letterimg in Intro. paragraph in "About Me" Section. */
