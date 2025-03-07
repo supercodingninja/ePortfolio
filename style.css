@@ -133,9 +133,9 @@ section:nth-child(even) {
 }
 
 .about-me__info--passage {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 2px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 /* Bold and Colored letterimg in Intro. paragraph in "About Me" Section. */
