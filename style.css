@@ -182,6 +182,25 @@ section:nth-child(even) {
     font-size: 36px;
 }
 
+/* Wave Hello */
+.sayHello {
+    display: inline-block;
+    animation: animate-wave 1.3s infinite ease-in-out;
+}
+
+@keyframes animate-wave {
+    0% {
+        transform: rotate(0);
+    }
+    
+    50% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
 
 /*============ Navigation Menu Styles ============*/
 /* How the list was made to line up vs. being stack upon one another. */
