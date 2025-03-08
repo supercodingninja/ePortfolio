@@ -15,6 +15,15 @@ sup {
     font-size: small;
 }
 
+/* WORKING THOUGHT
+.III {
+    text-align: center;
+    -webkit-animation: glow 1.3s ease-in-out infinite alternate;
+    -moz-animation: glow 1.3s ease-in-out infinite alternate;
+    animation: glow 1.3s ease-in-out infinite alternate;
+    text-decoration: none; 
+} */
+
 .sup3 {
     vertical-align: super;
     font-size: medium;
@@ -217,7 +226,7 @@ section:nth-child(even) {
 }
 
 .link__hover-effect--black:after {
-    background-color: #000;
+    background-color: #71713a;
 }
 
 .link__hover-effect:hover:after {
@@ -497,11 +506,11 @@ section:nth-child(even) {
 }
 
 /*Ref. https://stackoverflow.com/questions/9913293/change-text-on-hover-then-return-to-the-previous-text */
-h4 .project__sub-title:hover span {
+h4:hover span {
     display: none;
 }
 
-h4:hover:before {
+h4:hover::before {
     content: "HTML5 30.3% | CSS3 55.8% | JavaScript 13.9%";
     font-size: 24px;
     box-sizing: content-box;
