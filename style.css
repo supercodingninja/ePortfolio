@@ -1,7 +1,49 @@
 /* The Successful People NEVER quit. */
+
 /* For less HTTPS requests, this is one large file, as oppose to having multiple files; and I am the only developer on this project.  I still had my own issues in knowing where I was at sometimes; therefore, the pseudo code (especially with the headings/breaking the code into sections, etc.). Yes, I'm becoming to like Python, more, due to it's simplicity and readability; i. e. components. */
 
 /* Reference https://getbem.com/ "BEM — is a methodology that helps you to create reusable components and code sharing in front‑end development" */
+
+/* ASK HOW TO EFFECTIVELY APPLY THE FOLLOWING @media's. Make sure that you understand what to include, what not to include.  Be sure to ask when to use px (seems never), when to use em's, and when to use %'s, in other words, GET THE THOUGHT PROCESS DOWN */
+
+/* @media REF. https://stackoverflow.com/questions/15061520/responsive-css-styles-on-mobile-devices-only */
+/* Desktop styles */
+/* @media only screen  and (max-device-width: 1000px) and (orientation: landscape) {
+    Should I put all of my CSS here, and first?
+} 
+    
+@media only screen  and (max-device-width: 1000px) and (orientation: portrait) {
+    Should I put all of my CSS here, and first?
+}*/
+
+/* Should I go this route? */
+/* @media all and (min-width:960px) and (max-width: 1024px) {
+     put your css styles in here 
+  } 
+  
+  @media all and (min-width:801px) and (max-width: 959px) {
+    put your css styles in here
+  }
+  
+  @media all and (min-width:769px) and (max-width: 800px) {
+    put your css styles in here 
+  }
+  
+  @media all and (min-width:569px) and (max-width: 768px) {
+    put your css styles in here
+  }
+  
+  @media all and (min-width:481px) and (max-width: 568px) {
+    put your css styles in here
+  }
+  
+  @media all and (min-width:321px) and (max-width: 480px) {
+    put your css styles in here
+  }
+  
+  @media all and (min-width:0px) and (max-width: 320px) {
+    put your css styles in here
+  } */
 
 /*============================= Generic Styles Section (One Size Fits All Section) =============================*/
 /* Ref. https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_sup_default_css */
@@ -91,6 +133,8 @@ section:nth-child(even) {
     height:100%;
     width:100%;
 }
+
+
 
 /*=============================================== Specific Styles Section ===============================================*/
 /*============ About Me Section. ============*/
