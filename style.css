@@ -225,8 +225,26 @@ section:nth-child(even) {
     left: 0;
 }
 
-i:hover {
-    opacity: 0.7;
+/* THIS INTERFERES WITH MY with my <sup class="SUP2">! DO NOT WANT THIS TO TARGET EVERYTHING. Really cool approach; but it will take me more work to rebuild my site, rather using this as an individual class. KEEP IN CODE FOR POSSIBLE FUTURE USE. This is new to me (CSS4 tag, and currently CSS4 is still in draft mode, but some browsers have already implemented it). CSS is now versioned as a series of modules, with each module containing a specific set of features: the "i" selector Ref. https://stackoverflow.com/questions/27506735/what-does-i-mean-in-a-css-attribute-selector I have used a hover effect before, but not targeting with this selector (I think it was more of and ID/class). */
+/* i:hover {
+    opacity: 0.9;
+} */
+/* Use instead */
+.navEffect:hover {
+    opacity: 0.9;
+}
+
+/* THIS INTERFERES WITH MY PERSONAL HOVER EFFECTS! DO NOT WANT THIS TO TARGET EVERYTHING. Really cool approach; but it will take me more work to rebuild my site, rather using this as an individual class. KEEP IN CODE FOR POSSIBLE FUTURE USE.I don't recall using this selector before; but it does seem familiar. I've used this underline effect, before, i just can't remember where; and I think I did it differently.  This seems much more effective and cleaner. */
+/* a {
+    text-decoration: none;
+    position: relative;
+    transition: opacity 300ms ease;
+} */
+/* Use instead */
+.navEffect {
+    text-decoration: none;
+    position: relative;
+    transition: opacity 300ms ease;
 }
 
 /* I didn't like the name scheme in the personal logo: because I knew that I would confuse this code for my actual logo (later use); therefore, I change the name scheme to avoid a potential naming conflict, and to practice better semantics regarding myself. THIS IS THE BIG NAME OPENING. */
@@ -272,7 +290,7 @@ i:hover {
 
 /* Ref. Effect https://www.w3schools.com/howto/howto_css_glowing_text.asp */
 .whenUgotDaGlow {
-    background: linear-gradient(to top, #F99242, darorange);
+    background: linear-gradient(to top, #F99242, #Dc4D01);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
@@ -370,12 +388,6 @@ i:hover {
 .topSpace:hover .tech__name {
     transform: scale(1);
     opacity: 1;
-}
-
-.ai {
-    transform: scale(1);
-    transition: all 1ms ease;
-    opacity: 1; 
 }
 
 .expess {
@@ -485,7 +497,7 @@ i:hover {
 }
 
 /*Ref. https://stackoverflow.com/questions/9913293/change-text-on-hover-then-return-to-the-previous-text */
-h4:hover span {
+h4 .project__sub-title:hover span {
     display: none;
 }
 
@@ -591,6 +603,10 @@ footer {
     background-color: #000700;
 }
 
+.icon {
+    font-size: larger;
+}
+
 .footer__row {
     display: flex;
     flex-direction: column;
@@ -605,32 +621,32 @@ footer {
 }
 
 .footer__logo--img {
-    width: 70px;
-    height: 70px;
+    width: 82px;
+    height: 82px;
 }
   
 .footer__logo--img {
-    width: 70px;
-    height: 70px;
+    width: 82px;
+    height: 82px;
 }
 
 .footer__logo--popper {
     position: absolute;
     right: 0;
-    top: 30px;
+    top: 36px;
     font-weight: 700;
     opacity: 0;
     transition: all 300ms ease;
 }
 
 .footer__anchor:hover .footer__logo--popper {
-    transform: translateX(60px);
+    transform: translateX(55px);
     opacity: 1;
 }
 
 .footer__social--list {
     width: 100%;
-    max-width: 700px;
+    max-width: 550px;
     display: flex;
     justify-content: space-around;
     margin-bottom: 28px;
