@@ -92,12 +92,6 @@ section:nth-child(even) {
     width:100%;
 }
 
-/* Smart phones & tablets. */
-@media (max-width: 768px) {
-    nav {
-    height: 68px;
-}
-
 /*=============================================== Specific Styles Section ===============================================*/
 /*============ About Me Section. ============*/
 /* My Signature Header <h2> */
