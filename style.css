@@ -569,13 +569,130 @@ section:nth-child(even) {
 }
 
 /*Ref. https://stackoverflow.com/questions/9913293/change-text-on-hover-then-return-to-the-previous-text */
-h4:hover span {
+.first:hover span {
     display: none;
 }
 
-h4:hover::before {
+.first:hover::before {
     content: "HTML5 30.3% | CSS3 55.8% | JavaScript 13.9%";
     font-size: 24px;
+    box-sizing: content-box;
+    background: linear-gradient(to right, orange, white, orange, white, orange, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.second:hover span {
+    display: none;
+}
+
+.second:hover::before {
+    content: "JavaScript 53.7% | HTML5 24.4% | CSS3 21.9%";
+    font-size: 24px;
+    box-sizing: content-box;
+    background: linear-gradient(to right, orange, white, orange, white, orange, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.third:hover span {
+    display: none;
+}
+
+.third:hover::before {
+    content: "HTML5 74.2% | JavaScript 17.1% | CSS3 8.7%";
+    font-size: 24px;
+    box-sizing: content-box;
+    background: linear-gradient(to right, orange, white, orange, white, orange, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fourth:hover span {
+    display: none;
+}
+
+.fourth:hover::before {
+    content: "HTML5 100.0% (simplified by <style> & <script>) ";
+    font-size: 24px;
+    box-sizing: content-box;
+    background: linear-gradient(to right, orange, white, orange, white, orange, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fifth:hover span {
+    display: none;
+}
+
+.fifth:hover::before {
+    content: "JavaScript 100.0%";
+    font-size: 24px;
+    box-sizing: content-box;
+    background: linear-gradient(to right, orange, white, orange, white, orange, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sixth:hover span {
+    display: none;
+}
+
+.sixth:hover::before {
+    content: "JavaScript 66.0% | HTML5 23.6% | CSS3 10.4%";
+    font-size: 24px;
+    box-sizing: content-box;
+    background: linear-gradient(to right, orange, white, orange, white, orange, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.seventh:hover span {
+    display: none;
+}
+
+.seventh:hover::before {
+    content: "JavaScript 100.0%";
+    font-size: 24px;
+    box-sizing: content-box;
+    background: linear-gradient(to right, orange, white, orange, white, orange, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.eighth:hover span {
+    display: none;
+}
+
+.eighth:hover::before {
+    content: "JavaScript 82.7% | HTML5 12.5% | CSS3 4.8%";
+    font-size: 24px;
+    box-sizing: content-box;
+    background: linear-gradient(to right, orange, white, orange, white, orange, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ninth:hover span {
+    display: none;
+}
+
+.ninth:hover::before {
+    content: "TypeScript 90.5 | CSS3 4.7% | HTML5 3.1% | JavaScript 1.7% | Other Technologies include JWT, NPM, MongoBD, Saas, and more!";
+    font-size: 24px;
+    box-sizing: content-box;
+    background: linear-gradient(to right, orange, white, orange, white, orange, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tenth:hover span {
+    display: none;
+}
+
+.tenth:hover::before {
+    content: "JavaScript 62.1% | CSS3 36.2% | HTML5 1.6% | Shell 0.1%";
+    font-size: 20px;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
