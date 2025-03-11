@@ -4,46 +4,69 @@
 
 /* Reference https://getbem.com/ "BEM — is a methodology that helps you to create reusable components and code sharing in front‑end development" */
 
-/* ASK HOW TO EFFECTIVELY APPLY THE FOLLOWING @media's. Make sure that you understand what to include, what not to include.  Be sure to ask when to use px (seems never), when to use em's, and when to use %'s, in other words, GET THE THOUGHT PROCESS DOWN */
-
 /* @media REF. https://stackoverflow.com/questions/15061520/responsive-css-styles-on-mobile-devices-only */
-/* Desktop styles */
+/* Desktop/Laptop Styles */
 /* @media only screen  and (max-device-width: 1000px) and (orientation: landscape) {
-    Should I put all of my CSS here, and first?
+    
 } 
     
 @media only screen  and (max-device-width: 1000px) and (orientation: portrait) {
-    Should I put all of my CSS here, and first?
+    
 }*/
 
 /* Should I go this route? */
-/* @media all and (min-width:960px) and (max-width: 1024px) {
-     put your css styles in here 
-  } 
-  
-  @media all and (min-width:801px) and (max-width: 959px) {
-    put your css styles in here
-  }
-  
-  @media all and (min-width:769px) and (max-width: 800px) {
-    put your css styles in here 
-  }
-  
-  @media all and (min-width:569px) and (max-width: 768px) {
-    put your css styles in here
-  }
-  
-  @media all and (min-width:481px) and (max-width: 568px) {
-    put your css styles in here
-  }
-  
-  @media all and (min-width:321px) and (max-width: 480px) {
-    put your css styles in here
-  }
-  
-  @media all and (min-width:0px) and (max-width: 320px) {
-    put your css styles in here
-  } */
+@media all and (min-width:960px) and (max-width: 1024px) {
+      
+} 
+
+@media all and (min-width:801px) and (max-width: 959px) {
+
+}
+
+@media all and (min-width:769px) and (max-width: 800px) {
+    
+}
+
+@media all and (min-width:569px) and (max-width: 768px) {
+
+}
+
+@media all and (min-width:481px) and (max-width: 568px) {
+
+}
+
+@media all and (min-width:321px) and (max-width: 480px) {
+
+}
+
+@media all and (min-width:0px) and (max-width: 320px) {
+    nav {
+        height: 100%;
+        width: 100%;
+        font-size: small;
+        max-width: 320px;
+        margin: 0 auto;
+        display: flex;
+        justify-content:flex-end;
+    }
+
+    .nav__link--anchor {
+        margin: 0 3px;
+        color: #242424;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    
+    /* Contact Button Style.*/
+    .nav__link--anchor-primary {
+        background: linear-gradient(to right, #71713a, #544478);
+        padding: 4px 10px;
+        border-radius: 50px;
+        border-width: 50%;
+        color: white;
+        transition: all 300ms ease;
+    }
+}
 
 /*============================= Generic Styles Section (One Size Fits All Section) =============================*/
 /* Ref. https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_sup_default_css */
