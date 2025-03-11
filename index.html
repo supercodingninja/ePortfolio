@@ -15,6 +15,12 @@
     <link rel="icon" type="image/x-icon" href="./assets/logoNfavicon/use4favicon.jpeg" />
 
 
+    <!-- How do I incorporate Bootstrap without it overiding my CSS/How do I overide certain Bootstrap styles? -->
+    <!-- Bootstrap framework for building responsive, mobile-first sites, with jsDelivr. -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <!-- Used for Font & Icons. -->
     <link href='https://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css'>
     
 
@@ -43,40 +49,60 @@
             </div>
             
 
-            <!-- Unorder List for Naviagation Menu. -->
-            <ul class="nav__link--list">
-                <li>
-                    <!-- Anchor link for Tech Stack (Languages & TOOLS:  That's why I call it "Tech Stack," which iscommonly used & modern).  -->
-                    <a href="#techStack" class="
-                        navEffect 
-                        nav_link--anchor
-                        link__hover-effect
-                        link__hover-effect--black" style="margin-right: 20px;">
-                        Tech Stack
-                    </a>
-                </li>
+            <!-- Hamburger Menu Ref. Andrey Krokhin (https://codepen.io/andreykrokhin) -->
+             <!-- Bootstrap reference (https://getbootstrap.com/docs/4.1/utilities/display/#hiding-elements). -->
+            <div class="hamburger-menu">
+                <input id="menu__toggle" class="
+                    d-none
+                    d-sm-block 
+                    d-lg-none" type="checkbox" />
+                
+                
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+                
+                
+                <!-- Unorder List for Naviagation Menu. -->
+                <ul class="
+                    hamburger__sandwich 
+                    nav__link--list">
+                   
+                    
+                    <li class="burger__topping">
+                        <!-- Anchor link for Tech Stack (Languages & TOOLS:  That's why I call it "Tech Stack," which iscommonly used & modern).  -->
+                        <a href="#techStack" class="
+                            navEffect 
+                            nav_link--anchor
+                            link__hover-effect
+                            link__hover-effect--black" style="margin-right: 20px;">
+                            Tech Stack
+                        </a>
+                    </li>
 
 
-                <li>
-                    <!--Anchor link for  "Projects". -->
-                    <a href="#projectSection" class="
-                        navEffect 
-                        nav_link--anchor
-                        link__hover-effect
-                        link__hover-effect--black">
-                        Projects
-                    </a>
-                </li>
+                    <li class="burger__topping">
+                        <!--Anchor link for  "Projects". -->
+                        <a href="#projectSection" class="
+                            navEffect 
+                            nav_link--anchor
+                            link__hover-effect
+                            link__hover-effect--black">
+                            Projects
+                        </a>
+                    </li>
 
 
-                <li>
-                    <!--Anchor link for  Contact. NOTE: THIS IS STYLE DIFFERRENTLY (because it's a primary call to action button). -->
-                    <a href="" class="
-                    nav__link--anchor
-                    nav__link--anchor-primary
-                    ">Contact</a>
-                </li>
-            </ul>
+                    <li class="burger__topping">
+                        <!--Anchor link for  Contact. NOTE: THIS IS STYLE DIFFERRENTLY (because it's a primary call to action button). -->
+                        <a href="#footer" class="
+                            nav__link--anchor
+                            nav__link--anchor-primary">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
 
@@ -1295,7 +1321,7 @@
 
 
     <!--========== Footer Secton. ==========-->
-    <footer>
+    <footer id="footer">
         <div class="
             row 
             footer__row">
