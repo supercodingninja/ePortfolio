@@ -208,6 +208,10 @@
 
     /*============ Navigation Menu Styles ============*/
     /* How the list was made to line up vs. being stack upon one another. */
+    nav input[type='checkbox'], nav label {
+        display: none;
+    }
+    
     .nav__link--list {
         display: flex;
     }
