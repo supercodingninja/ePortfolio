@@ -181,11 +181,11 @@
     }
     
     @keyframes change-img-anim {
-        0%{ opacity: 0;}
+        0%{ opacity: 0.5;}
         20%{ opacity: 1;}
         40%{ opacity: 1;}
         60%{ opacity: 1;}
-        100%{ opacity: 0;}
+        100%{ opacity: 0.9;}
     }
 
     .about-me__info--passage {
@@ -846,7 +846,7 @@
         width: 100%;
         max-width: 550px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         margin-bottom: 28px;
     }
     
