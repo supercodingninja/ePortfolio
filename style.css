@@ -64,7 +64,7 @@
     /* Paragraph Style. */
     p {
         line-height: 1.5;
-        font-size: 16px;
+        font-size: 1em;
     }
 
     /* Default list style (set to none in order to remove the page bullets). */
@@ -189,7 +189,7 @@
     }
 
     .about-me__info--passage {
-        font-size: 18px;
+        font-size: 1.1em;
         margin-top: 2px;
         margin-bottom: 12px;
     }
@@ -226,7 +226,7 @@
 
     /* Specific Header 1 Style Given.  In the tutorial David Bragg led for us to along with him (pause to do our thing, etc.), so it does not affect any other <h1> tags. */
     .h1 {
-        font-size: 36px;
+        font-size: 2em;
     }
 
     /* Wave Hello */
@@ -328,7 +328,7 @@
 
     /* I didn't like the name scheme in the personal logo: because I knew that I would confuse this code for my actual logo (later use); therefore, I change the name scheme to avoid a potential naming conflict, and to practice better semantics regarding myself. THIS IS THE BIG NAME OPENING. */
     .BIG {
-        font-size: 24px;
+        font-size: 1.5em;
         margin: 0 12px;
         font-weight: bold;
         background: linear-gradient(to right, #71713a, #544478, #71713a, #544478);
@@ -360,7 +360,7 @@
         /* Ref. https://blog.webdevsimplified.com/2022-08/css-viewport-units/#:~:text=vw%20stands%20for%20Viewport%20Width,the%20width%20of%20your%20viewport. */
         width: 10vi; /* 250px */
         /* Ref. https://developer.mozilla.org/en-US/docs/Web/CSS/z-index */
-        font-size: 32px;
+        font-size: 2em;
         /* Remember that the syntax for box-shadow is: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];  Ref. https://css-tricks.com/almanac/properties/b/box-shadow/ */
         /* Other Ref. https://www.w3schools.com/css/css3_shadows_box.asp#:~:text=Set%20the%20Spread%20Radius%20of,the%20size%20of%20the%20shadow. */
         box-shadow: 3px 3px 3px 3px rgb(2,0,36);
@@ -428,7 +428,7 @@
         transition: all 300ms ease;
         opacity: 0;
         font-weight: 900;
-        font-size: 28px;
+        font-size: 1.8em;
     }
 
     .groovy {
@@ -461,7 +461,7 @@
         top: 0;
         transform: scale(0);
         transition: all 300ms ease;
-        font-size: 24px;
+        font-size: 1.5em;
         opacity: 0;
     }
 
@@ -488,7 +488,7 @@
 
     /* Projects' Header */
     .pj {
-        font-size: 32px;
+        font-size: 2em;
         margin: 0 0 0 7px;
         font-weight: bold;
         background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
@@ -559,7 +559,7 @@
 
     .project__title {
         text-align: left;
-        font-size: 50px;
+        font-size: 3em;
         font-weight: bold;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -569,7 +569,7 @@
     /* I want to target the projects sub-title. */
     .project__sub-title {
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 28px;
+        font-size: 1.8em;
         text-align: left;
         display: flex;
         flex-direction: column;
@@ -583,7 +583,7 @@
 
     .first:hover::before {
         content: "HTML5 30.3% | CSS3 55.8% | JavaScript 13.9%";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -596,7 +596,7 @@
 
     .second:hover::before {
         content: "JavaScript 53.7% | HTML5 24.4% | CSS3 21.9%";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -609,7 +609,7 @@
 
     .third:hover::before {
         content: "HTML5 74.2% | JavaScript 17.1% | CSS3 8.7%";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -622,7 +622,7 @@
 
     .fourth:hover::before {
         content: "HTML5 100.0% (simplified by <style> & <script>) ";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -635,7 +635,7 @@
 
     .fifth:hover::before {
         content: "JavaScript 100.0%";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -648,7 +648,7 @@
 
     .sixth:hover::before {
         content: "JavaScript 66.0% | HTML5 23.6% | CSS3 10.4%";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -661,7 +661,7 @@
 
     .seventh:hover::before {
         content: "JavaScript 100.0%";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -674,7 +674,7 @@
 
     .eighth:hover::before {
         content: "JavaScript 82.7% | HTML5 12.5% | CSS3 4.8%";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -687,7 +687,7 @@
 
     .ninth:hover::before {
         content: "TypeScript 90.5 | CSS3 4.7% | HTML5 3.1% | JavaScript 1.7% | Other Technologies include JWT, NPM, MongoBD, Saas, and more!";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -700,7 +700,7 @@
 
     .tenth:hover::before {
         content: "JavaScript 62.1% | CSS3 36.2% | HTML5 1.6% | Shell 0.1%";
-        font-size: 20px;
+        font-size: 1.3em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -712,7 +712,7 @@
         float: left;
         unicode-bidi: bidi-override;
         direction: rtl;
-        font-size: 28px;
+        font-size: 1.8em;
         align-items: left;
         justify-content: left;
         text-align: left;
@@ -721,7 +721,7 @@
     .technolgies:first-letter {
         color: #ffeb4b;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 1em;
     }
 
     .glow {
@@ -779,7 +779,7 @@
 
     .project__links {
         text-align: left;
-        font-size: 24px;
+        font-size: 1.5em;
         margin-right: 21px;
         text-decoration: none;
         background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
@@ -792,7 +792,7 @@
     }
 
     .info {
-        font-size: 18px;
+        font-size: 1.1em;
     }
 
     /*============ Footer Styles ============*/
@@ -957,7 +957,7 @@
     /* Paragraph Style. */
     p {
         line-height: 1.5;
-        font-size: 12px;
+        font-size: 0.8em;
     }
 
     /* Default list style (set to none in order to remove the page bullets). */
@@ -1082,7 +1082,7 @@
     }
 
     .about-me__info--passage {
-        font-size: 18px;
+        font-size: 1.1em;
         margin-top: 2px;
         margin-bottom: 12px;
     }
@@ -1119,7 +1119,7 @@
 
     /* Specific Header 1 Style Given.  In the tutorial David Bragg led for us to along with him (pause to do our thing, etc.), so it does not affect any other <h1> tags. */
     .h1 {
-        font-size: 36px;
+        font-size: 2em;
     }
 
     /* Wave Hello */
@@ -1236,14 +1236,14 @@
         top: 0;
         left: -100%;
         width: 320px;
-        height: 30%;
+        height: 35%;
         margin: 0;
         padding: 80px 0;
         list-style: armenian;
         transition-duration: .25s;
         background-image:url('./assets/img/me3.jpeg');
         opacity: 1;
-        background-size:60% 30%;
+        background-size:60% 35%;
         background-repeat:repeat-x;
         background-attachment: fixed;
     }
@@ -1252,26 +1252,22 @@
         display: block;
         flex-direction: column-reverse;
         padding: 12px 24px;
-        color: #333;
         font-family: 'Roboto', sans-serif;
-        font-size: 20px;
+        font-size: 1.25em;
         font-weight: 600;
         text-decoration: none;
         transition-duration: .25s;
         justify-content: left;
     }
-
-    .burger__topping:hover {
-        background-color: #083c52;
-    }
     
     .nav__link--list {
         display: flex;
+        align-items: center;
     }
 
     /* Anchor styles. */
     .nav__link--anchor {
-        margin: 0 12px;
+        margin: 0%;
         color: #242424;
         text-decoration: none;
         font-weight: 700;
@@ -1339,7 +1335,7 @@
 
     /* I didn't like the name scheme in the personal logo: because I knew that I would confuse this code for my actual logo (later use); therefore, I change the name scheme to avoid a potential naming conflict, and to practice better semantics regarding myself. THIS IS THE BIG NAME OPENING. */
     .BIG {
-        font-size: 24px;
+        font-size: 1.5em;
         margin: 0 12px;
         font-weight: bold;
         background: linear-gradient(to right, #71713a, #544478, #71713a, #544478);
@@ -1371,7 +1367,7 @@
         /* Ref. https://blog.webdevsimplified.com/2022-08/css-viewport-units/#:~:text=vw%20stands%20for%20Viewport%20Width,the%20width%20of%20your%20viewport. */
         width: 10vi; /* 250px */
         /* Ref. https://developer.mozilla.org/en-US/docs/Web/CSS/z-index */
-        font-size: 32px;
+        font-size: 2em;
         /* Remember that the syntax for box-shadow is: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];  Ref. https://css-tricks.com/almanac/properties/b/box-shadow/ */
         /* Other Ref. https://www.w3schools.com/css/css3_shadows_box.asp#:~:text=Set%20the%20Spread%20Radius%20of,the%20size%20of%20the%20shadow. */
         box-shadow: 3px 3px 3px 3px rgb(2,0,36);
@@ -1439,7 +1435,7 @@
         transition: all 300ms ease;
         opacity: 0;
         font-weight: 900;
-        font-size: 28px;
+        font-size: 1.8em;
     }
 
     .groovy {
@@ -1472,7 +1468,7 @@
         top: 0;
         transform: scale(0);
         transition: all 300ms ease;
-        font-size: 24px;
+        font-size: 1.5em;
         opacity: 0;
     }
 
@@ -1499,7 +1495,7 @@
 
     /* Projects' Header */
     .pj {
-        font-size: 32px;
+        font-size: 2em;
         margin: 0 0 0 7px;
         font-weight: bold;
         background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
@@ -1570,7 +1566,7 @@
 
     .project__title {
         text-align: left;
-        font-size: 50px;
+        font-size: 3em;
         font-weight: bold;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1580,7 +1576,7 @@
     /* I want to target the projects sub-title. */
     .project__sub-title {
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 28px;
+        font-size: 1.8em;
         text-align: left;
         display: flex;
         flex-direction: column;
@@ -1594,7 +1590,7 @@
 
     .first:hover::before {
         content: "HTML5 30.3% | CSS3 55.8% | JavaScript 13.9%";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1607,7 +1603,7 @@
 
     .second:hover::before {
         content: "JavaScript 53.7% | HTML5 24.4% | CSS3 21.9%";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1620,7 +1616,7 @@
 
     .third:hover::before {
         content: "HTML5 74.2% | JavaScript 17.1% | CSS3 8.7%";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1633,7 +1629,7 @@
 
     .fourth:hover::before {
         content: "HTML5 100.0% (simplified by <style> & <script>) ";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1646,7 +1642,7 @@
 
     .fifth:hover::before {
         content: "JavaScript 100.0%";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1659,7 +1655,7 @@
 
     .sixth:hover::before {
         content: "JavaScript 66.0% | HTML5 23.6% | CSS3 10.4%";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1672,7 +1668,7 @@
 
     .seventh:hover::before {
         content: "JavaScript 100.0%";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1685,7 +1681,7 @@
 
     .eighth:hover::before {
         content: "JavaScript 82.7% | HTML5 12.5% | CSS3 4.8%";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1698,7 +1694,7 @@
 
     .ninth:hover::before {
         content: "TypeScript 90.5 | CSS3 4.7% | HTML5 3.1% | JavaScript 1.7% | Other Technologies include JWT, NPM, MongoBD, Saas, and more!";
-        font-size: 24px;
+        font-size: 1.5em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1711,7 +1707,7 @@
 
     .tenth:hover::before {
         content: "JavaScript 62.1% | CSS3 36.2% | HTML5 1.6% | Shell 0.1%";
-        font-size: 20px;
+        font-size: 1.3em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1723,7 +1719,7 @@
         float: left;
         unicode-bidi: bidi-override;
         direction: rtl;
-        font-size: 28px;
+        font-size: 1.8em;
         align-items: left;
         justify-content: left;
         text-align: left;
@@ -1732,7 +1728,7 @@
     .technolgies:first-letter {
         color: #ffeb4b;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 1em;
     }
 
     .glow {
@@ -1790,7 +1786,7 @@
 
     .project__links {
         text-align: left;
-        font-size: 24px;
+        font-size: 1.5em;
         margin-right: 21px;
         text-decoration: none;
         background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
@@ -1803,7 +1799,7 @@
     }
 
     .info {
-        font-size: 18px;
+        font-size: 1.1em;
     }
 
     /*============ Footer Styles ============*/
@@ -1869,6 +1865,8 @@
     }
 }
 
+
+
 /*============================= Generic Styles Section (One Size Fits All Section) =============================*/
 /* Ref. https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_sup_default_css */
 sup {
@@ -1928,7 +1926,7 @@ h1, h2, h3, h4, h5, h6, span {
 /* Paragraph Style. */
 p {
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 /* Default list style (set to none in order to remove the page bullets). */
@@ -1966,8 +1964,8 @@ section:nth-child(even) {
 .about-me__info--subtitle {
     padding: 7px;
     background: linear-gradient(to right, #71713a, #544478);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Look for ID */
@@ -2010,7 +2008,7 @@ section:nth-child(even) {
 }
 
 .about-me__info--passage {
-    font-size: 18px;
+    font-size: 1.1em;
     margin-top: 2px;
     margin-bottom: 12px;
 }
@@ -2019,16 +2017,16 @@ section:nth-child(even) {
 .emph {
     font-weight: 700;
     background: linear-gradient(to right, #71713a, #544478);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .emph2 {
     font-weight: 900;
     text-decoration: underline;
     background: linear-gradient(to right, #71713a, #544478);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .about-me__img--container {
@@ -2047,7 +2045,7 @@ section:nth-child(even) {
 
 /* Specific Header 1 Style Given.  In the tutorial David Bragg led for us to along with him (pause to do our thing, etc.), so it does not affect any other <h1> tags. */
 .h1 {
-    font-size: 36px;
+    font-size: 2em;
 }
 
 /* Wave Hello */
@@ -2145,7 +2143,7 @@ section:nth-child(even) {
 
 /* I didn't like the name scheme in the personal logo: because I knew that I would confuse this code for my actual logo (later use); therefore, I change the name scheme to avoid a potential naming conflict, and to practice better semantics regarding myself. THIS IS THE BIG NAME OPENING. */
 .BIG {
-    font-size: 24px;
+    font-size: 1.5em;
     margin: 0 12px;
     font-weight: bold;
     background: linear-gradient(to right, #71713a, #544478, #71713a, #544478);
@@ -2177,7 +2175,7 @@ section:nth-child(even) {
     /* Ref. https://blog.webdevsimplified.com/2022-08/css-viewport-units/#:~:text=vw%20stands%20for%20Viewport%20Width,the%20width%20of%20your%20viewport. */
     width: 10vi; /* 250px */
     /* Ref. https://developer.mozilla.org/en-US/docs/Web/CSS/z-index */
-    font-size: 32px;
+    font-size: 2em;
     /* Remember that the syntax for box-shadow is: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];  Ref. https://css-tricks.com/almanac/properties/b/box-shadow/ */
     /* Other Ref. https://www.w3schools.com/css/css3_shadows_box.asp#:~:text=Set%20the%20Spread%20Radius%20of,the%20size%20of%20the%20shadow. */
     box-shadow: 3px 3px 3px 3px rgb(2,0,36);
@@ -2244,7 +2242,7 @@ section:nth-child(even) {
     transition: all 300ms ease;
     opacity: 0;
     font-weight: 900;
-    font-size: 28px;
+    font-size: 1.8em;
 }
 
 .groovy {
@@ -2277,7 +2275,7 @@ section:nth-child(even) {
     top: 0;
     transform: scale(0);
     transition: all 300ms ease;
-    font-size: 24px;
+    font-size: 1.5em;
     opacity: 0;
 }
 
@@ -2304,7 +2302,7 @@ section:nth-child(even) {
 
 /* Projects' Header */
 .pj {
-    font-size: 32px;
+    font-size: 2em;
     margin: 0 0 0 7px;
     font-weight: bold;
     background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
@@ -2375,7 +2373,7 @@ section:nth-child(even) {
 
 .project__title {
     text-align: left;
-    font-size: 50px;
+    font-size: 3em;
     font-weight: bold;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2385,7 +2383,7 @@ section:nth-child(even) {
 /* I want to target the projects sub-title. */
 .project__sub-title {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 28px;
+    font-size: 1.8em;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -2399,7 +2397,7 @@ section:nth-child(even) {
 
 .first:hover::before {
     content: "HTML5 30.3% | CSS3 55.8% | JavaScript 13.9%";
-    font-size: 24px;
+    font-size: 1.5em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2412,7 +2410,7 @@ section:nth-child(even) {
 
 .second:hover::before {
     content: "JavaScript 53.7% | HTML5 24.4% | CSS3 21.9%";
-    font-size: 24px;
+    font-size: 1.5em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2425,7 +2423,7 @@ section:nth-child(even) {
 
 .third:hover::before {
     content: "HTML5 74.2% | JavaScript 17.1% | CSS3 8.7%";
-    font-size: 24px;
+    font-size: 1.5em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2438,7 +2436,7 @@ section:nth-child(even) {
 
 .fourth:hover::before {
     content: "HTML5 100.0% (simplified by <style> & <script>) ";
-    font-size: 24px;
+    font-size: 1.5em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2451,7 +2449,7 @@ section:nth-child(even) {
 
 .fifth:hover::before {
     content: "JavaScript 100.0%";
-    font-size: 24px;
+    font-size: 1.5em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2464,7 +2462,7 @@ section:nth-child(even) {
 
 .sixth:hover::before {
     content: "JavaScript 66.0% | HTML5 23.6% | CSS3 10.4%";
-    font-size: 24px;
+    font-size: 1.5em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2477,7 +2475,7 @@ section:nth-child(even) {
 
 .seventh:hover::before {
     content: "JavaScript 100.0%";
-    font-size: 24px;
+    font-size: 1.5em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2490,7 +2488,7 @@ section:nth-child(even) {
 
 .eighth:hover::before {
     content: "JavaScript 82.7% | HTML5 12.5% | CSS3 4.8%";
-    font-size: 24px;
+    font-size: 1.5em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2503,7 +2501,7 @@ section:nth-child(even) {
 
 .ninth:hover::before {
     content: "TypeScript 90.5 | CSS3 4.7% | HTML5 3.1% | JavaScript 1.7% | Other Technologies include JWT, NPM, MongoBD, Saas, and more!";
-    font-size: 24px;
+    font-size: 1.5em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2516,7 +2514,7 @@ section:nth-child(even) {
 
 .tenth:hover::before {
     content: "JavaScript 62.1% | CSS3 36.2% | HTML5 1.6% | Shell 0.1%";
-    font-size: 20px;
+    font-size: 1.3em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2528,7 +2526,7 @@ section:nth-child(even) {
     float: left;
     unicode-bidi: bidi-override;
     direction: rtl;
-    font-size: 28px;
+    font-size: 1.8em;
     align-items: left;
     justify-content: left;
     text-align: left;
@@ -2537,7 +2535,7 @@ section:nth-child(even) {
 .technolgies:first-letter {
     color: #ffeb4b;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 .glow {
@@ -2594,7 +2592,7 @@ section:nth-child(even) {
 
 .project__links {
     text-align: left;
-    font-size: 24px;
+    font-size: 1.5em;
     margin-right: 21px;
     text-decoration: none;
     background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
@@ -2607,7 +2605,7 @@ section:nth-child(even) {
 }
 
 .info {
-    font-size: 18px;
+    font-size: 1.1em;
 }
 
 /*============ Footer Styles ============*/
