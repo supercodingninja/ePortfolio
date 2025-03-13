@@ -792,7 +792,7 @@
     }
 
     .info {
-        font-size: 1.1em;
+        font-size: 0.5em;
     }
 
     /*============ Footer Styles ============*/
@@ -1799,7 +1799,7 @@
     }
 
     .info {
-        font-size: 1.1em;
+        font-size: 0.5em;
     }
 
     /*============ Footer Styles ============*/
@@ -1950,7 +1950,7 @@ section:nth-child(even) {
     background-image:url('./assets/img/section__bg.jpeg');
     opacity: 0.9;
     background-size:100%;
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     height:100%;
     width:100%;
@@ -2605,7 +2605,7 @@ section:nth-child(even) {
 }
 
 .info {
-    font-size: 1.1em;
+    font-size: 0.5em;
 }
 
 /*============ Footer Styles ============*/
