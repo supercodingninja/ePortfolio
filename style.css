@@ -1024,7 +1024,7 @@
 
 
 
-/*============================= Generic Styles Section (Universal/One Size Fits All Section) =============================*/
+/*============================= Global Styles Section =============================*/
 /* Ref. https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_sup_default_css */
 sup {
     vertical-align: super;
@@ -1062,7 +1062,7 @@ sup {
 }
 
 .container {
-    padding: 50px 0px;
+    padding: 3.125rem 0;
 }
 
 /* Header Styles. */
@@ -1083,7 +1083,7 @@ h1, h2, h3, h4, h5, h6, span {
 /* Paragraph Style. */
 p {
     line-height: 1.5;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 /* Default list style (set to none in order to remove the page bullets). */
@@ -1093,9 +1093,9 @@ li {
 
 /* Navigation Menu Styles. */
 nav {
-    height: 100px;
+    height: 6.25rem;
     width: 100%;
-    max-width: 1000px;
+    max-width: 62.5rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -1119,7 +1119,7 @@ section:nth-child(even) {
 /*============ About Me Section. ============*/
 /* My Signature Header <h2> */
 .about-me__info--subtitle {
-    padding: 7px;
+    padding: 0.438em;
     background: linear-gradient(to right, #71713a, #544478);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1141,18 +1141,61 @@ section:nth-child(even) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 625px;
+    max-width: 39.063em;
     margin: 0 auto;
     text-align: center;
 }
 
 .about-me__picture--mask {
-    width: 100px;
-    height: 100px;
+    width: 6.25em;
+    height: 6.25em;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 8px 16px rgba(0,0,0, 0.16);
-    margin-bottom: 12px;
+    box-shadow: 0 0.5em 1em rgba(0,0,0, 0.16);
+    margin-bottom: 0.75em;
+}
+
+/* Ref. yochans (https://codepen.io/yochans) */
+.picThis {
+    position: relative;
+    width: 6.25em;
+    max-width: 100%;
+    height: 6.25em;
+}
+
+.cldntpck {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    animation: change-img-anim 30s infinite;
+}
+
+.cldntpck:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.cldntpck:nth-of-type(2) {
+    animation-delay: 5s;
+}
+
+.cldntpck:nth-of-type(3) {
+    animation-delay: 10s;
+}
+
+.cldntpck:nth-of-type(4) {
+    animation-delay: 15s;
+}
+
+.cldntpck:nth-of-type(5) {
+    animation-delay: 21s;
+}
+
+@keyframes change-img-anim {
+    0%{ opacity: 0.5;}
+    20%{ opacity: 1;}
+    40%{ opacity: 1;}
+    60%{ opacity: 1;}
+    100%{ opacity: 0.9;}
 }
 
 .about-me__picture {
@@ -1160,15 +1203,15 @@ section:nth-child(even) {
     
     /* Zoomed Picture In. */
     transform: scale(1.23);
-    padding-bottom: 8px;
+    padding-bottom: 0.5em;
     align-items: center;
 }
 
 .about-me__info--passage {
     color: #6030b1;
     font-size: 1.1em;
-    margin-top: 2px;
-    margin-bottom: 12px;
+    margin-top: 0.125em;
+    margin-bottom: 0.75em;
 }
 
 /* Bold and Colored letterimg in Intro. paragraph in "About Me" Section. */
@@ -1202,12 +1245,13 @@ section:nth-child(even) {
 }
 
 /* Specific Header 1 Style Given.  In the tutorial David Bragg led for us to along with him (pause to do our thing, etc.), so it does not affect any other <h1> tags. */
-.h1 {
+.about-me__info--title {
     font-size: 2em;
 }
 
 /* Wave Hello */
 .sayHello {
+    font-size: 0.7em;
     display: inline-block;
     animation: animate-wave 1.3s infinite ease-in-out;
 }
@@ -1238,7 +1282,7 @@ nav input[type='checkbox'], nav label {
 
 /* Anchor styles. */
 .nav__link--anchor {
-    margin: 0 12px;
+    margin: 0 0.75em;
     color: #242424;
     text-decoration: none;
     font-weight: 700;
@@ -1247,8 +1291,8 @@ nav input[type='checkbox'], nav label {
 /* Contact Button Style.*/
 .nav__link--anchor-primary {
     background: linear-gradient(to right, #71713a, #544478);
-    padding: 8px 20px;
-    border-radius: 50px;
+    padding: 0.5em 1.25em;
+    border-radius: 3.125em;
     color: white;
     transition: all 300ms ease;
 }
@@ -1261,9 +1305,9 @@ nav input[type='checkbox'], nav label {
 .link__hover-effect:after {
     content: "";
     position: absolute;
-    height: 3px;
+    height: 0.188em;
     width: 0;
-    bottom: -3px;
+    bottom: -0.188em;
     right: 0;
     transition: all 300ms ease;
 }
@@ -1306,7 +1350,7 @@ nav input[type='checkbox'], nav label {
 /* I didn't like the name scheme in the personal logo: because I knew that I would confuse this code for my actual logo (later use); therefore, I change the name scheme to avoid a potential naming conflict, and to practice better semantics regarding myself. THIS IS THE BIG NAME OPENING. */
 .BIG {
     font-size: 1.5em;
-    margin: 0 12px;
+    margin: 0 0.75em;
     font-weight: bold;
     background: linear-gradient(to right, #71713a, #544478, #71713a, #544478);
     -webkit-background-clip: text;
@@ -1315,14 +1359,14 @@ nav input[type='checkbox'], nav label {
 
 .row {
     width: 100%;
-    max-width: 800px;
+    max-width: 50em;
     margin: 0 auto;
-    padding: 0 12px;
+    padding: 0 0.75em;
 }
 
 /* Since David stated we could make this any color that we want, I just went ahead with adding my flare and style. */
 .myPreference {
-    padding: 7px;
+    padding: 0.438em;
     background: linear-gradient(to right, #544478, #71713a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1340,8 +1384,8 @@ nav input[type='checkbox'], nav label {
     font-size: 2em;
     /* Remember that the syntax for box-shadow is: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];  Ref. https://css-tricks.com/almanac/properties/b/box-shadow/ */
     /* Other Ref. https://www.w3schools.com/css/css3_shadows_box.asp#:~:text=Set%20the%20Spread%20Radius%20of,the%20size%20of%20the%20shadow. */
-    box-shadow: 3px 3px 3px 3px rgb(2,0,36);
-    background: radial-gradient(circle, rgba(2,0,36,0.6363139005602241) 0%, rgba(9,9,121,0.6223082983193278) 35%, rgba(65,72,74,0.6727284663865547) 100%); border-radius: 45px;
+    box-shadow: 0.188em 0.188em 0.188em 0.188em rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,0.6363139005602241) 0%, rgba(9,9,121,0.6223082983193278) 35%, rgba(65,72,74,0.6727284663865547) 100%); border-radius: 2.813em;
 }
 
 /* Ref. Effect https://www.w3schools.com/howto/howto_css_glowing_text.asp */
@@ -1357,10 +1401,10 @@ nav input[type='checkbox'], nav label {
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 .9px #4169e3, 0 0 .9px #F99245, 0 0 .9px white;
+    text-shadow: 0 0 0.056 #4169e3, 0 0 0.056 #F99245, 0 0 0.056 white;
   }
   to {
-    text-shadow: 0 0 .82px white, 0 0 .82px #F99245, 0 0 .82px #4169e1;
+    text-shadow: 0 0 0.051em white, 0 0 0.051em #F99245, 0 0 0.051em #4169e1;
   }
 }
 
@@ -1382,12 +1426,12 @@ nav input[type='checkbox'], nav label {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 25px 16px;
+    padding: 1.563em 1em;
 }
 
 .tech__img {
     width: 100%;
-    max-width: 100px;
+    max-width: 6.25em;
     transition: all 300ms;
 }
 
@@ -1415,8 +1459,8 @@ nav input[type='checkbox'], nav label {
 
 .alt2groovy {
     background: linear-gradient(to right, red, yellow, green);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .addTech:hover .tech__name {
@@ -1452,10 +1496,10 @@ nav input[type='checkbox'], nav label {
     /* I actually stumbled upon this playing around; and then I looked up the information to learn what I did to cause this effect, exactly. Ref. https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text */
     transform: scale(1, -1);
     align-items: center;
-    padding-top: 8px;
-    box-shadow: 3px 3px 3px 3px rgb(2, 0, 36);
+    padding-top: 0.5em;
+    box-shadow: 0.188em 0.188em 0.188em 0.188em rgb(2, 0, 36);
     background: radial-gradient(circle, rgba(65, 105, 227, 1.0) 0%, rgba(249, 146, 69, 1.0) 35%, rgba(61, 66, 68, 0.673) 100%);
-    border-radius: 50px;
+    border-radius: 3.125em;
 }
 
 
@@ -1465,25 +1509,25 @@ nav input[type='checkbox'], nav label {
 /* Projects' Header */
 .pj {
     font-size: 2em;
-    margin: 0 0 0 7px;
+    margin: 0 0 0 0.438em;
     font-weight: bold;
     background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .project__list {
-    padding-top: 40px;
+    padding-top: 2.5em;
 }
 
 .project {
-    margin-bottom: 135px;
+    margin-bottom: 8.438em;
 }
 
 .project__wrapper {
     display: flex;
-    box-shadow: 0 20px 80px rgba(58, 78, 118, 0.45);
-    border-radius: 20px;
+    box-shadow: 0 1.25em 5em rgba(58, 78, 118, 0.45);
+    border-radius: 1.25em;
     overflow: hidden;
     position: relative;
 }
@@ -1514,15 +1558,15 @@ nav input[type='checkbox'], nav label {
 
 .project:hover .project__img {
     transform: scale(2);
-    filter: blur(5px);
+    filter: blur(0.313em);
 }
 
 .project__description {
     position: absolute;
     top: 50%;
-    left: 90px;
+    left: 5.625em;
     transform: translateY(100%);
-    max-width: 600px;
+    max-width: 37.5em;
     z-index: 3;
     opacity: 0;
     transition: transform 450ms ease, opacity 300ms ease;
@@ -1735,17 +1779,17 @@ nav input[type='checkbox'], nav label {
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 .9px firebrick, 0 0 .9px darkorange, 0 0 .9px #F99245, 0 0 .9px #ffeb4b, 0 0 .9px white;
+    text-shadow: 0 0 0.056em firebrick, 0 0 0.056em darkorange, 0 0 0.056em #F99245, 0 0 0.056em #ffeb4b, 0 0 0.056em white;
   }
   to {
-    text-shadow: 0 0 .82px white, 0 0 .82px #ffeb4b, 0 0 .82px #F99245, 0 0 .82px darkorange, 0 0 .82px firebrick;
+    text-shadow: 0 0 0.051em white, 0 0 0.051em #ffeb4b, 0 0 0.051em #F99245, 0 0 0.051em darkorange, 0 0 0.051em firebrick;
   }
 }
 
 /* Passage about my project. */
 .project__passage {
     text-align: left;
-    margin: 22px 0;
+    margin: 1.375em 0;
     font-weight: 600;
     background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
     -webkit-background-clip: text;
@@ -1755,7 +1799,7 @@ nav input[type='checkbox'], nav label {
 .project__links {
     text-align: left;
     font-size: 1.1em;
-    margin-right: 21px;
+    margin-right: 1.313em;
     text-decoration: none;
     background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
     -webkit-background-clip: text;
@@ -1763,7 +1807,7 @@ nav input[type='checkbox'], nav label {
 }
 
 .project:last-child {
-    margin-bottom: 50px;
+    margin-bottom: 3.125em;
 }
 
 .info {
@@ -1789,40 +1833,40 @@ footer {
 }
 
 .footer__anchor {
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
     position: relative;
 }
 
 .footer__logo--img {
-    width: 82px;
-    height: 82px;
+    width: 5.125em;
+    height: 5.125em;
 }
   
 .footer__logo--img {
-    width: 82px;
-    height: 82px;
+    width: 5.125em;
+    height: 5.125em;
 }
 
 .footer__logo--popper {
     position: absolute;
     right: 0;
-    top: 36px;
+    top: 2.25em;
     font-weight: 700;
     opacity: 0;
     transition: all 300ms ease;
 }
 
 .footer__anchor:hover .footer__logo--popper {
-    transform: translateX(55px);
+    transform: translateX(3.438em);
     opacity: 1;
 }
 
 .footer__social--list {
     width: 100%;
-    max-width: 550px;
+    max-width: 34.375em;
     display: flex;
     justify-content: space-around;
-    margin-bottom: 28px;
+    margin-bottom: 1.75em;
 }
   
 .footer__social--link,
