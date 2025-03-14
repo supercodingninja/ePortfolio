@@ -5,857 +5,7 @@
 /* Reference https://getbem.com/ "BEM — is a methodology that helps you to create reusable components and code sharing in front‑end development" */
 
 @media only screen  and (min-device-width: 1024px) and (orientation: landscape) {
-    /*============================= Generic Styles Section (One Size Fits All Section) =============================*/
-    /* Ref. https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_sup_default_css */
-    sup {
-        vertical-align: super;
-        font-size: xx-small;
-    }
 
-    .sup2 {
-        vertical-align: super;
-        font-size: small;
-    }
-
-    /* WORKING THOUGHT
-    .III {
-        text-align: center;
-        -webkit-animation: glow 1.3s ease-in-out infinite alternate;
-        -moz-animation: glow 1.3s ease-in-out infinite alternate;
-        animation: glow 1.3s ease-in-out infinite alternate;
-        text-decoration: none; 
-    } */
-
-    .sup3 {
-        vertical-align: super;
-        font-size: medium;
-    }
-
-    /* Choice of font to be utilize. */
-    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-    /* Font Style. */
-    * {
-        font-family: 'Lato', serif;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-
-    .container {
-        padding: 50px 0px;
-    }
-
-    /* Header Styles. */
-    h1, h2, h3, h4, h5, h6, span {
-        color: #6030b1;
-        text-align: center;
-        line-height: 1.25;
-    }
-
-    .flex {
-        display: flex;
-    }
-
-    .flex-1{
-        flex: 1;
-    }
-
-    /* Paragraph Style. */
-    p {
-        line-height: 1.5;
-        font-size: 1em;
-    }
-
-    /* Default list style (set to none in order to remove the page bullets). */
-    li {
-        list-style: none;
-    }
-
-    /* Navigation Menu Styles. */
-    nav {
-        height: 100px;
-        width: 100%;
-        max-width: 1000px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    /* BACKGROUND FOR CONTAINER: EXCELLENT For Reusable Code: this one does the all of the even sections (2...4...6, etc.) providing a contrast between the sections when hovered over. */
-    section:nth-child(even) {
-        background-image:url('./assets/img/section__bg.jpeg');
-        opacity: 0.9;
-        background-size:100%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        height:100%;
-        width:100%;
-    }
-
-
-
-    /*=============================================== Specific Styles Section ===============================================*/
-    /*============ About Me Section. ============*/
-    /* My Signature Header <h2> */
-    .about-me__info--subtitle {
-        padding: 7px;
-        background: linear-gradient(to right, #71713a, #544478);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    }
-
-    /* Look for ID */
-    #about-me {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .about-me__info {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .about-me__info--container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 625px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .about-me__picture--mask {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        overflow: hidden;
-        box-shadow: 0 8px 16px rgba(0,0,0, 0.16);
-        margin-bottom: 12px;
-    }
-
-    .about-me__picture {
-        width: 100%;
-        
-        /* Zoomed Picture In. */
-        transform: scale(1.23);
-        padding-bottom: 8px;
-        align-items: center;
-    }
-
-    /* Ref. yochans (https://codepen.io/yochans) */
-    .picThis {
-        position: relative;
-        width: 500px;
-        max-width: 100%;
-        height: 400px;
-    }
-    
-    .cldntpck {
-        position: absolute;
-        width: 100%;
-        opacity: 0;
-        animation: change-img-anim 30s infinite;
-    }
-    
-    .cldntpck:nth-of-type(1) {
-        animation-delay: 0s;
-    }
-
-    .cldntpck:nth-of-type(2) {
-        animation-delay: 7s;
-    }
-
-    .cldntpck:nth-of-type(3) {
-        animation-delay: 14s;
-    }
-
-    .cldntpck:nth-of-type(4) {
-        animation-delay: 21s;
-    }
-
-    .cldntpck:nth-of-type(5) {
-        animation-delay: 28s;
-    }
-    
-    @keyframes change-img-anim {
-        0%{ opacity: 0.5;}
-        20%{ opacity: 1;}
-        40%{ opacity: 1;}
-        60%{ opacity: 1;}
-        100%{ opacity: 0.9;}
-    }
-
-    .about-me__info--passage {
-        font-size: 1.1em;
-        margin-top: 2px;
-        margin-bottom: 12px;
-    }
-
-    /* Bold and Colored letterimg in Intro. paragraph in "About Me" Section. */
-    .emph {
-        font-weight: 700;
-        background: linear-gradient(to right, #71713a, #544478);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    }
-
-    .emph2 {
-        font-weight: 900;
-        text-decoration: underline;
-        background: linear-gradient(to right, #71713a, #544478);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    }
-
-    .about-me__img--container {
-        flex: 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .about-me__img {
-        width: 70%;
-        height: 100%;
-        justify-content: center;
-    }
-
-    /* Specific Header 1 Style Given.  In the tutorial David Bragg led for us to along with him (pause to do our thing, etc.), so it does not affect any other <h1> tags. */
-    .h1 {
-        font-size: 2em;
-    }
-
-    /* Wave Hello */
-    .sayHello {
-        display: inline-block;
-        animation: animate-wave 1.3s infinite ease-in-out;
-    }
-
-    @keyframes animate-wave {
-        0% {
-            transform: rotate(0);
-        }
-        
-        50% {
-            transform: rotate(30deg);
-        }
-
-        100% {
-            transform: rotate(0);
-        }
-    }
-
-    /*============ Navigation Menu Styles ============*/
-    /* How the list was made to line up vs. being stack upon one another. */
-    nav input[type='checkbox'], nav label {
-        display: none;
-    }
-    
-    .nav__link--list {
-        display: flex;
-    }
-
-    /* Anchor styles. */
-    .nav__link--anchor {
-        margin: 0 12px;
-        color: #242424;
-        text-decoration: none;
-        font-weight: 700;
-    }
-
-    /* Contact Button Style.*/
-    .nav__link--anchor-primary {
-        background: linear-gradient(to right, #71713a, #544478);
-        padding: 8px 20px;
-        border-radius: 50px;
-        color: white;
-        transition: all 300ms ease;
-    }
-
-    .nav__link--anchor-primary:hover {
-        background: rgb(84,68,120);
-        background: linear-gradient(90deg, rgba(84,68,120,0.7687861271676301) 18%, rgba(0,0,0,1) 63%);
-    }
-
-    .link__hover-effect:after {
-        content: "";
-        position: absolute;
-        height: 3px;
-        width: 0;
-        bottom: -3px;
-        right: 0;
-        transition: all 300ms ease;
-    }
-
-    .link__hover-effect--white:after {
-        background-color: white;
-    }
-
-    .link__hover-effect--black:after {
-        background-color: #71713a;
-    }
-
-    .link__hover-effect:hover:after {
-        width: 100%;
-        left: 0;
-    }
-
-    /* THIS INTERFERES WITH MY with my <sup class="SUP2">! DO NOT WANT THIS TO TARGET EVERYTHING. Really cool approach; but it will take me more work to rebuild my site, rather using this as an individual class. KEEP IN CODE FOR POSSIBLE FUTURE USE. This is new to me (CSS4 tag, and currently CSS4 is still in draft mode, but some browsers have already implemented it). CSS is now versioned as a series of modules, with each module containing a specific set of features: the "i" selector Ref. https://stackoverflow.com/questions/27506735/what-does-i-mean-in-a-css-attribute-selector I have used a hover effect before, but not targeting with this selector (I think it was more of and ID/class). */
-    /* i:hover {
-        opacity: 0.9;
-    } */
-    /* Use instead */
-    .navEffect:hover {
-        opacity: 0.9;
-    }
-
-    /* THIS INTERFERES WITH MY PERSONAL HOVER EFFECTS! DO NOT WANT THIS TO TARGET EVERYTHING. Really cool approach; but it will take me more work to rebuild my site, rather using this as an individual class. KEEP IN CODE FOR POSSIBLE FUTURE USE.I don't recall using this selector before; but it does seem familiar. I've used this underline effect, before, i just can't remember where; and I think I did it differently.  This seems much more effective and cleaner. */
-    /* a {
-        text-decoration: none;
-        position: relative;
-        transition: opacity 300ms ease;
-    } */
-    /* Use instead */
-    .navEffect {
-        text-decoration: none;
-        position: relative;
-        transition: opacity 300ms ease;
-    }
-
-    /* I didn't like the name scheme in the personal logo: because I knew that I would confuse this code for my actual logo (later use); therefore, I change the name scheme to avoid a potential naming conflict, and to practice better semantics regarding myself. THIS IS THE BIG NAME OPENING. */
-    .BIG {
-        font-size: 1.5em;
-        margin: 0 12px;
-        font-weight: bold;
-        background: linear-gradient(to right, #71713a, #544478, #71713a, #544478);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    }
-
-    .row {
-        width: 100%;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0 12px;
-    }
-
-    /* Since David stated we could make this any color that we want, I just went ahead with adding my flare and style. */
-    .myPreference {
-        padding: 7px;
-        background: linear-gradient(to right, #544478, #71713a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    }
-
-
-    /*============ Tech Stack Section ============*/
-    /* #techStack {} */
-
-    /* Tech Stack Header. */
-    .tech__section__title {
-        /* Ref. https://blog.webdevsimplified.com/2022-08/css-viewport-units/#:~:text=vw%20stands%20for%20Viewport%20Width,the%20width%20of%20your%20viewport. */
-        width: 10vi; /* 250px */
-        /* Ref. https://developer.mozilla.org/en-US/docs/Web/CSS/z-index */
-        font-size: 2em;
-        /* Remember that the syntax for box-shadow is: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];  Ref. https://css-tricks.com/almanac/properties/b/box-shadow/ */
-        /* Other Ref. https://www.w3schools.com/css/css3_shadows_box.asp#:~:text=Set%20the%20Spread%20Radius%20of,the%20size%20of%20the%20shadow. */
-        box-shadow: 3px 3px 3px 3px rgb(2,0,36);
-        background: radial-gradient(circle, rgba(2,0,36,0.6363139005602241) 0%, rgba(9,9,121,0.6223082983193278) 35%, rgba(65,72,74,0.6727284663865547) 100%); border-radius: 45px;
-    }
-
-    /* Ref. Effect https://www.w3schools.com/howto/howto_css_glowing_text.asp */
-    .whenUgotDaGlow {
-        background: linear-gradient(to top, #F99242, #Dc4D01);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-align: center;
-        -webkit-animation: glow 0.7s ease-in-out infinite alternate;
-        -moz-animation: glow 0.7s ease-in-out infinite alternate;
-        animation: glow 0.7s ease-in-out infinite alternate;
-    }
-
-    @-webkit-keyframes glow {
-        from {
-            text-shadow: 0 0 .9px #4169e3, 0 0 .9px #F99245, 0 0 .9px white;
-        }
-        
-        to {
-            text-shadow: 0 0 .82px white, 0 0 .82px #F99245, 0 0 .82px #4169e1;
-        }
-    }
-
-    .tech__list {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        flex-wrap: wrap;
-    }
-
-    .addTech {
-        width: 25%;
-        display: flex;
-        justify-content: center;
-        position: relative;
-    }
-
-    .tech__img--wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 25px 16px;
-    }
-
-    .tech__img {
-        width: 100%;
-        max-width: 100px;
-        transition: all 300ms;
-    }
-
-    .addTech:hover .tech__img {
-        filter: brightness(80%);
-        opacity: 0.86;
-        transform: scale(0.9);
-    }
-
-    .tech__name {
-        position: absolute;
-        bottom: 0;
-        transform: scale(2);
-        transition: all 300ms ease;
-        opacity: 0;
-        font-weight: 900;
-        font-size: 1.8em;
-    }
-
-    .groovy {
-        background: linear-gradient(to right, #000700, red, #000700, orange,#000700, yellow,#000700, green,#000700, blue,#000700, indigo,#000700, violet);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .alt2groovy {
-        background: linear-gradient(to right, red, yellow, green);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    }
-
-    .addTech:hover .tech__name {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    .addTech:hover .tech__name {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    /* AI Chatbot Icon I had to make, so that I could include A NEW TECHNOLOGY that I learned within my Tech Stack!  I'm pretty proud of myslef for how it came out; and I am trying to learn a better transition style/way for it to be almost instant/quicker: I want the two different files I save for the AI Chatbot icon to appear as if the robot just suddenly started speaking to you when you hovered over.  What I am most proud of myelf is how I made the "Click Me" work!  If they do not go through all of my projects (because this will be at the end of my stack), then they will see this first (who can't resist pressing buttons and clicking hyperlinks on a site you've already deemed safe). */
-    .topSpace {
-        position: absolute;
-        align-items: center;
-        justify-content: center;
-        top: 0;
-        transform: scale(0);
-        transition: all 300ms ease;
-        font-size: 1.5em;
-        opacity: 0;
-    }
-
-    .topSpace:hover .tech__name {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    .expess {
-        height: 65%;
-        width: 100%;
-        /* I actually stumbled upon this playing around; and then I looked up the information to learn what I did to cause this effect, exactly. Ref. https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text */
-        transform: scale(1, -1);
-        align-items: center;
-        padding-top: 8px;
-        box-shadow: 3px 3px 3px 3px rgb(2, 0, 36);
-        background: radial-gradient(circle, rgba(65, 105, 227, 1.0) 0%, rgba(249, 146, 69, 1.0) 35%, rgba(61, 66, 68, 0.673) 100%);
-        border-radius: 50px;
-    }
-
-
-    /*============ Projects' Styles ============*/
-    /* #projectSection {} */
-
-    /* Projects' Header */
-    .pj {
-        font-size: 2em;
-        margin: 0 0 0 7px;
-        font-weight: bold;
-        background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    }
-
-    .project__list {
-        padding-top: 40px;
-    }
-
-    .project {
-        margin-bottom: 135px;
-    }
-
-    .project__wrapper {
-        display: flex;
-        box-shadow: 0 20px 80px rgba(58, 78, 118, 0.45);
-        border-radius: 20px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .project__wrapper:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #1c1d25;
-        opacity: 0;
-        transition: all 450ms ease;
-        z-index: 2;
-        transform: translateY(100%);
-    }
-
-    .project:hover .project__wrapper:before {
-        transform: translateY(0);
-        opacity: 0.7;
-    }
-
-    .project__img {
-        width: 100%;
-        transition: all 500ms ease;
-    }
-
-    .project:hover .project__img {
-        transform: scale(2);
-        filter: blur(5px);
-    }
-
-    .project__description {
-        position: absolute;
-        top: 50%;
-        left: 90px;
-        transform: translateY(100%);
-        max-width: 600px;
-        z-index: 3;
-        opacity: 0;
-        transition: transform 450ms ease, opacity 300ms ease;
-    }
-
-    .project:hover .project__description {
-        opacity: 1;
-        transform: translateY(-50%);
-    }
-
-    .project__title {
-        text-align: left;
-        font-size: 3em;
-        font-weight: bold;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    /* I want to target the projects sub-title. */
-    .project__sub-title {
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 1.8em;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        align-content: left;
-    }
-
-    /*Ref. https://stackoverflow.com/questions/9913293/change-text-on-hover-then-return-to-the-previous-text */
-    .first:hover span {
-        display: none;
-    }
-
-    .first:hover::before {
-        content: "HTML5 30.3% | CSS3 55.8% | JavaScript 13.9%";
-        font-size: 1.5em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .second:hover span {
-        display: none;
-    }
-
-    .second:hover::before {
-        content: "JavaScript 53.7% | HTML5 24.4% | CSS3 21.9%";
-        font-size: 1.5em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .third:hover span {
-        display: none;
-    }
-
-    .third:hover::before {
-        content: "HTML5 74.2% | JavaScript 17.1% | CSS3 8.7%";
-        font-size: 1.5em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .fourth:hover span {
-        display: none;
-    }
-
-    .fourth:hover::before {
-        content: "HTML5 100.0% (simplified by <style> & <script>) ";
-        font-size: 1.5em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .fifth:hover span {
-        display: none;
-    }
-
-    .fifth:hover::before {
-        content: "JavaScript 100.0%";
-        font-size: 1.5em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .sixth:hover span {
-        display: none;
-    }
-
-    .sixth:hover::before {
-        content: "JavaScript 66.0% | HTML5 23.6% | CSS3 10.4%";
-        font-size: 1.5em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .seventh:hover span {
-        display: none;
-    }
-
-    .seventh:hover::before {
-        content: "JavaScript 100.0%";
-        font-size: 1.5em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .eighth:hover span {
-        display: none;
-    }
-
-    .eighth:hover::before {
-        content: "JavaScript 82.7% | HTML5 12.5% | CSS3 4.8%";
-        font-size: 1.5em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .ninth:hover span {
-        display: none;
-    }
-
-    .ninth:hover::before {
-        content: "TypeScript 90.5 | CSS3 4.7% | HTML5 3.1% | JavaScript 1.7% | Other Technologies include JWT, NPM, MongoBD, Saas, and more!";
-        font-size: 1.5em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .tenth:hover span {
-        display: none;
-    }
-
-    .tenth:hover::before {
-        content: "JavaScript 62.1% | CSS3 36.2% | HTML5 1.6% | Shell 0.1%";
-        font-size: 1.3em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .technolgies {
-        /* Ref. https://stackoverflow.com/questions/15441742/change-last-letter-color */
-        float: left;
-        unicode-bidi: bidi-override;
-        direction: rtl;
-        font-size: 1.8em;
-        align-items: left;
-        justify-content: left;
-        text-align: left;
-    }
-
-    .technolgies:first-letter {
-        color: #ffeb4b;
-        font-weight: bold;
-        font-size: 1em;
-    }
-
-    .glow {
-        background: linear-gradient(to top, #F99242, darkorange);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-align: center;
-        -webkit-animation: glow 0.3s ease-in-out infinite alternate;
-        -moz-animation: glow 0.3s ease-in-out infinite alternate;
-        animation: glow 0.3s ease-in-out infinite alternate;
-        text-decoration: none;
-    }
-
-    .glow2 {
-        background: linear-gradient(to top, #F99242, darkorange);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-align: center;
-        -webkit-animation: glow 0.7s ease-in-out infinite alternate;
-        -moz-animation: glow 0.7s ease-in-out infinite alternate;
-        animation: glow 0.7s ease-in-out infinite alternate;
-        text-decoration: none;
-    }
-
-    .glow3 {
-        background: linear-gradient(to top, #F99242, darkorange);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-align: center;
-        -webkit-animation: glow 0.9s ease-in-out infinite alternate;
-        -moz-animation: glow 0.9s ease-in-out infinite alternate;
-        animation: glow 0.9s ease-in-out infinite alternate;
-        text-decoration: none;
-    }
-
-    @-webkit-keyframes glow {
-        from {
-            text-shadow: 0 0 .9px firebrick, 0 0 .9px darkorange, 0 0 .9px #F99245, 0 0 .9px #ffeb4b, 0 0 .9px white;
-        }
-
-        to {
-            text-shadow: 0 0 .82px white, 0 0 .82px #ffeb4b, 0 0 .82px #F99245, 0 0 .82px darkorange, 0 0 .82px firebrick;
-        }
-    }
-
-    /* Passage about my project. */
-    .project__passage {
-        text-align: left;
-        margin: 22px 0;
-        font-weight: 600;
-        background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .project__links {
-        text-align: left;
-        font-size: 1.5em;
-        margin-right: 21px;
-        text-decoration: none;
-        background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .project:last-child {
-        margin-bottom: 50px;
-    }
-
-    .info {
-        font-size: 0.5em;
-    }
-
-    /*============ Footer Styles ============*/
-    footer {
-        text-decoration: none;
-        background-color: #000700;
-    }
-
-    .icon {
-        font-size: larger;
-    }
-
-    .footer__row {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 8% 0;
-    }
-
-    .footer__anchor {
-        margin-bottom: 20px;
-        position: relative;
-    }
-
-    .footer__logo--img {
-        width: 82px;
-        height: 82px;
-    }
-
-    .footer__logo--popper {
-        position: absolute;
-        right: 0;
-        top: 36px;
-        font-weight: 900;
-        font-size: larger;
-        opacity: 0;
-        transition: all 300ms ease;
-        text-align: center;
-        -webkit-animation: glow 1.3s ease-in-out infinite alternate;
-        -moz-animation: glow 1.3s ease-in-out infinite alternate;
-        animation: glow 1.3s ease-in-out infinite alternate;
-        text-decoration: none;
-    }
-
-    .footer__anchor:hover .footer__logo--popper {
-        transform: translateX(55px);
-        opacity: 1;
-    }
-
-    .footer__social--list {
-        width: 100%;
-        max-width: 550px;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 28px;
-    }
-    
-    .footer__social--link,
-    .footer__copyright,
-    .footer__logo--popper {
-        color: white;
-    }
 } 
     
 @media only screen  and (min-device-width: 1024px) and (orientation: portrait) {
@@ -943,7 +93,7 @@
     h1, h2, h3, h4, h5, h6, span {
         color: #6030b1;
         text-align: center;
-        line-height: 1.25;
+        line-height: 0.25rem;
     }
 
     .flex {
@@ -956,8 +106,8 @@
 
     /* Paragraph Style. */
     p {
-        line-height: 1.5;
-        font-size: 0.8em;
+        line-height: 0.25rem;
+        font-size: 0.5em;
     }
 
     /* Default list style (set to none in order to remove the page bullets). */
@@ -981,10 +131,13 @@
         background-image:url('./assets/img/section__bg.jpeg');
         opacity: 0.9;
         background-size:100%;
-        background-repeat: no-repeat;
+        background-repeat:repeat-y;
         background-attachment: fixed;
-        height:100%;
-        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height:100vh;
+        width:100vw;
     }
 
 
@@ -995,8 +148,8 @@
     .about-me__info--subtitle {
         padding: 7px;
         background: linear-gradient(to right, #71713a, #544478);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     /* Look for ID */
@@ -1041,9 +194,9 @@
     /* Ref. yochans (https://codepen.io/yochans) */
     .picThis {
         position: relative;
-        width: 500px;
+        width: 100px;
         max-width: 100%;
-        height: 400px;
+        height: 100px;
     }
     
     .cldntpck {
@@ -1058,19 +211,19 @@
     }
 
     .cldntpck:nth-of-type(2) {
-        animation-delay: 7s;
+        animation-delay: 5s;
     }
 
     .cldntpck:nth-of-type(3) {
-        animation-delay: 14s;
+        animation-delay: 10s;
     }
 
     .cldntpck:nth-of-type(4) {
-        animation-delay: 21s;
+        animation-delay: 15s;
     }
 
     .cldntpck:nth-of-type(5) {
-        animation-delay: 28s;
+        animation-delay: 21s;
     }
     
     @keyframes change-img-anim {
@@ -1118,14 +271,15 @@
     }
 
     /* Specific Header 1 Style Given.  In the tutorial David Bragg led for us to along with him (pause to do our thing, etc.), so it does not affect any other <h1> tags. */
-    .h1 {
-        font-size: 2em;
+    .about-me__info--title {
+        font-size: 1.4em;
     }
 
     /* Wave Hello */
     .sayHello {
         display: inline-block;
         animation: animate-wave 1.3s infinite ease-in-out;
+        font-size: 0.7em;
     }
 
     @keyframes animate-wave {
@@ -1176,18 +330,22 @@
         opacity: 0;
     }
     
+    #menu__toggle ~ .sayHello {
+        z-index: -1;
+    }
+    
     #menu__toggle:checked ~ .menu__btn > span {
-        transform: rotate(45deg);
+        transform: rotate(360deg);
     }
 
     #menu__toggle:checked ~ .menu__btn > span::before {
         top: 0;
-        transform: rotate(0);
+        transform: rotate(82deg);
     }
 
     #menu__toggle:checked ~ .menu__btn > span::after {
         top: 0;
-        transform: rotate(90deg);
+        transform: rotate(570deg);
     }
 
     #menu__toggle:checked ~ .hamburger__sandwich {
@@ -1199,8 +357,8 @@
         display: flex;
         align-items: center;
         position: fixed;
-        top: 20px;
-        left: 20px;
+        top: 35px;
+        left: 280px;
         width: 26px;
         height: 26px;
         cursor: pointer;
@@ -1220,12 +378,12 @@
 
     .menu__btn > span::before {
         content: '';
-        top: -8px;
+        top: -5px;
     }
 
     .menu__btn > span::after {
         content: '';
-        top: 8px;
+        top: 5px;
     }
     
     .hamburger__sandwich {
@@ -1477,7 +635,7 @@
         opacity: 1;
     }
 
-    .expess {
+    .express {
         height: 65%;
         width: 100%;
         /* I actually stumbled upon this playing around; and then I looked up the information to learn what I did to cause this effect, exactly. Ref. https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text */
@@ -1576,7 +734,7 @@
     /* I want to target the projects sub-title. */
     .project__sub-title {
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 1.8em;
+        font-size: 1em;
         text-align: left;
         display: flex;
         flex-direction: column;
@@ -1590,7 +748,7 @@
 
     .first:hover::before {
         content: "HTML5 30.3% | CSS3 55.8% | JavaScript 13.9%";
-        font-size: 1.5em;
+        font-size: 1em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1603,7 +761,7 @@
 
     .second:hover::before {
         content: "JavaScript 53.7% | HTML5 24.4% | CSS3 21.9%";
-        font-size: 1.5em;
+        font-size: 1em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1616,7 +774,7 @@
 
     .third:hover::before {
         content: "HTML5 74.2% | JavaScript 17.1% | CSS3 8.7%";
-        font-size: 1.5em;
+        font-size: 1em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1629,7 +787,7 @@
 
     .fourth:hover::before {
         content: "HTML5 100.0% (simplified by <style> & <script>) ";
-        font-size: 1.5em;
+        font-size: 1em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1642,7 +800,7 @@
 
     .fifth:hover::before {
         content: "JavaScript 100.0%";
-        font-size: 1.5em;
+        font-size: 1em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1655,7 +813,7 @@
 
     .sixth:hover::before {
         content: "JavaScript 66.0% | HTML5 23.6% | CSS3 10.4%";
-        font-size: 1.5em;
+        font-size: 1em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1668,7 +826,7 @@
 
     .seventh:hover::before {
         content: "JavaScript 100.0%";
-        font-size: 1.5em;
+        font-size: 1em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1681,7 +839,7 @@
 
     .eighth:hover::before {
         content: "JavaScript 82.7% | HTML5 12.5% | CSS3 4.8%";
-        font-size: 1.5em;
+        font-size: 1em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1694,7 +852,7 @@
 
     .ninth:hover::before {
         content: "TypeScript 90.5 | CSS3 4.7% | HTML5 3.1% | JavaScript 1.7% | Other Technologies include JWT, NPM, MongoBD, Saas, and more!";
-        font-size: 1.5em;
+        font-size: 1em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1707,7 +865,7 @@
 
     .tenth:hover::before {
         content: "JavaScript 62.1% | CSS3 36.2% | HTML5 1.6% | Shell 0.1%";
-        font-size: 1.3em;
+        font-size: 1em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1719,7 +877,7 @@
         float: left;
         unicode-bidi: bidi-override;
         direction: rtl;
-        font-size: 1.8em;
+        font-size: 1em;
         align-items: left;
         justify-content: left;
         text-align: left;
@@ -1778,6 +936,7 @@
     .project__passage {
         text-align: left;
         margin: 22px 0;
+        font-size: 0.5em;
         font-weight: 600;
         background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
         -webkit-background-clip: text;
@@ -1786,7 +945,7 @@
 
     .project__links {
         text-align: left;
-        font-size: 1.5em;
+        font-size: 1em;
         margin-right: 21px;
         text-decoration: none;
         background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
@@ -1799,7 +958,7 @@
     }
 
     .info {
-        font-size: 0.5em;
+        font-size: 0.2em;
     }
 
     /*============ Footer Styles ============*/
@@ -1867,7 +1026,7 @@
 
 
 
-/*============================= Generic Styles Section (One Size Fits All Section) =============================*/
+/*============================= Generic Styles Section (Universal/One Size Fits All Section) =============================*/
 /* Ref. https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_sup_default_css */
 sup {
     vertical-align: super;
@@ -2284,7 +1443,7 @@ section:nth-child(even) {
     opacity: 1;
 }
 
-.expess {
+.express {
     height: 65%;
     width: 100%;
     /* I actually stumbled upon this playing around; and then I looked up the information to learn what I did to cause this effect, exactly. Ref. https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text */
@@ -2383,7 +1542,7 @@ section:nth-child(even) {
 /* I want to target the projects sub-title. */
 .project__sub-title {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.8em;
+    font-size: 1.2em;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -2397,7 +1556,7 @@ section:nth-child(even) {
 
 .first:hover::before {
     content: "HTML5 30.3% | CSS3 55.8% | JavaScript 13.9%";
-    font-size: 1.5em;
+    font-size: 1.2em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2410,7 +1569,7 @@ section:nth-child(even) {
 
 .second:hover::before {
     content: "JavaScript 53.7% | HTML5 24.4% | CSS3 21.9%";
-    font-size: 1.5em;
+    font-size: 1.2em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2423,7 +1582,7 @@ section:nth-child(even) {
 
 .third:hover::before {
     content: "HTML5 74.2% | JavaScript 17.1% | CSS3 8.7%";
-    font-size: 1.5em;
+    font-size: 1.2em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2436,7 +1595,7 @@ section:nth-child(even) {
 
 .fourth:hover::before {
     content: "HTML5 100.0% (simplified by <style> & <script>) ";
-    font-size: 1.5em;
+    font-size: 1.2em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2449,7 +1608,7 @@ section:nth-child(even) {
 
 .fifth:hover::before {
     content: "JavaScript 100.0%";
-    font-size: 1.5em;
+    font-size: 1.2em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2462,7 +1621,7 @@ section:nth-child(even) {
 
 .sixth:hover::before {
     content: "JavaScript 66.0% | HTML5 23.6% | CSS3 10.4%";
-    font-size: 1.5em;
+    font-size: 1.2em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2475,7 +1634,7 @@ section:nth-child(even) {
 
 .seventh:hover::before {
     content: "JavaScript 100.0%";
-    font-size: 1.5em;
+    font-size: 1.2em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2488,7 +1647,7 @@ section:nth-child(even) {
 
 .eighth:hover::before {
     content: "JavaScript 82.7% | HTML5 12.5% | CSS3 4.8%";
-    font-size: 1.5em;
+    font-size: 1.2em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2501,7 +1660,7 @@ section:nth-child(even) {
 
 .ninth:hover::before {
     content: "TypeScript 90.5 | CSS3 4.7% | HTML5 3.1% | JavaScript 1.7% | Other Technologies include JWT, NPM, MongoBD, Saas, and more!";
-    font-size: 1.5em;
+    font-size: 1.2em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2514,7 +1673,7 @@ section:nth-child(even) {
 
 .tenth:hover::before {
     content: "JavaScript 62.1% | CSS3 36.2% | HTML5 1.6% | Shell 0.1%";
-    font-size: 1.3em;
+    font-size: 1.2em;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -2526,7 +1685,7 @@ section:nth-child(even) {
     float: left;
     unicode-bidi: bidi-override;
     direction: rtl;
-    font-size: 1.8em;
+    font-size: 1.2em;
     align-items: left;
     justify-content: left;
     text-align: left;
@@ -2592,7 +1751,7 @@ section:nth-child(even) {
 
 .project__links {
     text-align: left;
-    font-size: 1.5em;
+    font-size: 1.1em;
     margin-right: 21px;
     text-decoration: none;
     background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
@@ -2605,7 +1764,7 @@ section:nth-child(even) {
 }
 
 .info {
-    font-size: 0.5em;
+    font-size: 0.6em;
 }
 
 /*============ Footer Styles ============*/
