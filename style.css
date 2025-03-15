@@ -147,7 +147,7 @@
     /* My Signature Header <h2> */
     .about-me__info--subtitle {
         padding: 7px;
-        font-size: 0.8em;
+        font-size: 0.89em !important;
         background: linear-gradient(to right, #71713a, #544478);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -237,7 +237,7 @@
 
     .about-me__info--passage {
         color: #6030b1;
-        font-size: 0.8em;
+        font-size: 0.8em !important;
         margin-top: 0.125em;
         margin-bottom: 0.75em;
     }
@@ -274,7 +274,7 @@
 
     /* Specific Header 1 Style Given.  In the tutorial David Bragg led for us to along with him (pause to do our thing, etc.), so it does not affect any other <h1> tags. */
     .about-me__info--title {
-        font-size: 1.4em;
+        font-size: 1.2em !important;
     }
 
     /* Wave Hello */
@@ -365,12 +365,12 @@
 
     .menu__btn > span::before {
         content: '';
-        top: -0.313em;
+        top: -0.438em;
     }
 
     .menu__btn > span::after {
         content: '';
-        top: 0.313em;
+        top: 0.438em;
         background: linear-gradient(to right, #71713a, #544478); 
         transition-duration: .25s;
     }
@@ -396,14 +396,14 @@
     
     .burger__topping {
         display: block;
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 0.75em 1.5em;
         font-family: 'Roboto', sans-serif;
-        font-size: 1.25em;
+        font-size: 1.25em !important;
         font-weight: 600;
         text-decoration: none;
         transition-duration: 0.25s;
-        justify-content: left;
+        justify-content: center;
     }
     
     .nav__link--list {
@@ -420,12 +420,13 @@
 
     /* Contact Button Style.*/
     .nav__link--anchor-primary {
-        background: linear-gradient(to top, orange, white);
-        padding: 0.188em 0.563em;
-        border-radius: 3.125em;
+        background: linear-gradient(to top, orange, blue, orange) !important;
+        font-weight: 900 !important;
+        padding: 0.3em 0.3em !important;
+        font-size: 1.125em !important;
+        border-radius: 3.125em !important;
         color: white;
         transition: all 300ms ease;
-        margin-left: 0%;
     }
 
     .nav__link--anchor-primary:hover {
@@ -484,8 +485,8 @@
         margin: 0 12px;
         font-weight: bold;
         background: linear-gradient(to right, #71713a, #544478, #71713a, #544478);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .row {
@@ -499,8 +500,8 @@
     .myPreference {
         padding: 7px;
         background: linear-gradient(to right, #544478, #71713a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
 
@@ -591,8 +592,8 @@
 
     .alt2groovy {
         background: linear-gradient(to right, red, yellow, green);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .addTech:hover .tech__name {
@@ -644,8 +645,8 @@
         margin: 0 0 0 7px;
         font-weight: bold;
         background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .project__list {
@@ -1361,8 +1362,8 @@ nav input[type='checkbox'], nav label {
 .myPreference {
     padding: 0.438em;
     background: linear-gradient(to right, #544478, #71713a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
