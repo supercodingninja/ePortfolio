@@ -190,6 +190,9 @@
         transform: scale(1.23);
         padding-bottom: 0.5em;
         align-items: center;
+
+        /* To hide image after nav menu is toggled. */
+        z-index: -1 !important;
     }
 
     /* Ref. yochans (https://codepen.io/yochans) */
@@ -275,6 +278,7 @@
     /* Specific Header 1 Style Given.  In the tutorial David Bragg led for us to along with him (pause to do our thing, etc.), so it does not affect any other <h1> tags. */
     .about-me__info--title {
         font-size: 1.2em !important;
+        z-index: -1 !important;
     }
 
     /* Wave Hello */
@@ -383,7 +387,7 @@
         top: 0;
         left: -100%;
         width: 20rem;
-        height: 35%;
+        height: 34%;
         margin: 0;
         padding: 5rem 0;
         list-style: armenian;
@@ -422,7 +426,7 @@
     .nav__link--anchor-primary {
         background: linear-gradient(to top, orange, blue, orange) !important;
         font-weight: 900 !important;
-        padding: 0.3em 0.3em !important;
+        padding: 0.005em 0.2em !important;
         font-size: 1.125em !important;
         border-radius: 3.125em !important;
         color: white;
