@@ -239,7 +239,7 @@
     }
 
     .about-me__info--passage {
-        color: #6030b1;
+        color: #6030b1 !important;
         font-size: 0.8em !important;
         margin-top: 0.125em;
         margin-bottom: 0.75em;
@@ -451,6 +451,12 @@
 
     .link__hover-effect--white:after {
         background-color: white;
+    }
+    
+    .link__hover-effect--red-hot:after {
+        background: linear-gradient(to top, red, white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .link__hover-effect--black:after {
@@ -780,15 +786,6 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
-    .se:hover::before {
-        content: "These Search Engines are a responsive web app that displays images and information about space, stars and planets. The user enters a desired word, and when the search button is pressed results appear using two NASA API's and one Wikipedia API.";
-        font-size: 0.5em !important;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
     
     .pic:hover::before {
         content: "A picture of the day will also appear in a side card, whatever picture is shown was taken on the same date as today (with the exception of the year).";
@@ -951,11 +948,11 @@
 
     @-webkit-keyframes glow {
         from {
-            text-shadow: 0 0 .9px firebrick, 0 0 .9px darkorange, 0 0 .9px #F99245, 0 0 .9px #ffeb4b, 0 0 .9px white;
+            text-shadow: 0 0 0.056em firebrick, 0 0 0.056em darkorange, 0 0 0.056em #F99245, 0 0 0.056em #ffeb4b, 0 0 0.056em white;
         }
 
         to {
-            text-shadow: 0 0 .82px white, 0 0 .82px #ffeb4b, 0 0 .82px #F99245, 0 0 .82px darkorange, 0 0 .82px firebrick;
+            text-shadow: 0 0 0.051em white, 0 0 0.051em #ffeb4b, 0 0 0.051em #F99245, 0 0 0.051em darkorange, 0 0 0.051em firebrick;
         }
     }
 
@@ -972,8 +969,8 @@
 
     .project__links {
         text-align: left;
-        font-size: 1em;
-        margin-right: 21px;
+        font-size: 0.7em !important;
+        margin-right: 1.313em;
         text-decoration: none;
         background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
         -webkit-background-clip: text;
@@ -992,10 +989,17 @@
     footer {
         text-decoration: none;
         background-color: #000700;
+        display: flex;
+        justify-content: center;
+        align-content: center !important;
     }
 
     .icon {
-        font-size: larger;
+        font-size: medium !important;
+    }
+
+    .résumé {
+        font-size: large !important;
     }
 
     .footer__row {
@@ -1007,19 +1011,19 @@
     }
 
     .footer__anchor {
-        margin-bottom: 20px;
+        margin-bottom: 1.25em;
         position: relative;
     }
 
     .footer__logo--img {
-        width: 82px;
-        height: 82px;
+        width: 5.125em;
+        height: 5.125em;
     }
 
     .footer__logo--popper {
         position: absolute;
         right: 0;
-        top: 36px;
+        top: 2.25em;
         font-weight: 900;
         font-size: larger;
         opacity: 0;
@@ -1032,22 +1036,28 @@
     }
 
     .footer__anchor:hover .footer__logo--popper {
-        transform: translateX(55px);
+        transform: translateX(3.438em);
         opacity: 1;
     }
 
     .footer__social--list {
         width: 100%;
-        max-width: 550px;
+        max-width: 34.375em;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 28px;
+        margin-bottom: 1.75em;
     }
     
     .footer__social--link,
     .footer__copyright,
     .footer__logo--popper {
         color: white;
+    }
+
+    .footer__copyright {
+        font-size: 0.7em !important;
+        text-align: center;
+        align-items: center;
     }
 }
 
@@ -1301,7 +1311,7 @@ section:nth-child(even) {
 }
 
 /*============ Navigation Menu Styles ============*/
-/* Getting rid of the checkbox's view */
+/* Getting rid of the checkbox's view (use for screens that you do not want the togle menu button feature */
 nav input[type='checkbox'], nav label {
     display: none;
 }
@@ -1347,6 +1357,12 @@ nav input[type='checkbox'], nav label {
 
 .link__hover-effect--white:after {
     background-color: white;
+}
+
+.link__hover-effect--red-hot:after {
+    background: linear-gradient(to bottom, orange, red, white, blue) !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .link__hover-effect--black:after {
@@ -1681,15 +1697,6 @@ nav input[type='checkbox'], nav label {
     -webkit-text-fill-color: transparent;
 }
 
-.se:hover::before {
-    content: "These Search Engines are a responsive web app that displays images and information about space, stars and planets. The user enters a desired word, and when the search button is pressed results appear using two NASA API's and one Wikipedia API.";
-    font-size: 1.5em;
-    box-sizing: content-box;
-    background: linear-gradient(to right, orange, white, orange, white, orange, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .pic:hover::before {
     content: "A picture of the day will also appear in a side card, whatever picture is shown was taken on the same date as today (with the exception of the year).";
     font-size: 1.5em;
@@ -1893,6 +1900,13 @@ footer {
 }
 
 .icon {
+    font-size: larger;
+    background: linear-gradient(to right, blue, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.résumé {
     font-size: larger;
 }
 
