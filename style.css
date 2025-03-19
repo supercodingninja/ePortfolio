@@ -122,9 +122,9 @@
     section:nth-child(even) {
         background-image:url('./assets/img/section__bg.jpeg');
         opacity: 0.9;
-        background-size:100%;
-        background-repeat:repeat-y;
-        background-attachment: fixed;
+        background-size:100% !important;
+        background-repeat:repeat !important;
+        background-attachment: scroll;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -153,7 +153,7 @@
         flex-direction: column;
         justify-content: center !important;
         align-items: center !important;
-        max-width: 20em !important;
+        max-width: 30em !important;
         margin: 0 auto;
         text-align: center;
     }
@@ -224,7 +224,7 @@
 
       /* Specific Header 1 Style Given.  In the tutorial David Bragg led for us to along with him (pause to do our thing, etc.), so it does not affect any other <h1> tags. */
       .about-me__info--title {
-        font-size: 1.2em !important;
+        font-size: 1.5em !important;
         z-index: -1 !important;
     }
 
@@ -232,7 +232,7 @@
     .sayHello {
         display: inline-block;
         animation: animate-wave 1.3s infinite ease-in-out;
-        font-size: 0.7em;
+        font-size: 0.82em !important;
     }
 
     @keyframes animate-wave {
@@ -252,7 +252,7 @@
     /* My Signature Header <h2> */
     .about-me__info--subtitle {
         padding: 0.438em !important;
-        font-size: 0.9em !important;
+        font-size: 1.2em !important;
         justify-content: center !important;
         align-content: center !important;
         background: linear-gradient(to right, #71713a, #544478);
@@ -262,7 +262,7 @@
 
     .about-me__info--passage {
         color: #6030b1 !important;
-        font-size: 0.8em !important;
+        font-size: 1em !important;
         text-align: center !important;
         margin-top: 0.125em;
         margin-bottom: 0.75em;
@@ -305,7 +305,7 @@
         height: 100%;
         width: 100%;
         font-size: small;
-        max-width: 20em;
+        max-width: 30em;
         margin: 0 auto;
         display: flex;
         justify-content:center;
@@ -346,7 +346,7 @@
         align-items: center;
         position: fixed;
         top: 2.188rem;
-        left: 22rem;
+        left: 30rem;
         width: 1.688rem;
         height: 1.688rem;
         cursor: pointer;
@@ -391,7 +391,7 @@
         transition-duration: 0.25s;
         background-image:url('./assets/img/me3.jpeg');
         background-repeat: no-repeat;
-        background-size: 35.5em;
+        background-size: 35em 40%;
         background-attachment: fixed;
         opacity: 1;
     }
@@ -499,7 +499,7 @@
 
     .row {
         width: 100%;
-        max-width: 50em;
+        max-width: 32em !important;
         margin: 0 auto;
         padding: 0 0.75em;
     }
@@ -515,7 +515,7 @@
 
     /*============ Tech Stack Section ============*/
     #techStack {
-        max-width: 25em;
+        max-width: 35em;
         display: flex;
         justify-content: center;
         align-content: center;
@@ -526,10 +526,9 @@
         /* Ref. https://blog.webdevsimplified.com/2022-08/css-viewport-units/#:~:text=vw%20stands%20for%20Viewport%20Width,the%20width%20of%20your%20viewport. */
         width: fit-content !important;
         /* Ref. https://developer.mozilla.org/en-US/docs/Web/CSS/z-index */
-        font-size: 1em !important;
+        font-size: 2em !important;
         /* Remember that the syntax for box-shadow is: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];  Ref. https://css-tricks.com/almanac/properties/b/box-shadow/ */
-        /* Other Ref. https://www.w3schools.com/css/css3_shadows_box.asp#:~:text=Set%20the%20Spread%20Radius%20of,the%20size%20of%20the%20shadow. */
-        /* box-shadow: 3px 3px 3px 3px rgb(2,0,36);
+        /* Other Ref. https://www.w3schools.com/css/css3_shadows_box.asp#:~:text=Set%20the%20Spread%20Radius%20of,the%20size%20of%20the%20sh0.188em 0.188em 0.188em 0.188em rgb(2,0,36);
         background: radial-gradient(circle, rgba(2,0,36,0.6363139005602241) 0%, rgba(9,9,121,0.6223082983193278) 35%, rgba(65,72,74,0.6727284663865547) 100%); border-radius: 2.813em !important; */
         display: flex !important;
         justify-content: center !important;
@@ -580,7 +579,7 @@
 
     .tech__img {
         width: 100%;
-        max-width: 100px;
+        max-width: 6.25em;
         transition: all 300ms;
     }
 
@@ -597,7 +596,7 @@
         transition: all 300ms ease;
         opacity: 0;
         font-weight: 900;
-        font-size: 1em;
+        font-size: 0.9em !important;
     }
 
     .groovy {
@@ -645,8 +644,7 @@
         /* I actually stumbled upon this playing around; and then I looked up the information to learn what I did to cause this effect, exactly. Ref. https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text */
         transform: scale(1, -1);
         align-items: center;
-        padding-top: 8px;
-        box-shadow: 3px 3px 3px 3px rgb(2, 0, 36);
+        paddin0.188em 0.188em 0.188em 0.188em rgb(2, 0, 36);
         background: radial-gradient(circle, rgba(65, 105, 227, 1.0) 0%, rgba(249, 146, 69, 1.0) 35%, rgba(61, 66, 68, 0.673) 100%);
         border-radius: 50px;
     }
@@ -712,7 +710,7 @@
 
     .project__title {
         text-align: left;
-        font-size: 1.7em !important;
+        font-size: 2em !important;
         font-weight: bold;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -724,7 +722,8 @@
         top: 50%;
         left: 1.5em !important;
         transform: translateY(100%);
-        max-width: 25em !important;
+        max-width: 30em !important;
+        font-size: 1em !important;
         z-index: 3;
         opacity: 0;
         transition: transform 450ms ease, opacity 300ms ease;
@@ -738,7 +737,7 @@
     /* I want to target the projects sub-title. */
     .project__sub-title {
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 1em !important;
+        font-size: 1.2em !important;
         text-align: left;
         display: flex;
         flex-direction: column;
@@ -912,7 +911,7 @@
     .technolgies:first-letter {
         color: #ffeb4b;
         font-weight: bold;
-        font-size: 1em;
+        font-size: 0.9em !important;
     }
 
     .glow {
@@ -971,7 +970,7 @@
 
     .project__links {
         text-align: left;
-        font-size: 0.7em !important;
+        font-size: 0.9em !important;
         margin-right: 1.313em;
         text-decoration: none;
         background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
@@ -1147,7 +1146,7 @@
         background-image:url('./assets/img/section__bg.jpeg');
         opacity: 0.9;
         background-size:100%;
-        background-repeat:repeat-y;
+        background-repeat: repeat !important;
         background-attachment: fixed;
         display: flex;
         align-items: center;
@@ -1370,7 +1369,7 @@
         align-items: center;
         position: fixed;
         top: 2.188rem;
-        left: 26.8rem;
+        left: 25.7rem !important;
         width: 1.688rem;
         height: 1.688rem;
         cursor: pointer;
@@ -1523,7 +1522,7 @@
 
     .row {
         width: 100%;
-        max-width: 50em;
+        max-width: 27em !important;
         margin: 0 auto;
         padding: 0 0.75em;
     }
@@ -1539,7 +1538,7 @@
 
     /*============ Tech Stack Section ============*/
     #techStack {
-        max-width: 25em;
+        max-width: 30em;
         display: flex;
         justify-content: center;
         align-content: center;
@@ -1550,10 +1549,9 @@
         /* Ref. https://blog.webdevsimplified.com/2022-08/css-viewport-units/#:~:text=vw%20stands%20for%20Viewport%20Width,the%20width%20of%20your%20viewport. */
         width: fit-content !important;
         /* Ref. https://developer.mozilla.org/en-US/docs/Web/CSS/z-index */
-        font-size: 1em !important;
+        font-size: 1.5em !important;
         /* Remember that the syntax for box-shadow is: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];  Ref. https://css-tricks.com/almanac/properties/b/box-shadow/ */
-        /* Other Ref. https://www.w3schools.com/css/css3_shadows_box.asp#:~:text=Set%20the%20Spread%20Radius%20of,the%20size%20of%20the%20shadow. */
-        /* box-shadow: 3px 3px 3px 3px rgb(2,0,36);
+        /* Other Ref. https://www.w3schools.com/css/css3_shadows_box.asp#:~:text=Set%20the%20Spread%20Radius%20of,the%20size%20of%20the%20sh0.188em 0.188em 0.188em 0.188em rgb(2,0,36);
         background: radial-gradient(circle, rgba(2,0,36,0.6363139005602241) 0%, rgba(9,9,121,0.6223082983193278) 35%, rgba(65,72,74,0.6727284663865547) 100%); border-radius: 2.813em !important; */
         display: flex !important;
         justify-content: center !important;
@@ -1604,7 +1602,7 @@
 
     .tech__img {
         width: 100%;
-        max-width: 100px;
+        max-width: 6.25em;
         transition: all 300ms;
     }
 
@@ -1621,7 +1619,7 @@
         transition: all 300ms ease;
         opacity: 0;
         font-weight: 900;
-        font-size: 1em;
+        font-size: 0.7em !important;
     }
 
     .groovy {
@@ -1669,8 +1667,7 @@
         /* I actually stumbled upon this playing around; and then I looked up the information to learn what I did to cause this effect, exactly. Ref. https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text */
         transform: scale(1, -1);
         align-items: center;
-        padding-top: 8px;
-        box-shadow: 3px 3px 3px 3px rgb(2, 0, 36);
+        paddin0.188em 0.188em 0.188em 0.188em rgb(2, 0, 36);
         background: radial-gradient(circle, rgba(65, 105, 227, 1.0) 0%, rgba(249, 146, 69, 1.0) 35%, rgba(61, 66, 68, 0.673) 100%);
         border-radius: 50px;
     }
@@ -2171,7 +2168,7 @@
         background-image:url('./assets/img/section__bg.jpeg');
         opacity: 0.9;
         background-size:100%;
-        background-repeat:repeat-y;
+        background-repeat: repeat !important;
         background-attachment: fixed;
         display: flex;
         align-items: center;
@@ -2543,7 +2540,7 @@
 
     .row {
         width: 100%;
-        max-width: 50em;
+        max-width: 20em;
         margin: 0 auto;
         padding: 0 0.75em;
     }
@@ -2572,8 +2569,7 @@
         /* Ref. https://developer.mozilla.org/en-US/docs/Web/CSS/z-index */
         font-size: 1em !important;
         /* Remember that the syntax for box-shadow is: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];  Ref. https://css-tricks.com/almanac/properties/b/box-shadow/ */
-        /* Other Ref. https://www.w3schools.com/css/css3_shadows_box.asp#:~:text=Set%20the%20Spread%20Radius%20of,the%20size%20of%20the%20shadow. */
-        /* box-shadow: 3px 3px 3px 3px rgb(2,0,36);
+        /* Other Ref. https://www.w3schools.com/css/css3_shadows_box.asp#:~:text=Set%20the%20Spread%20Radius%20of,the%20size%20of%20the%20sh0.188em 0.188em 0.188em 0.188em rgb(2,0,36);
         background: radial-gradient(circle, rgba(2,0,36,0.6363139005602241) 0%, rgba(9,9,121,0.6223082983193278) 35%, rgba(65,72,74,0.6727284663865547) 100%); border-radius: 2.813em !important; */
         display: flex !important;
         justify-content: center !important;
@@ -2624,7 +2620,7 @@
 
     .tech__img {
         width: 100%;
-        max-width: 100px;
+        max-width: 3em !important;
         transition: all 300ms;
     }
 
@@ -2641,7 +2637,9 @@
         transition: all 300ms ease;
         opacity: 0;
         font-weight: 900;
-        font-size: 1em;
+        font-size: 0.55em !important;
+        max-width: 20em;
+        overflow: none;
     }
 
     .groovy {
@@ -2690,7 +2688,7 @@
         transform: scale(1, -1);
         align-items: center;
         padding-top: 8px;
-        box-shadow: 3px 3px 3px 3px rgb(2, 0, 36);
+        box-shadow: 0.188em 0.188em 0.188em 0.188em rgb(2, 0, 36);
         background: radial-gradient(circle, rgba(65, 105, 227, 1.0) 0%, rgba(249, 146, 69, 1.0) 35%, rgba(61, 66, 68, 0.673) 100%);
         border-radius: 50px;
     }
@@ -3191,7 +3189,7 @@ nav {
 section:nth-child(even) {
     background-image:url('./assets/img/section__bg.jpeg');
     opacity: 0.9;
-    background-size:100% !important;
+    background-size: 100% !important;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height:100% !important;
