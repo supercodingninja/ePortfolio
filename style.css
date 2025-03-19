@@ -3552,7 +3552,7 @@ nav input[type='checkbox'], nav label {
     transition: all 300ms ease;
     opacity: 0;
     font-weight: 900;
-    font-size: 1.8em;
+    font-size: 1.7em;
 }
 
 .groovy {
@@ -3913,6 +3913,7 @@ nav input[type='checkbox'], nav label {
     text-align: left;
     margin: 1.375em 0;
     font-weight: 600;
+    font-size: 1.4em;
     background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -3920,7 +3921,7 @@ nav input[type='checkbox'], nav label {
 
 .project__links {
     text-align: left;
-    font-size: 1.1em;
+    font-size: 1.4em;
     margin-right: 1.313em;
     text-decoration: none;
     background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
