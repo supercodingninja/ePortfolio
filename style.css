@@ -133,7 +133,7 @@
     /*============ About Me Section. ============*/
     /* Look for ID */
     #about-me {
-        min-height: 84vh !important;
+        min-height: 87vh !important;
         display: flex;
         flex-direction: column;
     }
@@ -592,7 +592,7 @@
         transition: all 300ms ease;
         opacity: 0;
         font-weight: 900;
-        font-size: 0.9em !important;
+        font-size: 1em !important;
     }
 
     .groovy {
@@ -706,7 +706,7 @@
 
     .project__title {
         text-align: left;
-        font-size: 2em !important;
+        font-size: 1.9em !important;
         font-weight: bold;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -718,8 +718,7 @@
         top: 50%;
         left: 1.5em !important;
         transform: translateY(100%);
-        max-width: 30em !important;
-        font-size: 1em !important;
+        max-width: 31em !important;
         z-index: 3;
         opacity: 0;
         transition: transform 450ms ease, opacity 300ms ease;
@@ -747,7 +746,7 @@
 
     .first:hover::before {
         content: "HTML5 30.3% | CSS3 55.8% | JavaScript 13.9%";
-        font-size: 1em;
+        font-size: 1.2em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -760,7 +759,7 @@
 
     .second:hover::before {
         content: "JavaScript 53.7% | HTML5 24.4% | CSS3 21.9%";
-        font-size: 1em;
+        font-size: 1.2em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -808,7 +807,7 @@
 
     .fourth:hover::before {
         content: "HTML5 100.0% (simplified by <style> & <script>) ";
-        font-size: 1em;
+        font-size: 1.2em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -821,7 +820,7 @@
 
     .fifth:hover::before {
         content: "JavaScript 100.0%";
-        font-size: 1em;
+        font-size: 1.2em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -834,7 +833,7 @@
 
     .sixth:hover::before {
         content: "JavaScript 66.0% | HTML5 23.6% | CSS3 10.4%";
-        font-size: 1em;
+        font-size: 1.2em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -847,7 +846,7 @@
 
     .seventh:hover::before {
         content: "JavaScript 100.0%";
-        font-size: 1em;
+        font-size: 1.2em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -860,7 +859,7 @@
 
     .eighth:hover::before {
         content: "JavaScript 82.7% | HTML5 12.5% | CSS3 4.8%";
-        font-size: 1em;
+        font-size: 1.2em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -873,7 +872,7 @@
 
     .ninth:hover::before {
         content: "TypeScript 90.5 | CSS3 4.7% | HTML5 3.1% | JavaScript 1.7% | Other Technologies include JWT, NPM, MongoBD, Saas, and more!";
-        font-size: 1em;
+        font-size: 1.2em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -886,7 +885,7 @@
 
     .tenth:hover::before {
         content: "JavaScript 62.1% | CSS3 36.2% | HTML5 1.6% | Shell 0.1%";
-        font-size: 1em;
+        font-size: 1.2em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -1742,7 +1741,6 @@
         left: 1.5em !important;
         transform: translateY(100%);
         max-width: 30em !important;
-        font-size: 1em !important;
         z-index: 3;
         opacity: 0;
         transition: transform 450ms ease, opacity 300ms ease;
@@ -4707,7 +4705,7 @@ nav input[type='checkbox'], nav label {
 
 .project__title {
     text-align: left;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bold;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
