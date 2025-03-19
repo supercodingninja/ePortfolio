@@ -777,7 +777,7 @@
 
     .third:hover::before {
         content: "HTML5 74.2% | JavaScript 17.1% | CSS3 8.7%";
-        font-size: 0.5em !important;
+        font-size: 1em !important;
         display: flex !important;
         justify-content: center !important;
         align-content: center !important;
