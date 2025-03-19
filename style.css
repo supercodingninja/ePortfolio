@@ -383,15 +383,15 @@
         visibility: hidden;
         top: 0;
         left: -100%;
-        width: 20rem;
-        height: 34%;
+        width: 35.5em;
+        height: 36.65%;
         margin: 0;
         padding: 5rem 0;
         list-style: armenian;
         transition-duration: 0.25s;
         background-image:url('./assets/img/me3.jpeg');
         background-repeat: no-repeat;
-        background-size:60% 30.5%;
+        background-size: 35.5em;
         background-attachment: fixed;
         opacity: 1;
     }
@@ -399,7 +399,7 @@
     .burger__topping {
         display: block;
         flex-direction: column;
-        padding: 0.75em 1.5em;
+        padding: 0.25em !important;
         font-family: 'Roboto', sans-serif;
         font-size: 1.25em !important;
         font-weight: 600;
@@ -439,9 +439,9 @@
     .link__hover-effect:after {
         content: "";
         position: absolute;
-        height: 3px;
+        height: 0.188em;
         width: 0;
-        bottom: -3px;
+        bottom: -0.188em;
         right: 0;
         transition: all 300ms ease;
     }
@@ -490,7 +490,7 @@
     /* I didn't like the name scheme in the personal logo: because I knew that I would confuse this code for my actual logo (later use); therefore, I change the name scheme to avoid a potential naming conflict, and to practice better semantics regarding myself. THIS IS THE BIG NAME OPENING. */
     .BIG {
         font-size: 1.5em;
-        margin: 0 12px;
+        margin: 0 0.75em;
         font-weight: bold;
         background: linear-gradient(to right, #71713a, #544478, #71713a, #544478);
         -webkit-background-clip: text;
@@ -499,9 +499,9 @@
 
     .row {
         width: 100%;
-        max-width: 800px;
+        max-width: 50em;
         margin: 0 auto;
-        padding: 0 12px;
+        padding: 0 0.75em;
     }
 
     /* Since David stated we could make this any color that we want, I just went ahead with adding my flare and style. */
@@ -1407,7 +1407,7 @@
         visibility: hidden;
         top: 0;
         left: -100%;
-        width: 20rem;
+        width: 30rem;
         height: 34%;
         margin: 0;
         padding: 5rem 0;
@@ -1415,7 +1415,7 @@
         transition-duration: 0.25s;
         background-image:url('./assets/img/me3.jpeg');
         background-repeat: no-repeat;
-        background-size:60% 30.5%;
+        background-size: 30em;
         background-attachment: fixed;
         opacity: 1;
     }
@@ -1423,7 +1423,7 @@
     .burger__topping {
         display: block;
         flex-direction: column;
-        padding: 0.75em 1.5em;
+        padding: 0.3em;
         font-family: 'Roboto', sans-serif;
         font-size: 1.25em !important;
         font-weight: 600;
@@ -1463,9 +1463,9 @@
     .link__hover-effect:after {
         content: "";
         position: absolute;
-        height: 3px;
+        height: 0.188em;
         width: 0;
-        bottom: -3px;
+        bottom: -0.188em;
         right: 0;
         transition: all 300ms ease;
     }
@@ -1514,7 +1514,7 @@
     /* I didn't like the name scheme in the personal logo: because I knew that I would confuse this code for my actual logo (later use); therefore, I change the name scheme to avoid a potential naming conflict, and to practice better semantics regarding myself. THIS IS THE BIG NAME OPENING. */
     .BIG {
         font-size: 1.5em;
-        margin: 0 12px;
+        margin: 0 0.75em;
         font-weight: bold;
         background: linear-gradient(to right, #71713a, #544478, #71713a, #544478);
         -webkit-background-clip: text;
@@ -1523,9 +1523,9 @@
 
     .row {
         width: 100%;
-        max-width: 800px;
+        max-width: 50em;
         margin: 0 auto;
-        padding: 0 12px;
+        padding: 0 0.75em;
     }
 
     /* Since David stated we could make this any color that we want, I just went ahead with adding my flare and style. */
@@ -2443,7 +2443,7 @@
     .burger__topping {
         display: block;
         flex-direction: column;
-        padding: 0.75em 1.5em;
+        padding: 0.45em;
         font-family: 'Roboto', sans-serif;
         font-size: 1.25em !important;
         font-weight: 600;
@@ -2483,9 +2483,9 @@
     .link__hover-effect:after {
         content: "";
         position: absolute;
-        height: 3px;
+        height: 0.188em;
         width: 0;
-        bottom: -3px;
+        bottom: -0.188em;
         right: 0;
         transition: all 300ms ease;
     }
@@ -2534,7 +2534,7 @@
     /* I didn't like the name scheme in the personal logo: because I knew that I would confuse this code for my actual logo (later use); therefore, I change the name scheme to avoid a potential naming conflict, and to practice better semantics regarding myself. THIS IS THE BIG NAME OPENING. */
     .BIG {
         font-size: 1.5em;
-        margin: 0 12px;
+        margin: 0 0.75em;
         font-weight: bold;
         background: linear-gradient(to right, #71713a, #544478, #71713a, #544478);
         -webkit-background-clip: text;
@@ -2543,9 +2543,9 @@
 
     .row {
         width: 100%;
-        max-width: 800px;
+        max-width: 50em;
         margin: 0 auto;
-        padding: 0 12px;
+        padding: 0 0.75em;
     }
 
     /* Since David stated we could make this any color that we want, I just went ahead with adding my flare and style. */
