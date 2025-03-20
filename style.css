@@ -254,7 +254,7 @@
 
     .about-me__info--passage {
         color: #6030b1 !important;
-        font-size: 1.2em !important;
+        font-size: 1.3em !important;
         text-align: center !important;
         margin-top: 0.125em;
         margin-bottom: 0.75em;
@@ -338,7 +338,7 @@
         align-items: center;
         position: fixed;
         top: 2.188rem;
-        left: 38rem;
+        left: 40rem;
         width: 1.875rem;
         height: 1.875rem;
         cursor: pointer;
