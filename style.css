@@ -129,7 +129,7 @@
     /*============ About Me Section. ============*/
     /* Look for ID */
     #about-me {
-        min-height: 87vh !important;
+        min-height: 92.5vh !important;
         display: flex;
         flex-direction: column;
     }
@@ -297,7 +297,7 @@
         height: 100%;
         width: 100%;
         font-size: small;
-        max-width: 48em;
+        max-width: 50em !important;
         margin: 0 auto;
         display: flex;
         justify-content:center;
@@ -375,15 +375,15 @@
         visibility: hidden;
         top: 0;
         left: -100%;
-        width: 48em;
-        height: 33.6%;
+        width: 50em;
+        height: 39%;
         margin: 0;
         padding: 5rem 0;
         list-style: armenian;
         transition-duration: 0.25s;
         background-image:url('./assets/img/me3.jpeg');
         background-repeat: no-repeat;
-        background-size: 48em;
+        background-size: 50em 60%;
         background-attachment: fixed;
         opacity: 1;
     }
@@ -491,7 +491,7 @@
 
     .row {
         width: 100%;
-        max-width: 35em !important;
+        max-width: 40em !important;
         margin: 0 auto;
         padding: 0 0.75em;
     }
@@ -570,12 +570,9 @@
     }
 
     .tech__img {
-        width: 100%;
+        width: 5em !important;
         max-width: 6.25em;
         transition: all 300ms;
-        flex: 1 !important;
-        margin-top: 1.5em !important;
-        margin-bottom: 1.5em !important;
     }
 
     .addTech:hover .tech__img {
@@ -717,7 +714,7 @@
         top: 50%;
         left: 1.5em !important;
         transform: translateY(100%);
-        max-width: 48em !important;
+        max-width: 50em !important;
         z-index: 3;
         opacity: 0;
         transition: transform 450ms ease, opacity 300ms ease;
@@ -731,7 +728,7 @@
     /* I want to target the projects sub-title. */
     .project__sub-title {
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 1.2em !important;
+        font-size: 1.3em !important;
         text-align: left;
         display: flex;
         flex-direction: column;
@@ -745,7 +742,7 @@
 
     .first:hover::before {
         content: "HTML5 30.3% | CSS3 55.8% | JavaScript 13.9%";
-        font-size: 1.2em;
+        font-size: 1.3em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -758,7 +755,7 @@
 
     .second:hover::before {
         content: "JavaScript 53.7% | HTML5 24.4% | CSS3 21.9%";
-        font-size: 1.2em;
+        font-size: 1.3em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -771,7 +768,7 @@
 
     .third:hover::before {
         content: "HTML5 74.2% | JavaScript 17.1% | CSS3 8.7%";
-        font-size: 1em !important;
+        font-size: 1.3em !important;
         display: flex !important;
         justify-content: center !important;
         align-content: center !important;
@@ -806,7 +803,7 @@
 
     .fourth:hover::before {
         content: "HTML5 100.0% (simplified by <style> & <script>) ";
-        font-size: 1.2em;
+        font-size: 1.3em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -819,7 +816,7 @@
 
     .fifth:hover::before {
         content: "JavaScript 100.0%";
-        font-size: 1.2em;
+        font-size: 1.3em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -832,7 +829,7 @@
 
     .sixth:hover::before {
         content: "JavaScript 66.0% | HTML5 23.6% | CSS3 10.4%";
-        font-size: 1.2em;
+        font-size: 1.3em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -845,7 +842,7 @@
 
     .seventh:hover::before {
         content: "JavaScript 100.0%";
-        font-size: 1.2em;
+        font-size: 1.3em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -858,7 +855,7 @@
 
     .eighth:hover::before {
         content: "JavaScript 82.7% | HTML5 12.5% | CSS3 4.8%";
-        font-size: 1.2em;
+        font-size: 1.3em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -871,7 +868,7 @@
 
     .ninth:hover::before {
         content: "TypeScript 90.5 | CSS3 4.7% | HTML5 3.1% | JavaScript 1.7% | Other Technologies include JWT, NPM, MongoBD, Saas, and more!";
-        font-size: 1.2em;
+        font-size: 1.3em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -884,7 +881,7 @@
 
     .tenth:hover::before {
         content: "JavaScript 62.1% | CSS3 36.2% | HTML5 1.6% | Shell 0.1%";
-        font-size: 1.2em;
+        font-size: 1.3em;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -896,7 +893,7 @@
         float: left;
         unicode-bidi: bidi-override;
         direction: rtl;
-        font-size: 1.2em;
+        font-size: 1.3em;
         align-items: left;
         justify-content: left;
         text-align: left;
@@ -973,7 +970,7 @@
     }
 
     .project:last-child {
-        margin-bottom: 50px;
+        margin-bottom: 3.125em;
     }
 
     .info {
@@ -990,11 +987,11 @@
     }
 
     .icon {
-        font-size: large !important;
+        font-size: 1.7em !important;
     }
 
     .résumé {
-        font-size: large !important;
+        font-size: 1.7em !important;
     }
 
     .footer__row {
@@ -1018,7 +1015,7 @@
     .footer__logo--popper {
         position: absolute;
         right: 0;
-        top: 2.25em;
+        top: 2.5em;
         font-weight: 900;
         font-size: larger;
         opacity: 0;
@@ -1037,7 +1034,7 @@
 
     .footer__social--list {
         width: 100%;
-        max-width: 48em !important;
+        max-width: 50em !important;
         display: flex;
         justify-content: space-between;
         margin-bottom: 1.75em;
@@ -1050,7 +1047,7 @@
     }
 
     .footer__copyright {
-        font-size: 1em !important;
+        font-size: 1.3em !important;
         text-align: center;
         align-items: center;
     }
@@ -1796,7 +1793,7 @@
 
     .third:hover::before {
         content: "HTML5 74.2% | JavaScript 17.1% | CSS3 8.7%";
-        font-size: 1em !important;
+        font-size: 1.2em !important;
         display: flex !important;
         justify-content: center !important;
         align-content: center !important;
@@ -1998,7 +1995,7 @@
     }
 
     .project:last-child {
-        margin-bottom: 50px;
+        margin-bottom: 3.125em;
     }
 
     .info {
@@ -3020,7 +3017,7 @@
     }
 
     .project:last-child {
-        margin-bottom: 50px;
+        margin-bottom: 3.125em;
     }
 
     .info {
@@ -4042,7 +4039,7 @@
     }
 
     .project:last-child {
-        margin-bottom: 50px;
+        margin-bottom: 3.125em;
     }
 
     .info {
@@ -5064,7 +5061,7 @@
     }
 
     .project:last-child {
-        margin-bottom: 50px;
+        margin-bottom: 3.125em;
     }
 
     .info {
