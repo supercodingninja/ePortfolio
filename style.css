@@ -40,14 +40,13 @@
         font-size: small;
     }
 
-    /* WORKING THOUGHT
-    .III {
-        text-align: center;
-        -webkit-animation: glow 1.3s ease-in-out infinite alternate;
-        -moz-animation: glow 1.3s ease-in-out infinite alternate;
-        animation: glow 1.3s ease-in-out infinite alternate;
-        text-decoration: none; 
-    } */
+    .III:hover span {
+        display: none;
+    }
+    
+    .III:hover::before {
+        content: url('./assets/img/III.jpg');
+    }
 
     .sup3 {
         vertical-align: super;
@@ -709,7 +708,7 @@
         /* I actually stumbled upon this playing around; and then I looked up the information to learn what I did to cause this effect, exactly. Ref. https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text */
         transform: scale(1, -1);
         align-items: center;
-        paddin0.188em 0.188em 0.188em 0.188em rgb(2, 0, 36);
+        padding: 0.188em 0.188em 0.188em 0.188em rgb(2, 0, 36);
         background: radial-gradient(circle, rgba(65, 105, 227, 1.0) 0%, rgba(249, 146, 69, 1.0) 35%, rgba(61, 66, 68, 0.673) 100%);
         border-radius: 50px;
     }
@@ -1139,14 +1138,13 @@
         font-size: small;
     }
 
-    /* WORKING THOUGHT
-    .III {
-        text-align: center;
-        -webkit-animation: glow 1.3s ease-in-out infinite alternate;
-        -moz-animation: glow 1.3s ease-in-out infinite alternate;
-        animation: glow 1.3s ease-in-out infinite alternate;
-        text-decoration: none; 
-    } */
+    .III:hover span {
+        display: none;
+    }
+    
+    .III:hover::before {
+        content: url('./assets/img/III.jpg');
+    }
 
     .sup3 {
         vertical-align: super;
@@ -1783,7 +1781,7 @@
         /* I actually stumbled upon this playing around; and then I looked up the information to learn what I did to cause this effect, exactly. Ref. https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text */
         transform: scale(1, -1);
         align-items: center;
-        paddin0.188em 0.188em 0.188em 0.188em rgb(2, 0, 36);
+        padding: 0.188em 0.188em 0.188em 0.188em rgb(2, 0, 36);
         background: radial-gradient(circle, rgba(65, 105, 227, 1.0) 0%, rgba(249, 146, 69, 1.0) 35%, rgba(61, 66, 68, 0.673) 100%);
         border-radius: 50px;
     }
@@ -2213,14 +2211,13 @@
         font-size: small;
     }
 
-    /* WORKING THOUGHT
-    .III {
-        text-align: center;
-        -webkit-animation: glow 1.3s ease-in-out infinite alternate;
-        -moz-animation: glow 1.3s ease-in-out infinite alternate;
-        animation: glow 1.3s ease-in-out infinite alternate;
-        text-decoration: none; 
-    } */
+    .III:hover span {
+        display: none;
+    }
+    
+    .III:hover::before {
+        content: url('./assets/img/III.jpg');
+    }
 
     .sup3 {
         vertical-align: super;
@@ -2860,7 +2857,7 @@
         /* I actually stumbled upon this playing around; and then I looked up the information to learn what I did to cause this effect, exactly. Ref. https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text */
         transform: scale(1, -1);
         align-items: center;
-        paddin0.188em 0.188em 0.188em 0.188em rgb(2, 0, 36);
+        padding: 0.188em 0.188em 0.188em 0.188em rgb(2, 0, 36);
         background: radial-gradient(circle, rgba(65, 105, 227, 1.0) 0%, rgba(249, 146, 69, 1.0) 35%, rgba(61, 66, 68, 0.673) 100%);
         border-radius: 50px;
     }
@@ -3290,14 +3287,13 @@
         font-size: small;
     }
 
-    /* WORKING THOUGHT
-    .III {
-        text-align: center;
-        -webkit-animation: glow 1.3s ease-in-out infinite alternate;
-        -moz-animation: glow 1.3s ease-in-out infinite alternate;
-        animation: glow 1.3s ease-in-out infinite alternate;
-        text-decoration: none; 
-    } */
+    .III:hover span {
+        display: none;
+    }
+    
+    .III:hover::before {
+        content: url('./assets/img/III.jpg');
+    }
 
     .sup3 {
         vertical-align: super;
@@ -3942,7 +3938,7 @@
         /* I actually stumbled upon this playing around; and then I looked up the information to learn what I did to cause this effect, exactly. Ref. https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text */
         transform: scale(1, -1);
         align-items: center;
-        paddin0.188em 0.188em 0.188em 0.188em rgb(2, 0, 36);
+        padding: 0.188em 0.188em 0.188em 0.188em rgb(2, 0, 36);
         background: radial-gradient(circle, rgba(65, 105, 227, 1.0) 0%, rgba(249, 146, 69, 1.0) 35%, rgba(61, 66, 68, 0.673) 100%);
         border-radius: 50px;
     }
@@ -4372,14 +4368,13 @@
         font-size: small;
     }
 
-    /* WORKING THOUGHT
-    .III {
-        text-align: center;
-        -webkit-animation: glow 1.3s ease-in-out infinite alternate;
-        -moz-animation: glow 1.3s ease-in-out infinite alternate;
-        animation: glow 1.3s ease-in-out infinite alternate;
-        text-decoration: none; 
-    } */
+    .III:hover span {
+        display: none;
+    }
+    
+    .III:hover::before {
+        content: url('./assets/img/III.jpg');
+    }
 
     .sup3 {
         vertical-align: super;
@@ -5016,7 +5011,7 @@
         /* I actually stumbled upon this playing around; and then I looked up the information to learn what I did to cause this effect, exactly. Ref. https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text */
         transform: scale(1, -1);
         align-items: center;
-        paddin0.188em 0.188em 0.188em 0.188em rgb(2, 0, 36);
+        padding: 0.188em 0.188em 0.188em 0.188em rgb(2, 0, 36);
         background: radial-gradient(circle, rgba(65, 105, 227, 1.0) 0%, rgba(249, 146, 69, 1.0) 35%, rgba(61, 66, 68, 0.673) 100%);
         border-radius: 50px;
     }
@@ -5446,14 +5441,13 @@
         font-size: small;
     }
 
-    /* WORKING THOUGHT
-    .III {
-        text-align: center;
-        -webkit-animation: glow 1.3s ease-in-out infinite alternate;
-        -moz-animation: glow 1.3s ease-in-out infinite alternate;
-        animation: glow 1.3s ease-in-out infinite alternate;
-        text-decoration: none; 
-    } */
+    .III:hover span {
+        display: none;
+    }
+    
+    .III:hover::before {
+        content: url('./assets/img/III.jpg');
+    }
 
     .sup3 {
         vertical-align: super;
@@ -6089,7 +6083,7 @@
         /* I actually stumbled upon this playing around; and then I looked up the information to learn what I did to cause this effect, exactly. Ref. https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text */
         transform: scale(1, -1);
         align-items: center;
-        padding-top: 8px;
+        padding-top: 0.5em;
         box-shadow: 0.188em 0.188em 0.188em 0.188em rgb(2, 0, 36);
         background: radial-gradient(circle, rgba(65, 105, 227, 1.0) 0%, rgba(249, 146, 69, 1.0) 35%, rgba(61, 66, 68, 0.673) 100%);
         border-radius: 50px;
@@ -6520,14 +6514,13 @@ sup {
     font-size: small;
 }
 
-/* WORKING THOUGHT
-.III {
-    text-align: center;
-    -webkit-animation: glow 1.3s ease-in-out infinite alternate;
-    -moz-animation: glow 1.3s ease-in-out infinite alternate;
-    animation: glow 1.3s ease-in-out infinite alternate;
-    text-decoration: none; 
-} */
+.III:hover span {
+    display: none;
+}
+
+.III:hover::before {
+    content: url('./assets/img/III.jpg');
+}
 
 .sup3 {
     vertical-align: super;
@@ -6654,7 +6647,7 @@ section:nth-child(even) {
     position: absolute;
     width: 100%;
     opacity: 0;
-    animation: change-img-anim 30s infinite;
+    animation: change-img-anim 25s infinite;
 }
 
 .cldntpck:nth-of-type(1) {
@@ -6679,7 +6672,9 @@ section:nth-child(even) {
 
 @keyframes change-img-anim {
     0%{ opacity: 0.9;}
-    0.02%{ opacity: 1;}
+    20%{ opacity: 1;}
+    40%{ opacity: 1;}
+    60%{ opacity: 1;}
     100%{ opacity: 0.9;}
 }
 
@@ -6903,6 +6898,14 @@ nav input[type='checkbox'], nav label {
     background: linear-gradient(to right, #71713a, #544478, #71713a, #544478);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.III:hover span {
+    display: none;
+}
+
+.III:hover::before {
+    content: url('./assets/img/III.jpg');
 }
 
 .row {
