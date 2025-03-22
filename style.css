@@ -8217,7 +8217,7 @@ nav input[type='checkbox'], nav label {
     display: flex !important;
     justify-content: center !important;
     align-content: center !important;
-    background: linear-gradient(to top, #F99242, #Dc4D01);
+    background: linear-gradient(to top, #F99242, #DC4D01);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
@@ -8331,14 +8331,20 @@ nav input[type='checkbox'], nav label {
     transform: scale(1, -1);
     align-items: center;
     padding-top: 0.5em;
-    box-shadow: 0.188em 0.188em 0.188em 0.188em rgb(2, 0, 36);
-    background: radial-gradient(circle, rgba(65, 105, 227, 1.0) 0%, rgba(249, 146, 69, 1.0) 35%, rgba(61, 66, 68, 0.673) 100%);
-    border-radius: 3.125em;
+    display: flex !important;
+    justify-content: center !important;
+    align-content: center !important;
+    background: linear-gradient(to top, blue, #F99242, #DC4D01);
+    text-align: center;
+    -webkit-animation: glow 0.7s ease-in-out infinite alternate;
+    -moz-animation: glow 0.7s ease-in-out infinite alternate;
+    animation: glow 0.7s ease-in-out infinite alternate;
+    border-radius: 50%;
 }
 
 
 /*============ Projects' Styles ============*/
-/* #projectSection {} •/
+/* #projectSection {} */
 
 /* Projects' Header */
 .pj {
@@ -8420,7 +8426,7 @@ nav input[type='checkbox'], nav label {
     -webkit-text-fill-color: transparent;
 }
 
-/* I want to target the projects sub-title. */
+/* I want to target the project's sub-title. */
 .project__sub-title {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1.2em;
@@ -8628,6 +8634,7 @@ nav input[type='checkbox'], nav label {
     text-decoration: none;
 }
 
+/* Keyframes animation for .glow1 to .glow4 effects. */
 @-webkit-keyframes glow {
   from {
     text-shadow: 0 0 0.056em firebrick, 0 0 0.056em darkorange, 0 0 0.056em #F99245, 0 0 0.056em #ffeb4b, 0 0 0.056em white;
