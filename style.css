@@ -7601,38 +7601,12 @@
     }
 
     /*============ Footer Styles ============*/
-    footer {
-        text-decoration: none;
-        background-color: #000700;
-        display: flex;
-        justify-content: center;
-        align-content: center !important;
-    }
-
     .icon {
         font-size: medium !important;
     }
 
     .résumé {
         font-size: large !important;
-    }
-
-    .footer__row {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 8% 0;
-    }
-
-    .footer__anchor {
-        margin-bottom: 1.25em;
-        position: relative;
-    }
-
-    .footer__logo--img {
-        width: 5.125em;
-        height: 5.125em;
     }
 
     .footer__logo--popper {
@@ -7648,25 +7622,6 @@
         -moz-animation: glow 1.3s ease-in-out infinite alternate;
         animation: glow 1.3s ease-in-out infinite alternate;
         text-decoration: none;
-    }
-
-    .footer__anchor:hover .footer__logo--popper {
-        transform: translateX(3.438em);
-        opacity: 1;
-    }
-
-    .footer__social--list {
-        width: 100%;
-        max-width: 34.375em;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 1.75em;
-    }
-    
-    .footer__social--link,
-    .footer__copyright,
-    .footer__logo--popper {
-        color: white;
     }
 
     .footer__copyright {
