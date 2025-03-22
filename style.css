@@ -241,6 +241,7 @@
         font-size: 0.9em !important;
     }
 
+    /* Keyframes animation for Wave. */
     @keyframes animate-wave {
         0% {
             transform: rotate(0);
@@ -1339,6 +1340,7 @@
         font-size: 0.9em !important;
     }
 
+    /* Keyframes animation for Wave. */
     @keyframes animate-wave {
         0% {
             transform: rotate(0);
@@ -2412,6 +2414,7 @@
         font-size: 0.9em !important;
     }
 
+    /* Keyframes animation for Wave. */
     @keyframes animate-wave {
         0% {
             transform: rotate(0);
@@ -3485,6 +3488,7 @@
         font-size: 0.9em !important;
     }
 
+    /* Keyframes animation for Wave. */
     @keyframes animate-wave {
         0% {
             transform: rotate(0);
@@ -4549,11 +4553,20 @@
     }
     
     @keyframes change-img-anim {
-        0%{ opacity: 0.5;}
-        20%{ opacity: 1;}
-        40%{ opacity: 1;}
-        60%{ opacity: 1;}
-        100%{ opacity: 0.9;}
+        0% { 
+            opacity: 0.5;
+        }
+
+        20% { 
+            opacity: 1;
+        }
+
+        40% { 
+            opacity: 1;
+        }
+
+        60% { opacity: 1;}
+        100% { opacity: 0.9;}
     }
 
       /* Specific Header 1 Style Given.  In the tutorial David Bragg led for us to along with him (pause to do our thing, etc.), so it does not affect any other <h1> tags. */
@@ -4569,6 +4582,7 @@
         font-size: 0.82em !important;
     }
 
+    /* Keyframes animation for Wave. */
     @keyframes animate-wave {
         0% {
             transform: rotate(0);
@@ -4678,12 +4692,27 @@
         animation-delay: 72s;
     }
     
+    /* Keyframes animation for my pictures being changed for ".about-me__img" in the "about-me" section. */
     @keyframes change-img-anim {
-        0%{ opacity: 0;}
-        1.5%{ opacity: 0.3;}
-        3%{ opacity: 1;}
-        19%{ opacity: 0;}
-        100%{ opacity: 0;}
+        0% { 
+            opacity: 0;
+        }
+
+        1.5% { 
+            opacity: 0.3;
+        }
+
+        3% { 
+            opacity: 1;
+        }
+
+        19% { 
+            opacity: 0;
+        }
+
+        100% { 
+            opacity: 0;
+        }
     }
     
   
@@ -5623,10 +5652,19 @@
         animation-delay: 21s;
     }
     
+    /* Keyframes animation for my pictures being changed for ".picThis" in the "about-me" section. */
     @keyframes change-img-anim {
-        0%{ opacity: 0.9;}
-        0.02%{ opacity: 1;}
-        100%{ opacity: 0.9;}
+        0% { 
+            opacity: 0.9;
+        }
+
+        0.02% { 
+            opacity: 1;
+        }
+
+        100% { 
+            opacity: 0.9;
+        }
     }
 
       /* Specific Header 1 Style Given.  In the tutorial David Bragg led for us to along with him (pause to do our thing, etc.), so it does not affect any other <h1> tags. */
@@ -5642,6 +5680,7 @@
         font-size: 0.7em;
     }
 
+    /* Keyframes animation for Wave. */
     @keyframes animate-wave {
         0% {
             transform: rotate(0);
@@ -5752,12 +5791,27 @@
         animation-delay: 72s;
     }
     
+    /* Keyframes animation for my pictures being changed for ".about-me__img" in the "about-me" section. */
     @keyframes change-img-anim {
-        0%{ opacity: 0;}
-        1.5%{ opacity: 0.3;}
-        3%{ opacity: 1;}
-        19%{ opacity: 0;}
-        100%{ opacity: 0;}
+        0% { 
+            opacity: 0;
+        }
+
+        1.5% { 
+            opacity: 0.3;
+        }
+
+        3% { 
+            opacity: 1;
+        }
+
+        19% { 
+            opacity: 0;
+        }
+
+        100% { 
+            opacity: 0;
+        }
     }
     
   
@@ -6696,10 +6750,19 @@
         animation-delay: 21s;
     }
     
+    /* Keyframes animation for my pictures being changed for ".picThis" in the "about-me" section. */
     @keyframes change-img-anim {
-        0%{ opacity: 0.9;}
-        0.02%{ opacity: 1;}
-        100%{ opacity: 0.9;}
+        0% { 
+            opacity: 0.9;
+        }
+
+        0.02% { 
+            opacity: 1;
+        }
+
+        100% { 
+            opacity: 0.9;
+        }
     }
 
     /* Specific Header 1 Style Given.  In the tutorial David Bragg led for us to along with him (pause to do our thing, etc.), so it does not affect any other <h1> tags. */
@@ -6715,6 +6778,7 @@
         font-size: 0.7em;
     }
 
+    /* Keyframes animation for Wave. */
     @keyframes animate-wave {
         0% {
             transform: rotate(0);
@@ -6822,12 +6886,27 @@
         animation-delay: 72s;
     }
     
+    /* Keyframes animation for my pictures being changed for ".about-me__img" in the "about-me" section. */
     @keyframes change-img-anim {
-        0%{ opacity: 0;}
-        1.5%{ opacity: 0.3;}
-        3%{ opacity: 1;}
-        19%{ opacity: 0;}
-        100%{ opacity: 0;}
+        0% {
+            opacity: 0;
+        }
+
+        1.5% { 
+            opacity: 0.3;
+        }
+
+        3% { 
+            opacity: 1;
+        }
+
+        19% { 
+            opacity: 0;
+        }
+
+        100% { 
+            opacity: 0;
+        }
     }    
 
 
@@ -7603,6 +7682,70 @@
     scroll-behavior: smooth;
 }
 
+/* BEST REFERENCE https://www.google.com/search?q=what+is+svg+in+html&rlz=1C5CHFA_enUS924US924&oq=what+is+%3Csvg%3E&gs_lcrp=EgZjaHJvbWUqDAgDEAAYQxiABBiKBTIGCAAQRRg5MgoIARAAGLEDGIAEMgcIAhAAGIAEMgwIAxAAGEMYgAQYigUyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQkxNTY4MGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8 */
+/* I am trying to incorporate this SVG (another markup language) into my HTML, correctly.  The following code works, but I desire it on every section; then the last section I will place upwards. I keep placing the Tech Stack Section incorrectly (so future endeavor).  For now, I will hide my thoughts here:
+
+<!--========== Experiementing with scroll down arrows (future goal is to add a floating nav bar/table of contents, due to my many projects I listed). ==========-->
+<svg class="arrow">
+<path class="da1" d="M0 0 L30 22 L60 0"></path>
+
+<path class="da2" d="M0 20 L30 42 L60 20"></path>
+
+<path class="da3" d="M0 40 L30 62 L60 40"></path>
+</svg>
+
+
+Positions the Arrow.
+.arrow {
+	width: 3.125 em;
+	height: 3.125 em;
+	position: absolute; (LOOK INTO WHY YOU SHOULD SET THE CONTAINER TO RELATIVE: I DON'T WANT TO, SO FIND A BETTER WAY).
+	left: 50%;
+	margin-left: 0;
+	bottom: 7%;
+  z-index: 999;
+}
+
+Arrow Styles
+.arrow path {
+	stroke: #6030b1;
+	stroke-width: 0.188 em;
+	fill: transparent;	
+	animation: down 3s infinite;
+}
+
+Keyframes animation for Down Arrows (three).
+@keyframes down {
+    0% {
+        opacity:0
+    }
+
+    25% {
+        opacity:1
+    }
+
+    75% {
+        opacity:0
+    }
+
+    100% {
+        opacity:0
+    }
+}
+
+Delays of animation for my arrows.
+.arrow path.da1 {
+    animation-delay: -3s;
+}
+
+.arrow path.da2 {
+    animation-delay: -0.3s;
+}
+
+.arrow path.da3 {
+    animation-delay: 0.3s;
+} */
+
 /* Ref. https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_sup_default_css */
 sup {
     vertical-align: super;
@@ -7612,14 +7755,6 @@ sup {
 .sup2 {
     vertical-align: super;
     font-size: small;
-}
-
-.III:hover span {
-    display: none;
-}
-
-.III:hover::before {
-    content: url('./assets/img/III.jpg');
 }
 
 .sup3 {
@@ -7693,8 +7828,6 @@ section:nth-child(even) {
     min-width: 100%;
 }
 
-
-
 /*=============================================== Specific Styles Section ===============================================*/
 /*============ About Me Section. ============*/
 /* My Signature Header <h2> */
@@ -7750,6 +7883,7 @@ section:nth-child(even) {
     animation: change-img-anim 25s infinite;
 }
 
+/* Picture changes for ".picThis". */
 .cldntpck:nth-of-type(1) {
     animation-delay: 0s;
 }
@@ -7770,12 +7904,27 @@ section:nth-child(even) {
     animation-delay: 28s;
 }
 
+/* Keyframes animation for my pictures being changed for ".picThis" in the "about-me" section. */
 @keyframes change-img-anim {
-    0%{ opacity: 0.9;}
-    20%{ opacity: 1;}
-    40%{ opacity: 1;}
-    60%{ opacity: 1;}
-    100%{ opacity: 0.9;}
+    0% { 
+        opacity: 0.9;
+    }
+
+    20% { 
+        opacity: 1;
+    }
+
+    40% { 
+        opacity: 1;
+    }
+
+    60% { 
+        opacity: 1;
+    }
+
+    100% { 
+        opacity: 0.9;
+    }
 }
 
 .about-me__picture {
@@ -7834,6 +7983,7 @@ section:nth-child(even) {
     animation: change-img-anim 56s infinite;
 }
 
+/* Picture changes for ".about-me__img". */
 .cldntpck2:nth-of-type(1) {
     animation-delay: 0s;
 }
@@ -7870,12 +8020,27 @@ section:nth-child(even) {
     animation-delay: 72s;
 }
 
+/* Keyframes animation for my pictures being changed for ".about-me__img" in the "about-me" section. */
 @keyframes change-img-anim {
-    0%{ opacity: 0;}
-    1.5%{ opacity: 0.3;}
-    3%{ opacity: 1;}
-    19%{ opacity: 0;}
-    100%{ opacity: 0;}
+    0% { 
+        opacity: 0;
+    }
+
+    1.5% { 
+        opacity: 0.3;
+    }
+
+    3% { 
+        opacity: 1;
+    }
+
+    19% { 
+        opacity: 0;
+    }
+
+    100% { 
+        opacity: 0;
+    }
 }
 
 /* Specific Header 1 Style Given.  In the tutorial David Bragg led for us to along with him (pause to do our thing, etc.), so it does not affect any other <h1> tags. */
@@ -7890,6 +8055,7 @@ section:nth-child(even) {
     animation: animate-wave 1.3s infinite ease-in-out;
 }
 
+/* Keyframes animation for Wave. */
 @keyframes animate-wave {
     0% {
         transform: rotate(0);
@@ -8044,7 +8210,7 @@ nav input[type='checkbox'], nav label {
     align-content: center !important;
 }
 
-/* Ref. Effect https://www.w3schools.com/howto/howto_css_glowing_text.asp */
+/* Glow Effect Transitions. Ref. Effect https://www.w3schools.com/howto/howto_css_glowing_text.asp */
 .whenUgotDaGlow {
     display: flex !important;
     justify-content: center !important;
@@ -8065,6 +8231,7 @@ nav input[type='checkbox'], nav label {
     align-content: center !important;
     text-shadow: 0 0 0.056 #4169e3, 0 0 0.056 #F99245, 0 0 0.056 white;
   }
+
   to {
     display: flex !important;
     justify-content: center !important;
@@ -8464,6 +8631,7 @@ nav input[type='checkbox'], nav label {
   from {
     text-shadow: 0 0 0.056em firebrick, 0 0 0.056em darkorange, 0 0 0.056em #F99245, 0 0 0.056em #ffeb4b, 0 0 0.056em white;
   }
+
   to {
     text-shadow: 0 0 0.051em white, 0 0 0.051em #ffeb4b, 0 0 0.051em #F99245, 0 0 0.051em darkorange, 0 0 0.051em firebrick;
   }
