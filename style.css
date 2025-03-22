@@ -8110,10 +8110,10 @@ nav input[type='checkbox'], nav label {
     transform: scaleX(1);
 }
 
-.link__hover-effect--gold { /**/
+.link__hover-effect--gold {
     text-decoration: none;
     position: absolute;
-    background: linear-gradient(82deg, rgb(255, 204, 7), #6030b1);
+    background: linear-gradient(to right, #71713a, #544478, #71713a, #544478);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -8226,6 +8226,7 @@ nav input[type='checkbox'], nav label {
     animation: glow 0.7s ease-in-out infinite alternate;
 }
 
+/* .whenUgotDaGlow Keyframes animation. */
 @-webkit-keyframes glow {
   from {
     display: flex !important;
