@@ -7573,13 +7573,7 @@
 
     /* Passage about my project. */
     .project__passage {
-        text-align: left;
-        margin: 1.375em 0 !important;
         font-size: 0.5em !important;
-        font-weight: 600 !important;
-        background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
 
     .project__links {
@@ -7590,10 +7584,6 @@
         background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-    }
-
-    .project:last-child {
-        margin-bottom: 3.125em;
     }
 
     .info {
@@ -7609,19 +7599,16 @@
         font-size: large !important;
     }
 
+    .footer__logo--img {
+        width: 3em !important;
+        height: 3em !important;
+    }
+
     .footer__logo--popper {
-        position: absolute;
-        right: 0;
-        top: 2.25em;
         font-weight: 900;
         font-size: larger;
         opacity: 0;
-        transition: all 300ms ease;
-        text-align: center;
-        -webkit-animation: glow 1.3s ease-in-out infinite alternate;
-        -moz-animation: glow 1.3s ease-in-out infinite alternate;
-        animation: glow 1.3s ease-in-out infinite alternate;
-        text-decoration: none;
+        
     }
 
     .footer__copyright {
@@ -8056,7 +8043,6 @@ nav input[type='checkbox'], nav label {
 }
 
 .nav__link--anchor-primary:hover {
-    background: rgb(84,68,120);
     background: linear-gradient(90deg, rgba(84,68,120,0.7687861271676301) 18%, rgba(0,0,0,1) 63%);
 }
 
@@ -8074,13 +8060,31 @@ nav input[type='checkbox'], nav label {
     background-color: white;
 }
 
-.link__hover-effect--red-hot:after {
-    background: linear-gradient(to bottom, orange, red, white, blue) !important;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Ref. https://www.amberddesign.com/gradient-underline-links-with-animation/ */
+.link__hover-effect--red-hot {
+    text-decoration: none;
+    position: relative;
+    color: black;
+}
+    
+.link__hover-effect--red-hot::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 0.188rem;
+    left: 0;
+    bottom: -0.188rem;
+    background: linear-gradient(82deg, orange, red, white, blue);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+    
+.link__hover-effect--red-hot:hover::after {
+    transform: scaleX(1);
 }
 
-.link__hover-effect--black:after {
+.link__hover-effect--gold:after {
     background-color: #71713a;
 }
 
@@ -8624,7 +8628,11 @@ nav input[type='checkbox'], nav label {
 /*============ Footer Styles ============*/
 footer {
     text-decoration: none;
-    background-color: #000700;
+
+    /* Attr. vecteezy_minimal-stars-motion-loop-background-for-project-overlay_2016656 */
+    background-image: url('./assets/gif/vecteezy_minimal-stars-motion-loop-background-for-project-overlay_2016656-ezgif.com-video-to-gif-converter.gif');
+    
+    background-size: cover;
 }
 
 .icon {
@@ -8643,7 +8651,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 8% 0;
+    padding: 1% 0;
 }
 
 .footer__anchor {
@@ -8652,13 +8660,8 @@ footer {
 }
 
 .footer__logo--img {
-    width: 5.125em;
-    height: 5.125em;
-}
-  
-.footer__logo--img {
-    width: 5.125em;
-    height: 5.125em;
+    width: 12em;
+    height: 12em;
 }
 
 .footer__logo--popper {
@@ -8668,6 +8671,12 @@ footer {
     font-weight: 700;
     opacity: 0;
     transition: all 300ms ease;
+    transition: all 300ms ease;
+    text-align: center;
+    -webkit-animation: glow 1.3s ease-in-out infinite alternate;
+    -moz-animation: glow 1.3s ease-in-out infinite alternate;
+    animation: glow 1.3s ease-in-out infinite alternate;
+    text-decoration: none;
 }
 
 .footer__anchor:hover .footer__logo--popper {
@@ -8677,10 +8686,14 @@ footer {
 
 .footer__social--list {
     width: 100%;
-    max-width: 34.375em;
+    max-width: 37.5em;
     display: flex;
     justify-content: space-around;
-    margin-bottom: 1.75em;
+    margin-bottom: 1.25em;
+}
+
+.footer__copyright {
+    margin-bottom: 3em;
 }
   
 .footer__social--link,
