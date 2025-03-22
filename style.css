@@ -8113,7 +8113,7 @@ nav input[type='checkbox'], nav label {
 .link__hover-effect--gold {
     text-decoration: none;
     position: absolute;
-    background: linear-gradient(to right, #71713a, #544478, #71713a, #544478);
+    background: linear-gradient(to right, #6030b1, #71713a, #544478);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
