@@ -7599,6 +7599,10 @@
 
 
 /*============================= Global Styles Section =============================*/
+* {
+    scroll-behavior: smooth;
+}
+
 /* Ref. https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_sup_default_css */
 sup {
     vertical-align: super;
