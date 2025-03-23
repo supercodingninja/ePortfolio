@@ -850,7 +850,6 @@
     
     .pic:hover::before {
         content: "A picture of the day will also appear in a side card, whatever picture is shown was taken on the same date as today (with the exception of the year).";
-        font-size: 0.7em !important;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -859,7 +858,6 @@
     
     .ur:hover::before {
         content: "Users can then hover over their result images and click one of the heart buttons to add it to a list of favorite images. This is connected to local storage and will be saved even if the user refreshes.";
-        font-size: 0.7em !important;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -8282,24 +8280,26 @@ nav input[type='checkbox'], nav label {
 /*============ Projects' Styles ============*/
 /* #projectSection {} */
 
-/* Specific Style for the word "Projects" in the .project__title */
+/* THE BIG OPENR (<H1> FOR "PROJECTS SECTION"): Specific Style for the word "Projects" in the .project__title */
 .pj {
     margin: 0 0 0 0.438em;
-    padding-bottom: 0.5em;
+    padding-bottom: 1em;
     font-size: 2em;
     font-weight: bold;
-    background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
+    background: linear-gradient(to bottom, gold, #6030b1, gold, #6030b1, gold, #6030b1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* <h2> for "Projects!" section (the sub-title). */
 .project__sub-title {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1.5em;
     font-weight: bold;
-    padding-bottom: 0.5em;
+    padding-bottom: 1em;
     margin: 0 0 0 0.438em;
+    background: linear-gradient(to top, #6030b1, gold, purple, #6030b1, gold, purple, #6030b1, gold, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .project__list {
@@ -8310,7 +8310,7 @@ nav input[type='checkbox'], nav label {
     margin-bottom: 8.438em;
 }
 
-.project__wrapper {
+.project__wrapper--dark {
     display: flex;
     box-shadow: 0 1.25em 5em rgba(58, 78, 118, 0.45);
     border-radius: 1.25em;
@@ -8318,7 +8318,7 @@ nav input[type='checkbox'], nav label {
     position: relative;
 }
 
-.project__wrapper:before {
+.project__wrapper--dark:before {
     content: "";
     position: absolute;
     top: 0;
@@ -8327,24 +8327,105 @@ nav input[type='checkbox'], nav label {
     width: 100%;
     background-color: #1c1d25;
     opacity: 0;
-    transition: all 450ms ease;
+    transition: all 500ms ease-in-out;
     z-index: 2;
     transform: translateY(100%);
 }
 
-.project:hover .project__wrapper:before {
+.project:hover .project__wrapper--dark:before {
     transform: translateY(0);
     opacity: 0.7;
 }
 
+.project__wrapper--medium {
+    display: flex;
+    box-shadow: 0 1.25em 5em rgba(58, 78, 118, 0.45);
+    border-radius: 1.25em;
+    overflow: hidden;
+    position: relative;
+}
+
+.project__wrapper--medium:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+    opacity: 0.5;
+    transition: all 500ms ease-in-out;
+    z-index: 2;
+    transform: translateY(100%);
+}
+
+.project:hover .project__wrapper--medium:before {
+    transform: translateY(0);
+    opacity: 0.7;
+}
+
+.project__wrapper--light {
+    display: flex;
+    box-shadow: 0 1.25em 5em rgba(58, 78, 118, 0.45);
+    border-radius: 1.25em;
+    overflow: hidden;
+    position: relative;
+}
+
+.project__wrapper--light:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    opacity: 0.7;
+    transition: all 500ms ease-in-out;
+    z-index: 2;
+    transform: translateY(100%);
+}
+
+.project:hover .project__wrapper--light:before {
+    transform: translateY(0);
+    opacity: 0.7;
+}
+
+.project__wrapper--special {
+    display: flex;
+    box-shadow: 0 1.25em 5em rgba(58, 78, 118, 0.45);
+    border-radius: 1.25em;
+    overflow: hidden;
+    position: relative;
+}
+
+.project__wrapper--special:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    transition: all 500ms ease-in-out;
+    z-index: 2;
+    transform: translateY(100%);
+}
+
+.project:hover .project__wrapper--special:before {
+    transform: translateY(0);
+    opacity: 0.5;
+}
+
 .project__img {
     width: 100%;
-    transition: all 500ms ease;
+    transition: all 500ms ease-in-out;
 }
 
 .project:hover .project__img {
     transform: scale(2);
-    filter: blur(0.313em);
+    filter: blur(0.3em);
 }
 
 .project__description {
@@ -8355,7 +8436,7 @@ nav input[type='checkbox'], nav label {
     max-width: 37.5em;
     z-index: 3;
     opacity: 0;
-    transition: transform 450ms ease, opacity 300ms ease-in-out;
+    transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
 }
 
 .project:hover .project__description {
@@ -8365,7 +8446,7 @@ nav input[type='checkbox'], nav label {
 
 .project__title {
     text-align: left;
-    font-size: 2em;
+    font-size: 2.3em;
     font-weight: bold;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -8377,24 +8458,57 @@ nav input[type='checkbox'], nav label {
     float: left;
     unicode-bidi: bidi-override;
     direction: rtl;
-    font-size: 1.2em;
+    font-size: 1.4em;
     align-items: left;
+    padding-bottom: 0.2em;
     justify-content: left;
     text-align: left;
     color: whitesmoke;
 }
 
-/*Ref. https://stackoverflow.com/questions/9913293/change-text-on-hover-then-return-to-the-previous-text */
-.first, .second, .third, .fourth, .fifth, .sixth, .seventh, .eitgth, .ninth, .tenth:hover::before {
-    color: whitesmoke;
-    font-size: 1.2em;
+.technolgies:first-letter {
+    color: #ffeb4b;
+    font-weight: bold;
+    font-size: 1em;
 }
 
-.first:hover span, .second:hover span, .third:hover span, .fourth:hover span, .fifth:hover span, .sixth:hover span, .seventh:hover span, .eitgth:hover span, .ninth:hover span, .tenth:hover span {
+.project__wrapper--special .technolgies {
+    color: white;
+    
+    /* Making "Technologies" Shine. @Keyframes animation in Project's styles, under ".glow3". */
+    text-align: center;
+    -webkit-animation: glow 3s ease-in-out infinite alternate;
+    -moz-animation: glow 3s ease-in-out infinite alternate;
+    animation: glow 3s ease-in-out infinite alternate;
+    text-decoration: none;
+}
+
+/* Info Icon. */
+.glow {
+    text-align: center;
+    -webkit-animation: glow 0.3s ease-in-out infinite alternate;
+    -moz-animation: glow 0.3s ease-in-out infinite alternate;
+    animation: glow 0.3s ease-in-out infinite alternate;
+    text-decoration: none;
+}
+
+/*Ref. https://stackoverflow.com/questions/9913293/change-text-on-hover-then-return-to-the-previous-text */
+.first, .second, .third, .fourth, .fifth, .sixth, .seventh, .eighth, .ninth, .tenth:hover::before {
+    color: whitesmoke;
+    font-size: 1.3em;
+    padding-bottom: 0.2em;
+}
+
+.first:hover span, .second:hover span, .third:hover span, .fourth:hover span, .fifth:hover span, .sixth:hover span, .seventh:hover span, .eighth:hover span, .ninth:hover span, .tenth:hover span {
     display: none;
 }
 
-.first:hover::before, .second:hover::before, .third:hover::before, .fourth:hover::before, .fifth:hover::before, .sixth:hover::before, .seventh:hover::before, .eitgth:hover::before, .ninth:hover::before, .tenth:hover::before {
+.first:hover::before, .second:hover::before, .third:hover::before, .fourth:hover::before, .fifth:hover::before, .sixth:hover::before, .seventh:hover::before, .eighth:hover::before, .ninth:hover::before, .tenth:hover::before {
+    text-align: left;
+    font-size: 1.2em;
+    float: left;
+    align-items: left;
+    justify-content: left;
     box-sizing: content-box;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -8414,6 +8528,7 @@ nav input[type='checkbox'], nav label {
 }
 
 .pic:hover::before, .ur:hover::before {
+    font-size: 1.125em;
     box-sizing: content-box;
     background: linear-gradient(82deg, red, white, blue);
     -webkit-background-clip: text;
@@ -8456,24 +8571,67 @@ nav input[type='checkbox'], nav label {
     content: "JavaScript 62.1% | CSS3 36.2% | HTML5 1.6% | Shell 0.1%";
 }
 
-.technolgies:first-letter {
-    color: #ffeb4b;
-    font-weight: bold;
-    font-size: 1em;
+/* Brief Sentence(s) or Paragraph about the project. */
+.project__passage--dark {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    margin: 2em 0;
+    font-weight: 600;
+    font-size: 1.5em;
+    background: linear-gradient(to bottom, purple, gold, purple, gold, purple, gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* Info Icon. */
-.glow {
-    text-align: center;
-    -webkit-animation: glow 0.3s ease-in-out infinite alternate;
-    -moz-animation: glow 0.3s ease-in-out infinite alternate;
-    animation: glow 0.3s ease-in-out infinite alternate;
-    text-decoration: none;
+.project__passage--medium {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    margin: 2em 0;
+    font-weight: 600;
+    font-size: 1.5em;
+    background: linear-gradient(to bottom, purple, gold, purple, gold, purple, gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* Brief Sentence or Paragraph about the project. */
-.project__passage {
-    margin-right: 5.625em;
+.project__passage--light {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    float: left;
+    text-align: left;
+    margin: 1.375em 0;
+    font-weight: 600;
+    font-size: 1.4em;
+    background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* For Project Passages that need a smaller size. */
+.project__passage--medium__heavy {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    float: left;
+    text-align: left;
+    margin: 1em 0;
+    font-weight: 900;
+    font-size: 1.125em;
+    color: aliceblue;
+    -webkit-animation: glow 3s ease-in-out infinite alternate;
+    -moz-animation: glow 3s ease-in-out infinite alternate;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+/* Additional Material regarding Projeect's Passage. */
+.addMat {
+    display: inline-block;
+    padding-bottom: 1.25em;
+    font-weight: 900;
+}
+
+/* Themed Icons For National Aeronautics and Space Administration (NASA). */
+.flag {
+    background: linear-gradient(to right, red, white, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Github Icon for Project's Repository. */
@@ -8505,20 +8663,9 @@ nav input[type='checkbox'], nav label {
   }
 }
 
-/* Passage about my project. */
-.project__passage {
-    text-align: left;
-    margin: 1.375em 0;
-    font-weight: 600;
-    font-size: 1.4em;
-    background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .project__links {
     text-align: left;
-    font-size: 1.4em;
+    font-size: 1.3em;
     margin-right: 1.313em;
     text-decoration: none;
     background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
