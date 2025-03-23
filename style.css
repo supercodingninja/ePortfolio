@@ -7502,88 +7502,21 @@
         display: none;
     }
 
-    .tenth:hover::before {
-        content: "JavaScript 62.1% | CSS3 36.2% | HTML5 1.6% | Shell 0.1%";
+    .first, .second, .third, .fourth, .fifth, .sixth, .seventh, .eitgth, .ninth, .tenth:hover::before {
         font-size: 1em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
 
     .technolgies {
-        /* Ref. https://stackoverflow.com/questions/15441742/change-last-letter-color */
-        float: left;
-        unicode-bidi: bidi-override;
-        direction: rtl;
-        font-size: 1em;
-        align-items: left;
-        justify-content: left;
-        text-align: left;
+        font-size: 1em !important;
     }
-
-    .technolgies:first-letter {
-        color: #ffeb4b;
-        font-weight: bold;
-        font-size: 1em;
-    }
-
-    .glow {
-        background: linear-gradient(to top, #F99242, darkorange);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-align: center;
-        -webkit-animation: glow 0.3s ease-in-out infinite alternate;
-        -moz-animation: glow 0.3s ease-in-out infinite alternate;
-        animation: glow 0.3s ease-in-out infinite alternate;
-        text-decoration: none;
-    }
-
-    .glow2 {
-        background: linear-gradient(to top, #F99242, darkorange);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-align: center;
-        -webkit-animation: glow 0.7s ease-in-out infinite alternate;
-        -moz-animation: glow 0.7s ease-in-out infinite alternate;
-        animation: glow 0.7s ease-in-out infinite alternate;
-        text-decoration: none;
-    }
-
-    .glow3 {
-        background: linear-gradient(to top, #F99242, darkorange);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-align: center;
-        -webkit-animation: glow 0.9s ease-in-out infinite alternate;
-        -moz-animation: glow 0.9s ease-in-out infinite alternate;
-        animation: glow 0.9s ease-in-out infinite alternate;
-        text-decoration: none;
-    }
-
-    @-webkit-keyframes glow {
-        from {
-            text-shadow: 0 0 0.056em firebrick, 0 0 0.056em darkorange, 0 0 0.056em #F99245, 0 0 0.056em #ffeb4b, 0 0 0.056em white;
-        }
-
-        to {
-            text-shadow: 0 0 0.051em white, 0 0 0.051em #ffeb4b, 0 0 0.051em #F99245, 0 0 0.051em darkorange, 0 0 0.051em firebrick;
-        }
-    }
-
+    
     /* Passage about my project. */
     .project__passage {
         font-size: 0.5em !important;
     }
 
     .project__links {
-        text-align: left;
         font-size: 0.7em !important;
-        margin-right: 1.313em;
-        text-decoration: none;
-        background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
 
     .info {
@@ -8044,7 +7977,8 @@ nav input[type='checkbox'], nav label {
 }
 
 .nav__link--anchor-primary:hover {
-    background: linear-gradient(82deg, rgba(84,68,120,0.7687861271676301) 18%, rgba(0,0,0,1) 63%);
+    background: linear-gradient(135deg, blue, orange);
+    color: #eaedf0;
 }
 
 .link__hover-effect:after {
@@ -8348,14 +8282,24 @@ nav input[type='checkbox'], nav label {
 /*============ Projects' Styles ============*/
 /* #projectSection {} */
 
-/* Projects' Header */
+/* Specific Style for the word "Projects" in the .project__title */
 .pj {
-    font-size: 2em;
     margin: 0 0 0 0.438em;
+    padding-bottom: 0.5em;
+    font-size: 2em;
     font-weight: bold;
     background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+/* <h2> for "Projects!" section (the sub-title). */
+.project__sub-title {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+    margin: 0 0 0 0.438em;
 }
 
 .project__list {
@@ -8411,7 +8355,7 @@ nav input[type='checkbox'], nav label {
     max-width: 37.5em;
     z-index: 3;
     opacity: 0;
-    transition: transform 450ms ease, opacity 300ms ease;
+    transition: transform 450ms ease, opacity 300ms ease-in-out;
 }
 
 .project:hover .project__description {
@@ -8428,165 +8372,6 @@ nav input[type='checkbox'], nav label {
     -webkit-text-fill-color: transparent;
 }
 
-/* I want to target the project's sub-title. */
-.project__sub-title {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.2em;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-content: left;
-}
-
-/*Ref. https://stackoverflow.com/questions/9913293/change-text-on-hover-then-return-to-the-previous-text */
-.first:hover span {
-    display: none;
-}
-
-.first:hover::before {
-    content: "HTML5 30.3% | CSS3 55.8% | JavaScript 13.9%";
-    font-size: 1.2em;
-    box-sizing: content-box;
-    background: linear-gradient(to right, orange, white, orange, white, orange, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.second:hover span {
-    display: none;
-}
-
-.second:hover::before {
-    content: "JavaScript 53.7% | HTML5 24.4% | CSS3 21.9%";
-    font-size: 1.2em;
-    box-sizing: content-box;
-    background: linear-gradient(to right, orange, white, orange, white, orange, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.third:hover span {
-    display: none;
-}
-
-.third:hover::before {
-    content: "HTML5 74.2% | JavaScript 17.1% | CSS3 8.7%";
-    font-size: 1.2em;
-    box-sizing: content-box;
-    background: linear-gradient(to right, orange, white, orange, white, orange, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.pic:hover::before {
-    content: "A picture of the day will also appear in a side card, whatever picture is shown was taken on the same date as today (with the exception of the year).";
-    font-size: 1.5em;
-    box-sizing: content-box;
-    background: linear-gradient(to right, orange, white, orange, white, orange, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.ur:hover::before {
-    content: "Users can then hover over their result images and click one of the heart buttons to add it to a list of favorite images. This is connected to local storage and will be saved even if the user refreshes.";
-    font-size: 1.5em;
-    box-sizing: content-box;
-    background: linear-gradient(to right, orange, white, orange, white, orange, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.fourth:hover span {
-    display: none;
-}
-
-.fourth:hover::before {
-    content: "HTML5 100.0% (simplified by <style> & <script>) ";
-    font-size: 1.2em;
-    box-sizing: content-box;
-    background: linear-gradient(to right, orange, white, orange, white, orange, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.fifth:hover span {
-    display: none;
-}
-
-.fifth:hover::before {
-    content: "JavaScript 100.0%";
-    font-size: 1.2em;
-    box-sizing: content-box;
-    background: linear-gradient(to right, orange, white, orange, white, orange, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.sixth:hover span {
-    display: none;
-}
-
-.sixth:hover::before {
-    content: "JavaScript 66.0% | HTML5 23.6% | CSS3 10.4%";
-    font-size: 1.2em;
-    box-sizing: content-box;
-    background: linear-gradient(to right, orange, white, orange, white, orange, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.seventh:hover span {
-    display: none;
-}
-
-.seventh:hover::before {
-    content: "JavaScript 100.0%";
-    font-size: 1.2em;
-    box-sizing: content-box;
-    background: linear-gradient(to right, orange, white, orange, white, orange, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.eighth:hover span {
-    display: none;
-}
-
-.eighth:hover::before {
-    content: "JavaScript 82.7% | HTML5 12.5% | CSS3 4.8%";
-    font-size: 1.2em;
-    box-sizing: content-box;
-    background: linear-gradient(to right, orange, white, orange, white, orange, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.ninth:hover span {
-    display: none;
-}
-
-.ninth:hover::before {
-    content: "TypeScript 90.5 | CSS3 4.7% | HTML5 3.1% | JavaScript 1.7% | Other Technologies include JWT, NPM, MongoBD, Saas, and more!";
-    font-size: 1.2em;
-    box-sizing: content-box;
-    background: linear-gradient(to right, orange, white, orange, white, orange, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.tenth:hover span {
-    display: none;
-}
-
-.tenth:hover::before {
-    content: "JavaScript 62.1% | CSS3 36.2% | HTML5 1.6% | Shell 0.1%";
-    font-size: 1.2em;
-    box-sizing: content-box;
-    background: linear-gradient(to right, orange, white, orange, white, orange, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .technolgies {
     /* Ref. https://stackoverflow.com/questions/15441742/change-last-letter-color */
     float: left;
@@ -8596,6 +8381,79 @@ nav input[type='checkbox'], nav label {
     align-items: left;
     justify-content: left;
     text-align: left;
+    color: whitesmoke;
+}
+
+/*Ref. https://stackoverflow.com/questions/9913293/change-text-on-hover-then-return-to-the-previous-text */
+.first, .second, .third, .fourth, .fifth, .sixth, .seventh, .eitgth, .ninth, .tenth:hover::before {
+    color: whitesmoke;
+    font-size: 1.2em;
+}
+
+.first:hover span, .second:hover span, .third:hover span, .fourth:hover span, .fifth:hover span, .sixth:hover span, .seventh:hover span, .eitgth:hover span, .ninth:hover span, .tenth:hover span {
+    display: none;
+}
+
+.first:hover::before, .second:hover::before, .third:hover::before, .fourth:hover::before, .fifth:hover::before, .sixth:hover::before, .seventh:hover::before, .eitgth:hover::before, .ninth:hover::before, .tenth:hover::before {
+    box-sizing: content-box;
+    background: linear-gradient(to right, orange, white, orange, white, orange, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+
+.first:hover::before {
+    content: "HTML5 30.3% | CSS3 55.8% | JavaScript 13.9%";
+}
+
+.second:hover::before {
+    content: "JavaScript 53.7% | HTML5 24.4% | CSS3 21.9%";
+}
+
+.third:hover::before {
+    content: "HTML5 74.2% | JavaScript 17.1% | CSS3 8.7%";
+}
+
+.pic:hover::before, .ur:hover::before {
+    box-sizing: content-box;
+    background: linear-gradient(82deg, red, white, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pic:hover::before {
+    content: "A picture of the day will also appear in a side card, whatever picture is shown was taken on the same date as today (with the exception of the year).";
+}
+
+.ur:hover::before {
+    content: "Users can then hover over their result images and click one of the heart buttons to add it to a list of favorite images. This is connected to local storage and will be saved even if the user refreshes.";
+}
+
+.fourth:hover::before {
+    content: "HTML5 100.0% (simplified by <style> & <script>) ";
+}
+
+.fifth:hover::before {
+    content: "JavaScript 100.0%";
+}
+
+.sixth:hover::before {
+    content: "JavaScript 66.0% | HTML5 23.6% | CSS3 10.4%";
+}
+
+.seventh:hover::before {
+    content: "JavaScript 100.0%";
+}
+
+.eighth:hover::before {
+    content: "JavaScript 82.7% | HTML5 12.5% | CSS3 4.8%";
+}
+
+.ninth:hover::before {
+    content: "TypeScript 90.5 | CSS3 4.7% | HTML5 3.1% | JavaScript 1.7% | Other Technologies include JWT, NPM, MongoBD, Saas, and more!";
+}
+
+.tenth:hover::before {
+    content: "JavaScript 62.1% | CSS3 36.2% | HTML5 1.6% | Shell 0.1%";
 }
 
 .technolgies:first-letter {
@@ -8604,6 +8462,7 @@ nav input[type='checkbox'], nav label {
     font-size: 1em;
 }
 
+/* Info Icon. */
 .glow {
     text-align: center;
     -webkit-animation: glow 0.3s ease-in-out infinite alternate;
@@ -8612,6 +8471,12 @@ nav input[type='checkbox'], nav label {
     text-decoration: none;
 }
 
+/* Brief Sentence or Paragraph about the project. */
+.project__passage {
+    margin-right: 5.625em;
+}
+
+/* Github Icon for Project's Repository. */
 .glow2 {
     text-align: center;
     -webkit-animation: glow 0.7s ease-in-out infinite alternate;
@@ -8620,6 +8485,7 @@ nav input[type='checkbox'], nav label {
     text-decoration: none;
 }
 
+/* Project's Deployment Link Icon. */
 .glow3 {
     text-align: center;
     -webkit-animation: glow 0.9s ease-in-out infinite alternate;
@@ -8628,15 +8494,7 @@ nav input[type='checkbox'], nav label {
     text-decoration: none;
 }
 
-.glow4 {
-    text-align: center;
-    -webkit-animation: glow 3s ease-in-out infinite alternate;
-    -moz-animation: glow 3s ease-in-out infinite alternate;
-    animation: glow 3s ease-in-out infinite alternate;
-    text-decoration: none;
-}
-
-/* Keyframes animation for .glow1 to .glow4 effects. */
+/* Keyframes animation for .glow classes (glow effects), and .résumé (works for "Résumé" shine effect). */
 @-webkit-keyframes glow {
   from {
     text-shadow: 0 0 0.056em firebrick, 0 0 0.056em darkorange, 0 0 0.056em #F99245, 0 0 0.056em #ffeb4b, 0 0 0.056em white;
@@ -8687,14 +8545,21 @@ footer {
 }
 
 .icon {
-    font-size: larger;
+    font-size: x-large;
     background: linear-gradient(to right, blue, orange);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .résumé {
-    font-size: larger;
+    font-size: x-large;
+
+    /* Making Résumé Shine. @Keyframes animation in Project's styles, under ".glow3". */
+    text-align: center;
+    -webkit-animation: glow 3s ease-in-out infinite alternate;
+    -moz-animation: glow 3s ease-in-out infinite alternate;
+    animation: glow 3s ease-in-out infinite alternate;
+    text-decoration: none;
 }
 
 .footer__row {
@@ -8719,10 +8584,10 @@ footer {
 .footer__logo--popper {
     position: absolute;
     right: 0;
-    top: 3.5em;
+    top: 4.5em;
     font-weight: 900;
     opacity: 0;
-    font-size: x-large;
+    font-size: 1.2em;
     transition: all 300ms ease;
     text-align: center;
     -webkit-animation: glow 1.3s ease-in-out infinite alternate;
@@ -8738,7 +8603,7 @@ footer {
 
 .footer__social--list {
     width: 100%;
-    max-width: 37.5em;
+    max-width: 43.75em;
     display: flex;
     justify-content: space-around;
     margin-bottom: 1.25em;
