@@ -8352,7 +8352,7 @@ nav input[type='checkbox'], nav label {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: blue;
+    background-color: black;
     opacity: 0.5;
     transition: all 500ms ease-in-out;
     z-index: 2;
@@ -8379,8 +8379,8 @@ nav input[type='checkbox'], nav label {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: red;
-    opacity: 0.7;
+    background-color: black;
+    opacity: 0.9;
     transition: all 500ms ease-in-out;
     z-index: 2;
     transform: translateY(100%);
@@ -8407,7 +8407,7 @@ nav input[type='checkbox'], nav label {
     height: 100%;
     width: 100%;
     background-color: black;
-    opacity: 0.5;
+    opacity: 0.9;
     transition: all 500ms ease-in-out;
     z-index: 2;
     transform: translateY(100%);
@@ -8472,8 +8472,10 @@ nav input[type='checkbox'], nav label {
     font-size: 1em;
 }
 
+/* NASA Project's effect for the word "Technologies." */
 .project__wrapper--special .technolgies {
     color: white;
+    font-size: 1.2em;
     
     /* Making "Technologies" Shine. @Keyframes animation in Project's styles, under ".glow3". */
     text-align: center;
@@ -8527,14 +8529,6 @@ nav input[type='checkbox'], nav label {
     content: "HTML5 74.2% | JavaScript 17.1% | CSS3 8.7%";
 }
 
-.pic:hover::before, .ur:hover::before {
-    font-size: 1.125em;
-    box-sizing: content-box;
-    background: linear-gradient(82deg, red, white, blue);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .pic:hover::before {
     content: "A picture of the day will also appear in a side card, whatever picture is shown was taken on the same date as today (with the exception of the year).";
 }
@@ -8575,7 +8569,7 @@ nav input[type='checkbox'], nav label {
 .project__passage--dark {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: left;
-    margin: 2em 0;
+    margin: 2em 0 1.375em 0;
     font-weight: 600;
     font-size: 1.5em;
     background: linear-gradient(to bottom, purple, gold, purple, gold, purple, gold);
@@ -8586,9 +8580,9 @@ nav input[type='checkbox'], nav label {
 .project__passage--medium {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: left;
-    margin: 2em 0;
+    margin: 2em 0 1.375em 0;
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 1.3em;
     background: linear-gradient(to bottom, purple, gold, purple, gold, purple, gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -8613,7 +8607,7 @@ nav input[type='checkbox'], nav label {
     text-align: left;
     margin: 1em 0;
     font-weight: 900;
-    font-size: 1.125em;
+    font-size: 1.2em;
     color: aliceblue;
     -webkit-animation: glow 3s ease-in-out infinite alternate;
     -moz-animation: glow 3s ease-in-out infinite alternate;
@@ -8621,6 +8615,15 @@ nav input[type='checkbox'], nav label {
 }
 
 /* Additional Material regarding Projeect's Passage. */
+.pic:hover::before, .ur:hover::before {
+    font-size: 1.355em;
+    box-sizing: content-box;
+    background: linear-gradient(82deg, red, white, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Additional Material Positioning and Alignment. */
 .addMat {
     display: inline-block;
     padding-bottom: 1.25em;
