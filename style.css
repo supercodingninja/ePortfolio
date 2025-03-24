@@ -8280,7 +8280,7 @@ nav input[type='checkbox'], nav label {
 /*============ Projects' Styles ============*/
 /* #projectSection {} */
 
-/* THE BIG OPENR (<H1> FOR "PROJECTS SECTION"): Specific Style for the word "Projects" in the .project__title */
+/* THE BIG OPENER (<H1> FOR "PROJECTS SECTION"): Specific Style for the word "Projects" in the .project__title */
 .pj {
     margin: 0 0 0 0.438em;
     padding-bottom: 1em;
@@ -8310,7 +8310,7 @@ nav input[type='checkbox'], nav label {
     margin-bottom: 8.438em;
 }
 
-.project__wrapper--dark {
+.project__wrapper--dark, .project__passage--medium, .project__passage--light, .project__passage--special {
     display: flex;
     box-shadow: 0 1.25em 5em rgba(58, 78, 118, 0.45);
     border-radius: 1.25em;
@@ -8431,7 +8431,7 @@ nav input[type='checkbox'], nav label {
 .project__description {
     position: absolute;
     top: 50%;
-    left: 5.625em;
+    left: 5em;
     transform: translateY(100%);
     max-width: 37.5em;
     z-index: 3;
@@ -8566,42 +8566,34 @@ nav input[type='checkbox'], nav label {
 }
 
 /* Brief Sentence(s) or Paragraph about the project. */
-.project__passage--dark {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.project__passage {
     text-align: left;
-    margin: 2em 0 1.375em 0;
+    float: left;
+    margin: 1.375em 0;
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 1.4em;
+}
+
+.project__passage--dark {
     background: linear-gradient(to bottom, purple, gold, purple, gold, purple, gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .project__passage--medium {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: left;
-    margin: 2em 0 1.375em 0;
-    font-weight: 600;
-    font-size: 1.3em;
     background: linear-gradient(to bottom, purple, gold, purple, gold, purple, gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .project__passage--light {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    float: left;
-    text-align: left;
-    margin: 1.375em 0;
-    font-weight: 600;
-    font-size: 1.4em;
     background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* For Project Passages that need a smaller size. */
-.project__passage--medium__heavy {
+/* NASA Project. */
+.project__passage--special {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     float: left;
     text-align: left;
@@ -8614,7 +8606,7 @@ nav input[type='checkbox'], nav label {
     animation: glow 3s ease-in-out infinite alternate;
 }
 
-/* Additional Material regarding Projeect's Passage. */
+/* NASA's Additional Material regarding Projeect's Passage. */
 .pic:hover::before, .ur:hover::before {
     font-size: 1.355em;
     box-sizing: content-box;
@@ -8623,7 +8615,7 @@ nav input[type='checkbox'], nav label {
     -webkit-text-fill-color: transparent;
 }
 
-/* Additional Material Positioning and Alignment. */
+/* Additional Material Positioning and Alignment over project's links.. */
 .addMat {
     display: inline-block;
     padding-bottom: 1.25em;
@@ -8668,7 +8660,7 @@ nav input[type='checkbox'], nav label {
 
 .project__links {
     text-align: left;
-    font-size: 1.3em;
+    font-size: 1.4em;
     margin-right: 1.313em;
     text-decoration: none;
     background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
