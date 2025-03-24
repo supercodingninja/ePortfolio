@@ -8310,7 +8310,7 @@ nav input[type='checkbox'], nav label {
     margin-bottom: 8.438em;
 }
 
-.project__wrapper--dark, .project__passage--medium, .project__passage--light, .project__passage--special {
+.project__wrapper {
     display: flex;
     box-shadow: 0 1.25em 5em rgba(58, 78, 118, 0.45);
     border-radius: 1.25em;
@@ -8318,7 +8318,7 @@ nav input[type='checkbox'], nav label {
     position: relative;
 }
 
-.project__wrapper--dark:before {
+.project__wrapper:before {
     content: "";
     position: absolute;
     top: 0;
@@ -8327,95 +8327,14 @@ nav input[type='checkbox'], nav label {
     width: 100%;
     background-color: #1c1d25;
     opacity: 0;
-    transition: all 500ms ease-in-out;
+    transition: all 450ms ease;
     z-index: 2;
     transform: translateY(100%);
 }
 
-.project:hover .project__wrapper--dark:before {
+.project:hover .project__wrapper:before {
     transform: translateY(0);
     opacity: 0.7;
-}
-
-.project__wrapper--medium {
-    display: flex;
-    box-shadow: 0 1.25em 5em rgba(58, 78, 118, 0.45);
-    border-radius: 1.25em;
-    overflow: hidden;
-    position: relative;
-}
-
-.project__wrapper--medium:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: 0.5;
-    transition: all 500ms ease-in-out;
-    z-index: 2;
-    transform: translateY(100%);
-}
-
-.project:hover .project__wrapper--medium:before {
-    transform: translateY(0);
-    opacity: 0.7;
-}
-
-.project__wrapper--light {
-    display: flex;
-    box-shadow: 0 1.25em 5em rgba(58, 78, 118, 0.45);
-    border-radius: 1.25em;
-    overflow: hidden;
-    position: relative;
-}
-
-.project__wrapper--light:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: 0.9;
-    transition: all 500ms ease-in-out;
-    z-index: 2;
-    transform: translateY(100%);
-}
-
-.project:hover .project__wrapper--light:before {
-    transform: translateY(0);
-    opacity: 0.7;
-}
-
-.project__wrapper--special {
-    display: flex;
-    box-shadow: 0 1.25em 5em rgba(58, 78, 118, 0.45);
-    border-radius: 1.25em;
-    overflow: hidden;
-    position: relative;
-}
-
-.project__wrapper--special:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: 0.9;
-    transition: all 500ms ease-in-out;
-    z-index: 2;
-    transform: translateY(100%);
-}
-
-.project:hover .project__wrapper--special:before {
-    transform: translateY(0);
-    opacity: 0.5;
 }
 
 .project__img {
@@ -8425,13 +8344,13 @@ nav input[type='checkbox'], nav label {
 
 .project:hover .project__img {
     transform: scale(2);
-    filter: blur(0.3em);
+    filter: blur(0.313em);
 }
 
 .project__description {
     position: absolute;
     top: 50%;
-    left: 5em;
+    left: 5.625em;
     transform: translateY(100%);
     max-width: 37.5em;
     z-index: 3;
@@ -8446,7 +8365,7 @@ nav input[type='checkbox'], nav label {
 
 .project__title {
     text-align: left;
-    font-size: 2.3em;
+    font-size: 2em;
     font-weight: bold;
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
@@ -8495,17 +8414,17 @@ nav input[type='checkbox'], nav label {
 }
 
 /*Ref. https://stackoverflow.com/questions/9913293/change-text-on-hover-then-return-to-the-previous-text */
-.first, .second, .third, .fourth, .fifth, .sixth, .seventh, .eighth, .ninth, .tenth:hover::before {
+.scn1, .wo, .nasa, .aicb1, .rmg, .ntue, .e-t, .pbt, .joia, .DFT:hover::before {
     color: whitesmoke;
     font-size: 1.3em;
     padding-bottom: 0.2em;
 }
 
-.first:hover span, .second:hover span, .third:hover span, .fourth:hover span, .fifth:hover span, .sixth:hover span, .seventh:hover span, .eighth:hover span, .ninth:hover span, .tenth:hover span {
+.scn1:hover span, .wo:hover span, .nasa:hover span, .aicb1:hover span, .rmg:hover span, .ntue:hover span, .e-t:hover span, .pbt:hover span, .joia:hover span, .DFT:hover span {
     display: none;
 }
 
-.first:hover::before, .second:hover::before, .third:hover::before, .fourth:hover::before, .fifth:hover::before, .sixth:hover::before, .seventh:hover::before, .eighth:hover::before, .ninth:hover::before, .tenth:hover::before {
+.scn1:hover::before, .wo:hover::before, .nasa:hover::before, .aicb1:hover::before, .rmg:hover::before, .ntue:hover::before, .e-t:hover::before, .pbt:hover::before, .joia:hover::before, .DFT:hover::before {
     text-align: left;
     font-size: 1.2em;
     float: left;
@@ -8517,15 +8436,15 @@ nav input[type='checkbox'], nav label {
     -webkit-text-fill-color: transparent;
 } 
 
-.first:hover::before {
+.scn1:hover::before {
     content: "HTML5 30.3% | CSS3 55.8% | JavaScript 13.9%";
 }
 
-.second:hover::before {
+.wo:hover::before {
     content: "JavaScript 53.7% | HTML5 24.4% | CSS3 21.9%";
 }
 
-.third:hover::before {
+.nasa:hover::before {
     content: "HTML5 74.2% | JavaScript 17.1% | CSS3 8.7%";
 }
 
@@ -8537,31 +8456,31 @@ nav input[type='checkbox'], nav label {
     content: "Users can then hover over their result images and click one of the heart buttons to add it to a list of favorite images. This is connected to local storage and will be saved even if the user refreshes.";
 }
 
-.fourth:hover::before {
+.aicb1:hover::before {
     content: "HTML5 100.0% (simplified by <style> & <script>) ";
 }
 
-.fifth:hover::before {
+.rmg:hover::before {
     content: "JavaScript 100.0%";
 }
 
-.sixth:hover::before {
+.ntue:hover::before {
     content: "JavaScript 66.0% | HTML5 23.6% | CSS3 10.4%";
 }
 
-.seventh:hover::before {
+.e-t:hover::before {
     content: "JavaScript 100.0%";
 }
 
-.eighth:hover::before {
+.pbt:hover::before {
     content: "JavaScript 82.7% | HTML5 12.5% | CSS3 4.8%";
 }
 
-.ninth:hover::before {
+.joia:hover::before {
     content: "TypeScript 90.5 | CSS3 4.7% | HTML5 3.1% | JavaScript 1.7% | Other Technologies include JWT, NPM, MongoBD, Saas, and more!";
 }
 
-.tenth:hover::before {
+.DFT:hover::before {
     content: "JavaScript 62.1% | CSS3 36.2% | HTML5 1.6% | Shell 0.1%";
 }
 
@@ -8571,7 +8490,7 @@ nav input[type='checkbox'], nav label {
     float: left;
     margin: 1.375em 0;
     font-weight: 600;
-    font-size: 1.4em;
+    font-size: 1.45em;
 }
 
 .project__passage--dark {
@@ -8594,7 +8513,6 @@ nav input[type='checkbox'], nav label {
 
 /* NASA Project. */
 .project__passage--special {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     float: left;
     text-align: left;
     margin: 1em 0;
@@ -8675,6 +8593,7 @@ nav input[type='checkbox'], nav label {
 .info {
     font-size: 0.6em;
 }
+
 
 /*============ Footer Styles ============*/
 footer {
