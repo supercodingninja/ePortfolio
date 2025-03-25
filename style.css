@@ -7357,170 +7357,51 @@
         flex-direction: column;
         align-content: left;
     }
-
-    /*Ref. https://stackoverflow.com/questions/9913293/change-text-on-hover-then-return-to-the-previous-text */
-    .first:hover span {
-        display: none;
-    }
-
-    .first:hover::before {
-        content: "HTML5 30.3% | CSS3 55.8% | JavaScript 13.9%";
-        font-size: 1em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .second:hover span {
-        display: none;
-    }
-
-    .second:hover::before {
-        content: "JavaScript 53.7% | HTML5 24.4% | CSS3 21.9%";
-        font-size: 1em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .third:hover span {
-        display: none;
-    }
-
-    .third:hover::before {
-        content: "HTML5 74.2% | JavaScript 17.1% | CSS3 8.7%";
-        font-size: 0.5em !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-content: center !important;
-        padding: 0 !important;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
     
-    .pic:hover::before {
-        content: "A picture of the day will also appear in a side card, whatever picture is shown was taken on the same date as today (with the exception of the year).";
-        font-size: 0.5em !important;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    
-    .ur:hover::before {
-        content: "Users can then hover over their result images and click one of the heart buttons to add it to a list of favorite images. This is connected to local storage and will be saved even if the user refreshes.";
-        font-size: 0.5em !important;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .fourth:hover span {
-        display: none;
-    }
-
-    .fourth:hover::before {
-        content: "HTML5 100.0% (simplified by <style> & <script>) ";
-        font-size: 1em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .fifth:hover span {
-        display: none;
-    }
-
-    .fifth:hover::before {
-        content: "JavaScript 100.0%";
-        font-size: 1em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .sixth:hover span {
-        display: none;
-    }
-
-    .sixth:hover::before {
-        content: "JavaScript 66.0% | HTML5 23.6% | CSS3 10.4%";
-        font-size: 1em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .seventh:hover span {
-        display: none;
-    }
-
-    .seventh:hover::before {
-        content: "JavaScript 100.0%";
-        font-size: 1em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .eighth:hover span {
-        display: none;
-    }
-
-    .eighth:hover::before {
-        content: "JavaScript 82.7% | HTML5 12.5% | CSS3 4.8%";
-        font-size: 1em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .ninth:hover span {
-        display: none;
-    }
-
-    .ninth:hover::before {
-        content: "TypeScript 90.5 | CSS3 4.7% | HTML5 3.1% | JavaScript 1.7% | Other Technologies include JWT, NPM, MongoBD, Saas, and more!";
-        font-size: 1em;
-        box-sizing: content-box;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .tenth:hover span {
-        display: none;
-    }
-
-    .first, .second, .third, .fourth, .fifth, .sixth, .seventh, .eitgth, .ninth, .tenth:hover::before {
-        font-size: 1em;
-    }
-
     .technolgies {
         font-size: 1em !important;
     }
+
+    .technolgies:first-letter {
+        color: #ffeb4b;
+        font-weight: bold;
+        font-size: 0.2em;
+    }
+
+    .scn1, .wo, .nasa, .aicb1, .rmg, .ntue, .e-t, .pbt, .joia, .DFT {
+        font-size: 0.7em;
+    }
     
-    /* Passage about my project. */
+    .scn1:hover::before, .wo:hover::before, .nasa:hover::before, .aicb1:hover::before, .rmg:hover::before, .ntue:hover::before, .e-t:hover::before, .pbt:hover::before, .joia:hover::before, .DFT:hover::before {
+        font-size: 0.7em !important;
+    }
+    
     .project__passage {
         font-size: 0.5em !important;
+    }
+
+    .project__passage--special {
+        font-size: 0.5em !important;
+    }
+
+    .pic:hover::before, .ur:hover::before {
+        font-size: 1em !important;
+    }
+
+    .addMat {
+        padding-bottom: 0.025em !important;
+    }
+
+    .flag {
+        font-size: 0.7em !important;
     }
 
     .project__links {
         font-size: 0.7em !important;
     }
 
-    .info {
-        font-size: 0.2em;
+    .project:last-child {
+        margin-bottom: 0.5em !important;
     }
 
     /*============ Footer Styles ============*/
@@ -8409,11 +8290,6 @@ nav input[type='checkbox'], nav label {
     font-size: 1.6em;
 }
 
-/* Isoloated size adjustment "info" icon, located by technologies. */
-.info {
-    font-size: 0.305em;
-}
-
 .scn1, .wo, .nasa, .aicb1, .rmg, .ntue, .e-t, .pbt, .joia, .DFT:hover::before {
     color: whitesmoke;
     font-size: 1.3em;
@@ -8496,19 +8372,6 @@ nav input[type='checkbox'], nav label {
     -webkit-text-fill-color: transparent;
 }
 
-
-
-/*===== Project's Link(s) Styles =====*/
-.project__links {
-    text-align: left;
-    font-size: 1.4em;
-    margin-right: 1.313em;
-    text-decoration: none;
-    background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .project__passage--dark {
     background: linear-gradient(to bottom, purple, gold, purple, gold, purple, gold);
     -webkit-background-clip: text;
@@ -8560,6 +8423,17 @@ nav input[type='checkbox'], nav label {
 /* Themed Icons For National Aeronautics and Space Administration (NASA). */
 .flag {
     background: linear-gradient(to right, red, white, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*===== Project's Link(s) Styles =====*/
+.project__links {
+    text-align: left;
+    font-size: 1.4em;
+    margin-right: 1.313em;
+    text-decoration: none;
+    background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
