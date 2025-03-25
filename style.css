@@ -850,6 +850,7 @@
     
     .pic:hover::before {
         content: "A picture of the day will also appear in a side card, whatever picture is shown was taken on the same date as today (with the exception of the year).";
+        font-size: 0.7em !important;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -858,6 +859,7 @@
     
     .ur:hover::before {
         content: "Users can then hover over their result images and click one of the heart buttons to add it to a list of favorite images. This is connected to local storage and will be saved even if the user refreshes.";
+        font-size: 0.7em !important;
         box-sizing: content-box;
         background: linear-gradient(to right, orange, white, orange, white, orange, white);
         -webkit-background-clip: text;
@@ -7551,7 +7553,7 @@
 }
 
 
-/*============================= Global Styles Section =============================*/
+/*==================================================== Global Styles. ====================================================*/
 * {
     scroll-behavior: smooth;
 }
@@ -7702,8 +7704,19 @@ section:nth-child(even) {
     min-width: 100%;
 }
 
-/*=============================================== Specific Styles Section ===============================================*/
-/*============ About Me Section. ============*/
+.glow {
+    background: linear-gradient(to top, #F99242, darkorange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    -webkit-animation: glow 0.3s ease-in-out infinite alternate;
+    -moz-animation: glow 0.3s ease-in-out infinite alternate;
+    animation: glow 0.3s ease-in-out infinite alternate;
+    text-decoration: none;
+}
+
+/*================================================== Non-Global Styles. ==================================================*/
+/*====================================== About Me Section. ======================================*/
 /* My Signature Header <h2> */
 .about-me__info--subtitle {
     padding: 0.438em;
@@ -7944,7 +7957,7 @@ section:nth-child(even) {
     }
 }
 
-/*============ Navigation Menu Styles ============*/
+/*====================================== Navigation Menu Styles ======================================*/
 /* Getting rid of the checkbox's view (use for screens that you do not want the togle menu button feature */
 nav input[type='checkbox'], nav label {
     display: none;
@@ -8069,10 +8082,11 @@ nav input[type='checkbox'], nav label {
 }
 
 
-/* THIS INTERFERES WITH MY with my <sup class="SUP2">! DO NOT WANT THIS TO TARGET EVERYTHING. Really cool approach; but it will take me more work to rebuild my site, rather using this as an individual class. KEEP IN CODE FOR POSSIBLE FUTURE USE. This is new to me (CSS4 tag, and currently CSS4 is still in draft mode, but some browsers have already implemented it). CSS is now versioned as a series of modules, with each module containing a specific set of features: the "i" selector Ref. https://stackoverflow.com/questions/27506735/what-does-i-mean-in-a-css-attribute-selector I have used a hover effect before, but not targeting with this selector (I think it was more of and ID/class). */
+/* THIS INTERFERES WITH MY with my <sup class="SUP2">! I DO NOT WANT THIS TO TARGET EVERYTHING. Really cool approach; but it will take me more work to rebuild my site, rather using this as an individual class. KEEP IN CODE FOR POSSIBLE FUTURE USE. This is new to me (CSS4 tag, and currently CSS4 is still in draft mode, but some browsers have already implemented it). CSS is now versioned as a series of modules, with each module containing a specific set of features: the "i" selector Ref. https://stackoverflow.com/questions/27506735/what-does-i-mean-in-a-css-attribute-selector I have used a hover effect before, but not targeting with this selector (I think it was more of and ID/class). */
 /* i:hover {
     opacity: 0.9;
 } */
+
 /* Use instead */
 .navEffect:hover {
     opacity: 0.9;
@@ -8084,6 +8098,7 @@ nav input[type='checkbox'], nav label {
     position: relative;
     transition: opacity 300ms ease;
 } */
+
 /* Use instead */
 .navEffect {
     text-decoration: none;
@@ -8116,7 +8131,6 @@ nav input[type='checkbox'], nav label {
     padding: 0 0.75em;
 }
 
-/* Since David stated we could make this any color that we want, I just went ahead with adding my flare and style. */
 .myPreference {
     padding: 0.438em;
     background: linear-gradient(to right, #544478, #71713a);
@@ -8125,7 +8139,7 @@ nav input[type='checkbox'], nav label {
 }
 
 
-/*============ Tech Stack Section ============*/
+/*====================================== Tech Stack Section ======================================*/
 #techStack {
     min-height: 87vh !important;
 }
@@ -8261,6 +8275,7 @@ nav input[type='checkbox'], nav label {
 .express {
     height: 65%;
     width: 100%;
+    
     /* I actually stumbled upon this playing around; and then I looked up the information to learn what I did to cause this effect, exactly. Ref. https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text */
     transform: scale(1, -1);
     align-items: center;
@@ -8277,7 +8292,7 @@ nav input[type='checkbox'], nav label {
 }
 
 
-/*============ Projects' Styles ============*/
+/*====================================== Projects' Styles ======================================*/
 /* #projectSection {} */
 
 /* THE BIG OPENER (<H1> FOR "PROJECTS SECTION"): Specific Style for the word "Projects" in the .project__title */
@@ -8339,7 +8354,7 @@ nav input[type='checkbox'], nav label {
 
 .project__img {
     width: 100%;
-    transition: all 500ms ease-in-out;
+    transition: all 500ms ease;
 }
 
 .project:hover .project__img {
@@ -8355,7 +8370,7 @@ nav input[type='checkbox'], nav label {
     max-width: 37.5em;
     z-index: 3;
     opacity: 0;
-    transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+    transition: transform 450ms ease, opacity 300ms ease-in-out;
 }
 
 .project:hover .project__description {
@@ -8372,54 +8387,40 @@ nav input[type='checkbox'], nav label {
     -webkit-text-fill-color: transparent;
 }
 
+/*===== Project's <h3> Styles & Effects ("Technologies"). =====*/
+/*Ref. https://stackoverflow.com/questions/9913293/change-text-on-hover-then-return-to-the-previous-text */
+/* <h3> Styles ("Technologies," and "info" icon. */
 .technolgies {
     /* Ref. https://stackoverflow.com/questions/15441742/change-last-letter-color */
     float: left;
     unicode-bidi: bidi-override;
     direction: rtl;
-    font-size: 1.4em;
+    font-size: 1.2em;
     align-items: left;
-    padding-bottom: 0.2em;
     justify-content: left;
     text-align: left;
     color: whitesmoke;
 }
 
+/* "Info" icon styles */
 .technolgies:first-letter {
     color: #ffeb4b;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1.6em;
 }
 
-/* NASA Project's effect for the word "Technologies." */
-.project__wrapper--special .technolgies {
-    color: white;
-    font-size: 1.2em;
-    
-    /* Making "Technologies" Shine. @Keyframes animation in Project's styles, under ".glow3". */
-    text-align: center;
-    -webkit-animation: glow 3s ease-in-out infinite alternate;
-    -moz-animation: glow 3s ease-in-out infinite alternate;
-    animation: glow 3s ease-in-out infinite alternate;
-    text-decoration: none;
+/* Isoloated size adjustment "info" icon, located by technologies. */
+.info {
+    font-size: 0.305em;
 }
 
-/* Info Icon. */
-.glow {
-    text-align: center;
-    -webkit-animation: glow 0.3s ease-in-out infinite alternate;
-    -moz-animation: glow 0.3s ease-in-out infinite alternate;
-    animation: glow 0.3s ease-in-out infinite alternate;
-    text-decoration: none;
-}
-
-/*Ref. https://stackoverflow.com/questions/9913293/change-text-on-hover-then-return-to-the-previous-text */
 .scn1, .wo, .nasa, .aicb1, .rmg, .ntue, .e-t, .pbt, .joia, .DFT:hover::before {
     color: whitesmoke;
     font-size: 1.3em;
     padding-bottom: 0.2em;
 }
 
+/*===== Projects' <h3> effects: The Razzle-Dazzle: Watch "Technologies" disappear, and choice string content appear! =====*/
 .scn1:hover span, .wo:hover span, .nasa:hover span, .aicb1:hover span, .rmg:hover span, .ntue:hover span, .e-t:hover span, .pbt:hover span, .joia:hover span, .DFT:hover span {
     display: none;
 }
@@ -8434,7 +8435,7 @@ nav input[type='checkbox'], nav label {
     background: linear-gradient(to right, orange, white, orange, white, orange, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-} 
+}
 
 .scn1:hover::before {
     content: "HTML5 30.3% | CSS3 55.8% | JavaScript 13.9%";
@@ -8484,13 +8485,28 @@ nav input[type='checkbox'], nav label {
     content: "JavaScript 62.1% | CSS3 36.2% | HTML5 1.6% | Shell 0.1%";
 }
 
-/* Brief Sentence(s) or Paragraph about the project. */
+/*===== Project's Passage Styles. =====*/
 .project__passage {
     text-align: left;
-    float: left;
     margin: 1.375em 0;
     font-weight: 600;
-    font-size: 1.45em;
+    font-size: 1.4em;
+    background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+/*===== Project's Link(s) Styles =====*/
+.project__links {
+    text-align: left;
+    font-size: 1.4em;
+    margin-right: 1.313em;
+    text-decoration: none;
+    background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .project__passage--dark {
@@ -8506,22 +8522,23 @@ nav input[type='checkbox'], nav label {
 }
 
 .project__passage--light {
-    background: linear-gradient(to right, purple, gold, purple, gold, purple, gold);
+    background: linear-gradient(to top, purple, rgb(255, 204, 7), gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* NASA Project. */
 .project__passage--special {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     float: left;
     text-align: left;
     margin: 1em 0;
     font-weight: 900;
     font-size: 1.2em;
     color: aliceblue;
-    -webkit-animation: glow 3s ease-in-out infinite alternate;
-    -moz-animation: glow 3s ease-in-out infinite alternate;
-    animation: glow 3s ease-in-out infinite alternate;
+    -webkit-animation: glow 15s ease-in-out infinite alternate;
+    -moz-animation: glow 15s ease-in-out infinite alternate;
+    animation: glow 15s ease-in-out infinite alternate;
 }
 
 /* NASA's Additional Material regarding Projeect's Passage. */
@@ -8550,22 +8567,30 @@ nav input[type='checkbox'], nav label {
 /* Github Icon for Project's Repository. */
 .glow2 {
     text-align: center;
-    -webkit-animation: glow 0.7s ease-in-out infinite alternate;
-    -moz-animation: glow 0.7s ease-in-out infinite alternate;
-    animation: glow 0.7s ease-in-out infinite alternate;
+    -webkit-animation: glow 4s ease-in-out infinite alternate;
+    -moz-animation: glow 4s ease-in-out infinite alternate;
+    animation: glow 4s ease-in-out infinite alternate;
     text-decoration: none;
 }
 
-/* Project's Deployment Link Icon. */
+/* Project's Deployment Link(s) Icon. */
 .glow3 {
     text-align: center;
-    -webkit-animation: glow 0.9s ease-in-out infinite alternate;
-    -moz-animation: glow 0.9s ease-in-out infinite alternate;
-    animation: glow 0.9s ease-in-out infinite alternate;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
     text-decoration: none;
 }
 
-/* Keyframes animation for .glow classes (glow effects), and .résumé (works for "Résumé" shine effect). */
+.glow4 {
+    text-align: center;
+    -webkit-animation: glow 3s ease-in-out infinite alternate;
+    -moz-animation: glow 3s ease-in-out infinite alternate;
+    animation: glow 3s ease-in-out infinite alternate;
+    text-decoration: none;
+}
+
+/* Keyframes animation for .glow classes (glow effects), and .résumé (works for "Résumé" (footer) shine effect). */
 @-webkit-keyframes glow {
   from {
     text-shadow: 0 0 0.056em firebrick, 0 0 0.056em darkorange, 0 0 0.056em #F99245, 0 0 0.056em #ffeb4b, 0 0 0.056em white;
@@ -8576,26 +8601,12 @@ nav input[type='checkbox'], nav label {
   }
 }
 
-.project__links {
-    text-align: left;
-    font-size: 1.4em;
-    margin-right: 1.313em;
-    text-decoration: none;
-    background: linear-gradient(to right, #544478, #ffeb4a, #544478, #ffeb4a, #544478, #ffeb4a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .project:last-child {
     margin-bottom: 3.125em;
 }
 
-.info {
-    font-size: 0.6em;
-}
 
-
-/*============ Footer Styles ============*/
+/*====================================== Footer Styles ======================================*/
 footer {
     text-decoration: none;
 
