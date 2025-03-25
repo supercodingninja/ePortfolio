@@ -7283,55 +7283,12 @@
     }
 
     .project {
-        margin-bottom: 8.438em;
-    }
-
-    .project__wrapper {
-        display: flex;
-        box-shadow: 0 1.25em 5em rgba(58, 78, 118, 0.45);
-        border-radius: 1.25em;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .project__wrapper:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #1c1d25;
-        opacity: 0;
-        transition: all 450ms ease;
-        z-index: 2;
-        transform: translateY(100%);
-    }
-
-    .project:hover .project__wrapper:before {
-        transform: translateY(0);
-        opacity: 0.7;
-    }
-
-    .project__img {
-        width: 100%;
-        transition: all 500ms ease;
-    }
-
-    .project:hover .project__img {
-        transform: scale(2);
-        filter: blur(0.313em);
+        margin-bottom: 2em !important;
     }
 
     .project__description {
-        position: absolute;
-        top: 50%;
         left: 1.5em !important;
-        transform: translateY(100%);
         max-width: 20em !important;
-        z-index: 3;
-        opacity: 0;
-        transition: transform 450ms ease, opacity 300ms ease;
     }
 
     .project:hover .project__description {
@@ -7339,45 +7296,32 @@
         transform: translateY(-50%);
     }
 
-    .project__title {
-        text-align: left;
-        font-size: 1em !important;
-        font-weight: bold;
-        background: linear-gradient(to right, orange, white, orange, white, orange, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    /* I want to target the projects sub-title. */
-    .project__sub-title {
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    .project__intro--sub-title {
         font-size: 0.7em !important;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        align-content: left;
+    }
+    
+    .project__title {
+        font-size: 0.8em !important;
     }
     
     .technolgies {
-        font-size: 1em !important;
+        font-size: 0.5em !important;
     }
 
     .technolgies:first-letter {
-        color: #ffeb4b;
-        font-weight: bold;
-        font-size: 0.2em;
+        font-size: 0.1em !important;
     }
 
     .scn1, .wo, .nasa, .aicb1, .rmg, .ntue, .e-t, .pbt, .joia, .DFT {
-        font-size: 0.7em;
+        font-size: 0.5em;
     }
     
     .scn1:hover::before, .wo:hover::before, .nasa:hover::before, .aicb1:hover::before, .rmg:hover::before, .ntue:hover::before, .e-t:hover::before, .pbt:hover::before, .joia:hover::before, .DFT:hover::before {
-        font-size: 0.7em !important;
+        font-size: 0.5em !important;
     }
     
     .project__passage {
-        font-size: 0.5em !important;
+        font-size: 0.3em !important;
     }
 
     .project__passage--special {
@@ -7389,7 +7333,7 @@
     }
 
     .addMat {
-        padding-bottom: 0.025em !important;
+        padding-bottom: 0.005em !important;
     }
 
     .flag {
