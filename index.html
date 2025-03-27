@@ -1528,16 +1528,16 @@
 
 
     <!-- How to track my ePortfolio's progress.  BEST REF. GOOGLE AI Overview (ASSIGNMENT ALREADY GRADED, FIRST VIEWED WEEKS, BEFORE, and i was complimented and told that I did a good job: these are my notes that I got out of the tutorial concerning my recent topic of interests). -->
-     // SOME BIG AND  IMPORTANT REMINDERS/KNOWLEDGE TO HAVE:
-        1. Server-Side Implementation (Optional): For more robust tracking, you can implement server-side tracking in addition to or instead of client-side tracking. 
+     // SOME BIG AND  IMPORTANT REMINDERS/KNOWLEDGE TO HAVE: //
+        // 1. Server-Side Implementation (Optional): For more robust tracking, you can implement server-side tracking in addition to or instead of client-side tracking. //
 
-        2. User Experience: Avoid overly aggressive tracking techniques that might annoy users. 
+        // 2. User Experience: Avoid overly aggressive tracking techniques that might annoy users. //
 
-        3. Browser Compatibility: Ensure your code is compatible with different browsers. 
+        // 3. Browser Compatibility: Ensure your code is compatible with different browsers. //
 
-        4. Privacy: Be mindful of user privacy and comply with relevant regulations (e.g., GDPR) when using cookies and local storage. 
+        // 4. Privacy: Be mindful of user privacy and comply with relevant regulations (e.g., GDPR) when using cookies and local storage. //
 
-        5. Analytics: Consider using a web analytics platform (e.g., Google Analytics) for more comprehensive website traffic analysis. 
+        // 5. Analytics: Consider using a web analytics platform (e.g., Google Analytics) for more comprehensive website traffic analysis. // 
     <script>
         // USE COOKIES (that's what they're for 😂)! //
         document.cookie = "visitor_id=" + Math.random().toString(36).substring(2, 15);
@@ -1577,6 +1577,15 @@
         var visitorId = localStorage.getItem("visitor_id");
         
         console.log("Visitor ID:", visitorId);
+
+
+        // HOW TO SHOW OTHER USERS HOW MANY TIMES MY PAGE HAS BEEN VISITED. //
+        var url = window.location.href;
+        
+        $.getJSON('https://api.gosquared.com/now/v3/pages?api_key=demo&site_token=GSN-106863-S&href=' + encodeURIComponent(url), function(data) {
+    
+    $('#online-now').addClass('visible').find('.visitors').text(data.visitors);
+});
     </script>
 </body>
 
