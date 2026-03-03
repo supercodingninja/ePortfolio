@@ -1,0 +1,69 @@
+{
+    "name": "Frederick Thomas - The Super Coding Ninja™",
+    "short_name": "Super Coding Ninja",
+    "description": "Developer & Engineer solving problems people don't know exist",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0a0a",
+    "theme_color": "#0a0a0a",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "en",
+    "dir": "ltr",
+    "icons": [
+        {
+            "src": "./assets/logoNfavicon/logo.jpeg",
+            "sizes": "192x192",
+            "type": "image/jpeg",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "./assets/logoNfavicon/logo.jpeg",
+            "sizes": "512x512",
+            "type": "image/jpeg",
+            "purpose": "maskable any"
+        }
+    ],
+    "categories": ["portfolio", "developer", "technology"],
+    "screenshots": [
+        {
+            "src": "./assets/img/section__bg.jpeg",
+            "sizes": "1280x720",
+            "type": "image/jpeg",
+            "form_factor": "wide",
+            "label": "Desktop view of Super Coding Ninja portfolio"
+        },
+        {
+            "src": "./assets/img/me.jpg",
+            "sizes": "750x1334",
+            "type": "image/jpeg",
+            "form_factor": "narrow",
+            "label": "Mobile view of Super Coding Ninja portfolio"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "View Projects",
+            "short_name": "Projects",
+            "description": "See Frederick's latest development work",
+            "url": "/#projects",
+            "icons": [{ "src": "./assets/logoNfavicon/logo.jpeg", "sizes": "192x192" }]
+        },
+        {
+            "name": "Tech Stack",
+            "short_name": "Tech",
+            "description": "View technologies and tools",
+            "url": "/#tech-stack",
+            "icons": [{ "src": "./assets/logoNfavicon/logo.jpeg", "sizes": "192x192" }]
+        },
+        {
+            "name": "Contact",
+            "short_name": "Contact",
+            "description": "Get in touch with Frederick",
+            "url": "/#contact",
+            "icons": [{ "src": "./assets/logoNfavicon/logo.jpeg", "sizes": "192x192" }]
+        }
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false
+}
