@@ -1,1596 +1,758 @@
+<!-- 
+================================================================================
+FILE: index.html
+PROJECT: ePortfolio PWA Refactor
+AUTHOR: Frederick Thomas (The Super Coding Ninja™)
+================================================================================
+-->
+
 <!DOCTYPE html>
-<html lang="en">
-
-
+<!--
+This Area Of Code Is: Document Type Declaration
+Explanation: Declares this document as HTML5, ensuring browsers render in standards mode
+In Other Words: Tells the browser "This is a modern HTML document, not old-school HTML"
+-->
+<html lang="en" dir="ltr">
+<!--
+This Area Of Code Is: Root HTML Element with Language Attributes
+Explanation: Sets the document language to English and text direction to left-to-right for accessibility
+In Other Words: Helps screen readers know this page is in English, reading left to right
+-->
 <head>
+    <!--
+    This Area Of Code Is: Document Head Section
+    Explanation: Contains metadata, links to resources, and configuration not visible on the page
+    In Other Words: The "behind the scenes" info that makes the page work properly
+    -->
+    
     <meta charset="UTF-8">
+    <!--
+    This Area Of Code Is: Character Encoding Meta Tag
+    Explanation: Specifies UTF-8 encoding to support all Unicode characters including emojis and special symbols
+    In Other Words: Makes sure all text shows up correctly, including special characters
+    -->
     
-    <!-- This tag is crucial for mobile-first web design, ensuring that the page scales correctly on different screen sizes. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <!--
+    This Area Of Code Is: Viewport Meta Tag
+    Explanation: Controls layout on mobile browsers with width=device-width for responsive scaling
+    In Other Words: Makes the page fit properly on phones without weird zooming issues
+    -->
     
-    <title>Super Coding Ninja™</title>
-
-    <!-- Stylesheet. -->
-    <link rel="stylesheet" href="style.css"/>
-
-    <!-- Favicon. -->
-    <link rel="icon" type="image/x-icon" href="./assets/logoNfavicon/logo.jpeg"/>
-
-
-    <!-- Used for Font & Icons. -->
-    <link href='https://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css'>
+    <meta name="description" content="Frederick Thomas - The Super Coding Ninja™ | Developer & Engineer Solving Problems People Don't Know Exist">
+    <!--
+    This Area Of Code Is: SEO Description Meta Tag
+    Explanation: Provides search engines with a concise summary of the page content
+    In Other Words: The text that shows up under the link in Google search results
+    -->
     
-
-    <!-- Used for Font & Icons. -->
-    <script src="https://kit.fontawesome.com/e371fbb1b1.js" crossorigin="anonymous"></script>
+    <meta name="theme-color" content="#0a0a0a">
+    <!--
+    This Area Of Code Is: Theme Color Meta Tag
+    Explanation: Sets the browser toolbar color on mobile devices for PWA integration
+    In Other Words: Makes the browser address bar match my site's dark theme on phones
+    -->
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--
+    This Area Of Code Is: iOS PWA Capability Meta Tag
+    Explanation: Allows the web app to run in full-screen mode on iOS devices without browser chrome
+    In Other Words: Makes the website feel like a real app on iPhones when saved to home screen
+    -->
+    
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--
+    This Area Of Code Is: iOS Status Bar Style Meta Tag
+    Explanation: Controls the appearance of the status bar in iOS full-screen mode
+    In Other Words: Makes the iPhone status bar blend nicely with your dark theme
+    -->
+    
+    <title>Frederick Thomas | The Super Coding Ninja™</title>
+    <!--
+    This Area Of Code Is: Document Title
+    Explanation: Sets the text displayed in the browser tab and used by search engines
+    In Other Words: What the user sees at the top of your browser tab
+    -->
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    <!--
+    This Area Of Code Is: Web App Manifest Link
+    Explanation: Links to the JSON file that defines PWA properties like icons and theme colors
+    In Other Words: The instruction manual that tells the browser how to treat this as an app
+    -->
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="./assets/logoNfavicon/logo.jpeg">
+    <!--
+    This Area Of Code Is: Favicon Link
+    Explanation: Specifies the icon displayed in browser tabs and bookmarks
+    In Other Words: The little icon the user see on the browser tab
+    -->
+    
+    <link rel="apple-touch-icon" href="./assets/logoNfavicon/logo.jpeg">
+    <!--
+    This Area Of Code Is: Apple Touch Icon Link
+    Explanation: Provides the icon used when users add the PWA to their iOS home screen
+    In Other Words: The app icon that appears on iPhone/iPad home screens
+    -->
+    
+    <!-- Preconnect to External Domains for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--
+    This Area Of Code Is: DNS Preconnect Links
+    Explanation: Establishes early connections to external domains to speed up resource loading
+    In Other Words: Starts connecting to Google Fonts before my site actually needs them, making things faster
+    -->
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--
+    This Area Of Code Is: Google Fonts Stylesheet
+    Explanation: Loads the Inter font family for body text and JetBrains Mono for code elements
+    In Other Words: Imports nice modern fonts that look professional and clean
+    -->
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+    <!--
+    This Area Of Code Is: Main CSS Stylesheet Link
+    Explanation: Links to the external stylesheet containing all visual styling rules
+    In Other Words: Connects to the file that makes everything look pretty
+    -->
 </head>
 
-
 <body>
-    <!--HTML Currency Symbols, Currency Entities and ASCII Currency Character Code Reference https://www.toptal.com/designers/htmlarrows/symbols/ -->
+    <!--
+    This Area Of Code Is: Document Body
+    Explanation: Contains all visible content and interactive elements of the webpage
+    In Other Words: Everything you actually see and click on the page
+    -->
     
-    <!-- Use of underscores and hyphens in the name scheme are due to applying the BEM method. Reference https://getbem.com/ "BEM — is a methodology that helps you to create reusable components and code sharing in front‑end development" -->
-   <!--========== About Me Secton. ==========-->
-    <section id="about-me">
-        <!-- Displays Page's Visitations.  Attr. https://www.gosquared.com/blog/visitors-currently-on-this-page -->
-        <p id="online-now"><span class="visitors">0</span> people are currently viewing this page.</p>
-
-        <!-- Navigation Menu. -->
-        <nav>
-            <!-- Personal Logo. Class "III" is in both parts of name: in order to make it easier for the page visitor when hovering. -->
-            <div class="BIG">
-                <i style="cursor: pointer;">
-                    Frederick
-                    
-                    <!-- Class "glow" is intended to attract the page visitor to hover over my name. -->
-                    <sup class="
-                        III 
-                        sup2" style="background: linear-gradient(to right, rgb(255, 204, 0), blue, #ff6200, white, orange, rgb(255, 165, 0), blue, #ff6200, white, orange, rgb(255, 204, 0), blue, #ff6200, white, orange);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent; font-weight: 900;">
-                        III
-                    </sup>
-                </i>
-            </div>
+    <!-- Skip to Main Content Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!--
+    This Area Of Code Is: Skip Navigation Link
+    Explanation: Allows keyboard users to bypass navigation and jump directly to main content
+    In Other Words: A hidden link that helps people using keyboards navigate faster
+    -->
+    
+    <!-- Navigation Header -->
+    <header class="site-header" role="banner">
+        <!--
+        This Area Of Code Is: Site Header Container
+        Explanation: Wraps the navigation and branding elements at the top of the page
+        In Other Words: The top bar with my name and menu
+        -->
+        
+        <div class="header-container">
+            <!--
+            This Area Of Code Is: Header Inner Container
+            Explanation: Provides max-width constraint and flexbox layout for header contents
+            In Other Words: Keeps the header content centered and organized
+            -->
             
-
-            <!-- Hamburger Menu Ref. Andrey Krokhin (https://codepen.io/andreykrokhin) -->
-             <!-- Bootstrap reference (https://getbootstrap.com/docs/4.1/utilities/display/#hiding-elements). -->
-            <div class="hamburger-menu">
-                <input id="menu__toggle" type="checkbox"/>
+            <!-- Logo / Brand -->
+            <a href="#" class="brand" aria-label="Frederick Thomas Home">
+                <!--
+                This Area Of Code Is: Brand Logo Link
+                Explanation: Clickable home link with the "Frederick" text and Easter egg superscript
+                In Other Words: My name in the top left that links back to the top
+                -->
+                <span class="brand-text">Frederick</span>
+                <sup class="easter-egg-trigger" aria-label="Hidden surprise">
+                    <!--
+                    This Area Of Code Is: Easter Egg Superscript Element
+                    Explanation: The "III" superscript that triggers the hidden image on hover
+                    In Other Words: The little "III" that shows a secret image when the user hovers over it
+                    -->
+                    III
+                    <span class="easter-egg-image" role="img" aria-label="Surprise image">
+                        <!--
+                        This Area Of Code Is: Easter Egg Hidden Image
+                        Explanation: The image that appears when hovering over the III superscript
+                        In Other Words: The secret photo that pops up as a surprise
+                        -->
+                        <img src="./assets/img/III.jpg" alt="Frederick III Surprise!" loading="lazy">
+                    </span>
+                </sup>
+            </a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="menu-toggle" 
+                    aria-label="Toggle navigation menu" 
+                    aria-expanded="false"
+                    aria-controls="main-nav">
+                <!--
+                This Area Of Code Is: Mobile Menu Toggle Button
+                Explanation: Accessible button that controls the navigation menu visibility
+                In Other Words: The hamburger button that opens/closes the menu on phones
+                -->
                 
+                <span class="hamburger-lines">
+                    <!--
+                    This Area Of Code Is: Hamburger Icon Lines Container
+                    Explanation: Contains the three lines that morph into the SCN logo when clicked
+                    In Other Words: The three horizontal lines that transform into my logo
+                    -->
+                    <span class="line line-1" aria-hidden="true"></span>
+                    <span class="line line-2" aria-hidden="true"></span>
+                    <span class="line line-3" aria-hidden="true"></span>
+                </span>
                 
-                <label class="menu__btn" for="menu__toggle">
-                    <span></span>
-                </label>
+                <span class="scn-logo" aria-hidden="true">
+                    <!--
+                    This Area Of Code Is: SCN Logo Text (Hidden by Default)
+                    Explanation: The "<SCN/>" text that appears when hamburger is clicked
+                    In Other Words: My logo text that replaces the hamburger lines
+                    -->
+                    &lt;SCN/&gt;
+                </span>
+            </button>
+            
+            <!-- Main Navigation -->
+            <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main navigation">
+                <!--
+                This Area Of Code Is: Main Navigation Menu
+                Explanation: Contains the primary site navigation links with mobile-friendly behavior
+                In Other Words: The menu with links to different sections of my portfolio
+                -->
                 
-                
-                <!-- Unorder List for Naviagation Menu. -->
-                <ul class="
-                    hamburger__sandwich 
-                    nav__link--list">
-                   
+                <ul class="nav-list">
+                    <!--
+                    This Area Of Code Is: Navigation List
+                    Explanation: Unordered list of navigation items for semantic structure
+                    In Other Words: A bulleted list (without bullets) of menu items
+                    -->
                     
-                    <li class="burger__topping">
-                        <!-- Anchor link for Tech Stack (Languages & TOOLS:  That's why I call it "Tech Stack," which iscommonly used & modern).  -->
-                        <a href="#techStack" class="
-                            np 
-                            navEffect 
-                            nav_link--anchor
-                            link__hover-effect
-                            link__hover-effect--gold" style="margin-right: 20px;">
-                            Tech Stack
-                        </a>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
                     </li>
-
-
-                    <li class="burger__topping">
-                        <!--Anchor link for  "Projects". -->
-                        <a href="#projectSection" class="
-                            np
-                            navEffect 
-                            nav_link--anchor
-                            link__hover-effect
-                            link__hover-effect--gold">
-                            Projects
-                        </a>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
                     </li>
-
-
-                    <li class="burger__topping">
-                        <!--Anchor link for  Contact. NOTE: THIS IS STYLE DIFFERRENTLY (because it's a primary call to action button). -->
-                        <a href="#footer" class="
-                            nav__link--anchor
-                            nav__link--anchor-primary">
-                            Contact
-                        </a>
+                    <li class="nav-item">
+                        <a href="#tech-stack" class="nav-link">Tech Stack</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
                     </li>
                 </ul>
-            </div>
-        </nav>
-
-
-        <!-- About Me Section. -->
-        <div class="flex flex-1">
-            <div class="about-me__info row">
-                <div class="about-me__info--container">
-                    <figure class="about-me__picture--mask">
-                        <!-- Ref. yochans (https://codepen.io/yochans) -->
-                        <div class="picThis">
-                            <img src="./assets/img/me.jpg" alt="Awesome Picture of Frederick Thomas, Super Coding Ninja™!" class="
-                                cldntpck 
-                                about-me__picture" style="display: flex; justify-content: center; align-items: center;"/>
-                            
-                                
-                            <img src="./assets/img/meUSMC.jpg" class="
-                                cldntpck 
-                                about-me__picture" style="display: flex; justify-content: center; align-items: center;"/>
-                            
-                            
-                            <img src="./assets/img/me2.jpeg" class="
-                                cldntpck 
-                                about-me__picture" style="display: flex; justify-content: center; align-items: center;"/>
-                            
-                            
-                            <img src="./assets/img/meJam.JPG" class="
-                                cldntpck 
-                                about-me__picture" style="display: flex; justify-content: center; align-items: center;"/>
-                            
-                            
-                            <img src="./assets/img/me3.jpeg" class="
-                                cldntpck 
-                                about-me__picture" style="display: flex; justify-content: center; align-items: center;"/>
-                        </div>
-                    </figure>
-
-
-                    <!-- Big Introduction Header. -->
-                    <h1 class="about-me__info--title">
-                        Hi, I'm<span class="myPreference">Frederick Thomas</span>
-
-                        <!-- Be kind and wave "Hello." -->
-                        <sup class="sayHello">
-                            👋🏿
-                        </sup>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main Content Area -->
+    <main id="main-content" class="main-content">
+        <!--
+        This Area Of Code Is: Main Content Container
+        Explanation: Wraps the primary page content for semantic structure and skip link targeting
+        In Other Words: The main area where all my important content lives
+        -->
+        
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <!--
+            This Area Of Code Is: Hero Section
+            Explanation: The prominent top section introducing me with key messaging
+            In Other Words: The big impressive section at the top with my photo and headline
+            -->
+            
+            <div class="hero-container">
+                <!--
+                This Area Of Code Is: Hero Inner Container
+                Explanation: Provides layout constraints and grid/flexbox structure for hero content
+                In Other Words: Organizes the hero content in a nice layout
+                -->
+                
+                <!-- Hero Image -->
+                <div class="hero-image-wrapper">
+                    <!--
+                    This Area Of Code Is: Hero Image Container
+                    Explanation: Wraps the profile image with decorative elements and aspect ratio control
+                    In Other Words: The box that holds my profile photo with special styling
+                    -->
+                    
+                    <img src="./assets/img/me.jpg" 
+                         alt="Frederick Thomas - The Super Coding Ninja" 
+                         class="hero-image"
+                         width="400"
+                         height="400"
+                         loading="eager"
+                         fetchpriority="high">
+                    <!--
+                    This Area Of Code Is: Hero Profile Image
+                    Explanation: Main profile photo with explicit dimensions to prevent layout shift
+                    In Other Words: My main photo with set size so the page doesn't jump while loading
+                    -->
+                    
+                    <!-- Decorative Binary Code Background -->
+                    <div class="binary-decoration" aria-hidden="true">
+                        <!--
+                        This Area Of Code Is: Binary Code Decorative Element
+                        Explanation: Visual decoration showing binary code that reinforces the coding theme
+                        In Other Words: The 1s and 0s that appear behind my photo for style
+                        -->
+                        101010101110100111101
+                    </div>
+                </div>
+                
+                <!-- Hero Text Content -->
+                <div class="hero-content">
+                    <!--
+                    This Area Of Code Is: Hero Text Content Container
+                    Explanation: Contains the headline, tagline, and descriptive text
+                    In Other Words: All the words in the hero section
+                    -->
+                    
+                    <h1 id="hero-heading" class="hero-title">
+                        <!--
+                        This Area Of Code Is: Main Heading
+                        Explanation: Primary page heading with wave emoji for personality
+                        In Other Words: The big "HELLO" text
+                        -->
+                        Hi, I'm <span class="name-highlight">Frederick Thomas</span> 👋
                     </h1>
-
-
-                    <!-- My trademark included. -->
-                    <h2 class="about-me__info--subtitle">
-                        <i>👨🏾‍🎓&nbsp;&nbsp;&ldquo;And I Am The Super Coding Ninja&trade;&rdquo;&nbsp;<sup>🎶</sup>🎷</i>
-                    </h2>
-
-
-                    <!-- About Me Paragraph. -->
-                    <p class="about-me__info--passage">
-                        I'm a <strong class="emph">Developer & Engineer</strong> who solves problems people don't know exist.&nbsp;&nbsp;Solving problems can be difficult, but so is failing:&nbsp;<u><b>Choose</b></u>&nbsp;Your Hard!&nbsp;&nbsp;I choose to&nbsp;&nbsp;<strong class="emph">Learn</strong>,&nbsp;<strong class="emph">Teach</strong>, and&nbsp;<strong class="emph">Replicate</strong>, Ensuring Generational&nbsp;<strong class="emph2">SUCCESS</strong>.
+                    
+                    <p class="hero-tagline">
+                        <!--
+                        This Area Of Code Is: Tagline Paragraph
+                        Explanation: Secondary heading establishing the Super Coding Ninja brand identity
+                        In Other Words: Your catchy title with the trophy and ninja emojis
+                        -->
+                        <span class="trophy" aria-hidden="true">🏆</span>
+                        "And I Am The Super Coding Ninja™"
+                        <span class="ninja" aria-hidden="true">🥷</span>
+                    </p>
+                    
+                    <p class="hero-description">
+                        <!--
+                        This Area Of Code Is: Hero Description Text
+                        Explanation: Detailed description of my professional identity and philosophy
+                        In Other Words: The paragraph explaining what I do and my motto
+                        -->
+                        I'm a <strong>Developer & Engineer</strong> who solves problems people don't know exist. 
+                        Solving problems can be difficult, but so is failing: 
+                        <em class="emphasis-highlight">Choose</em> Your Hard! 
+                        I choose to <span class="pillars">Learn</span>, 
+                        <span class="pillars">Teach</span>, and 
+                        <span class="pillars">Replicate</span>, 
+                        Ensuring Generational <span class="success-text">SUCCESS</span>.
                     </p>
                 </div>
-
-                <div class="about-me__img--container">
-                    <figure class="about-me__img">
-                        <img src="/assets/img/remote2.png" alt="Me, coding, Remotely." class="cldntpck2"/>
-                                
-                        <img src="./assets/img/gl.png" alt="Frederick, cleaning the church's steeple (a cross)." class="cldntpck2"/>
-                        
-                        <img src="./assets/img/cross.png" alt="Frederick, cleaning the church's steeple (a cross)." class="cldntpck2"/>
-                        
-                        <img src="./assets/img/kiss.png" alt="Frederick, cleaning the church's steeple (a cross)." class="cldntpck2"/>
-                        
-                        <img src="./assets/img/bk.png" alt="Frederick, cleaning the church's steeple (a cross)." class="cldntpck2"/>
-                        
-                        <img src="./assets/img/dreamOn.png" alt="Frederick, cleaning the church's steeple (a cross)." class="cldntpck2"/>
-                        
-                        <img src="./assets/img/UWproPic2.gif" alt="Frederick is looking up, and believing his dreams: dream on." class="          cldntpck2"/>
-                        
-                        <img src="./assets/img/cf.png" alt="Frederick is looking up, and believing his dreams: dream on." class="            cldntpck2"/>
-                        
-                        <img src="./assets/img/d.jpg" alt="Frederick is looking up, and believing his dreams: dream on." class="            cldntpck2"/>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section" aria-labelledby="projects-heading">
+            <!--
+            This Area Of Code Is: Projects Section
+            Explanation: Showcases portfolio projects with interactive cards and hover effects
+            In Other Words: The section displays all my cool projects
+            -->
+            
+            <div class="section-container">
+                <!--
+                This Area Of Code Is: Section Container
+                Explanation: Standard container providing consistent padding and max-width across sections
+                In Other Words: The box that keeps all sections looking consistent
+                -->
+                
+                <h2 id="projects-heading" class="section-title">Featured Projects</h2>
+                <!--
+                This Area Of Code Is: Section Heading
+                Explanation: Accessible heading linking to the projects section
+                In Other Words: The "Featured Projects" title
+                -->
+                
+                <div class="projects-grid">
+                    <!--
+                    This Area Of Code Is: Projects Grid Container
+                    Explanation: CSS Grid layout for responsive project card arrangement
+                    In Other Words: The layout that organizes project cards in a nice grid
+                    -->
+                    
+                    <!-- AIproj Project Card -->
+                    <article class="project-card" data-project="ai-proj">
+                        <div class="project-image-wrapper">
+                            <img src="./assets/img/AIproj.png" 
+                                 alt="AI Project Interface" 
+                                 class="project-image"
+                                 loading="lazy">
+                            <div class="project-overlay">
+                                <span class="project-status">Featured</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">AI Project</h3>
+                            <p class="project-description">
+                                Advanced Artificial Intelligence Implementation
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">AI</span>
+                                <span class="tag">Machine Learning</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- APIproj Project Card -->
+                    <article class="project-card" data-project="api-proj">
+                        <div class="project-image-wrapper">
+                            <img src="./assets/img/APIproj.png" 
+                                 alt="API Project Interface" 
+                                 class="project-image"
+                                 loading="lazy">
+                            <div class="project-overlay">
+                                <span class="project-status">Featured</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">API Project</h3>
+                            <p class="project-description">
+                                Robust API development and integration
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">API</span>
+                                <span class="tag">Backend</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- NoteTaker Project Card -->
+                    <article class="project-card" data-project="note-taker">
+                        <div class="project-image-wrapper">
+                            <img src="./assets/img/NoteTaker.png" 
+                                 alt="Note Taker Application Interface" 
+                                 class="project-image"
+                                 loading="lazy">
+                            <div class="project-overlay">
+                                <span class="project-status">Featured</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Note Taker</h3>
+                            <p class="project-description">
+                                Efficient note-taking application
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Full Stack</span>
+                                <span class="tag">Productivity</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- ReadMeGenerator Project Card -->
+                    <article class="project-card" data-project="readme-gen">
+                        <div class="project-image-wrapper">
+                            <img src="./assets/img/ReadMeGenerator.png" 
+                                 alt="README Generator Interface" 
+                                 class="project-image"
+                                 loading="lazy">
+                            <div class="project-overlay">
+                                <span class="project-status">Featured</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">README Generator</h3>
+                            <p class="project-description">
+                                Automated documentation generator
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">CLI</span>
+                                <span class="tag">Node.js</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- ReadMeGenerator2 Project Card -->
+                    <article class="project-card" data-project="readme-gen-2">
+                        <div class="project-image-wrapper">
+                            <img src="./assets/img/ReadMeGenerator2.png" 
+                                 alt="README Generator Version 2 Interface" 
+                                 class="project-image"
+                                 loading="lazy">
+                            <div class="project-overlay">
+                                <span class="project-status">Featured</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">README Generator V2</h3>
+                            <p class="project-description">
+                                Enhanced documentation generator with advanced features
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">CLI</span>
+                                <span class="tag">Enhanced</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Remote Project Card -->
+                    <article class="project-card" data-project="remote">
+                        <div class="project-image-wrapper">
+                            <img src="./assets/img/remote.png" 
+                                 alt="Remote Project Interface" 
+                                 class="project-image"
+                                 loading="lazy">
+                            <div class="project-overlay">
+                                <span class="project-status">Featured</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Remote</h3>
+                            <p class="project-description">
+                                Remote work collaboration tool
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Collaboration</span>
+                                <span class="tag">Remote</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tech Stack Section -->
+        <section id="tech-stack" class="tech-stack-section" aria-labelledby="tech-heading">
+            <!--
+            This Area Of Code Is: Tech Stack Section
+            Explanation: Displays the technologies and tools I work with
+            In Other Words: The section showing all the coding tools I know
+            -->
+            
+            <div class="section-container">
+                <h2 id="tech-heading" class="section-title">Tech. Stack</h2>
+                
+                <div class="tech-grid">
+                    <!--
+                    This Area Of Code Is: Technology Grid
+                    Explanation: Responsive grid layout for technology icons and labels
+                    In Other Words: The grid of all your technology icons
+                    -->
+                    
+                    <figure class="tech-item">
+                        <img src="./assets/techStack/AIchatbot.png" 
+                             alt="" 
+                             class="tech-icon"
+                             loading="lazy"
+                             width="64"
+                             height="64">
+                        <figcaption class="tech-name">AI Chatbot</figcaption>
+                    </figure>
+                    
+                    <figure class="tech-item">
+                        <img src="./assets/techStack/AngularJS.png" 
+                             alt="" 
+                             class="tech-icon"
+                             loading="lazy"
+                             width="64"
+                             height="64">
+                        <figcaption class="tech-name">AngularJS</figcaption>
+                    </figure>
+                    
+                    <figure class="tech-item">
+                        <img src="./assets/techStack/Heroku.png" 
+                             alt="" 
+                             class="tech-icon"
+                             loading="lazy"
+                             width="64"
+                             height="64">
+                        <figcaption class="tech-name">Heroku</figcaption>
+                    </figure>
+                    
+                    <figure class="tech-item">
+                        <img src="./assets/techStack/JS.png" 
+                             alt="" 
+                             class="tech-icon"
+                             loading="lazy"
+                             width="64"
+                             height="64">
+                        <figcaption class="tech-name">JavaScript</figcaption>
+                    </figure>
+                    
+                    <figure class="tech-item">
+                        <img src="./assets/techStack/VanillaJS.webp" 
+                             alt="" 
+                             class="tech-icon"
+                             loading="lazy"
+                             width="64"
+                             height="64">
+                        <figcaption class="tech-name">Vanilla JS</figcaption>
+                    </figure>
+                    
+                    <figure class="tech-item">
+                        <img src="./assets/techStack/adobeCC.png" 
+                             alt="" 
+                             class="tech-icon"
+                             loading="lazy"
+                             width="64"
+                             height="64">
+                        <figcaption class="tech-name">Adobe CC</figcaption>
+                    </figure>
+                    
+                    <figure class="tech-item">
+                        <img src="./assets/techStack/aiTalks.png" 
+                             alt="" 
+                             class="tech-icon"
+                             loading="lazy"
+                             width="64"
+                             height="64">
+                        <figcaption class="tech-name">AI Talks</figcaption>
+                    </figure>
+                    
+                    <figure class="tech-item">
+                        <img src="./assets/techStack/bootstrap.svg" 
+                             alt="" 
+                             class="tech-icon"
+                             loading="lazy"
+                             width="64"
+                             height="64">
+                        <figcaption class="tech-name">Bootstrap</figcaption>
+                    </figure>
+                    
+                    <figure class="tech-item">
+                        <img src="./assets/techStack/jQuery.png" 
+                             alt="" 
+                             class="tech-icon"
+                             loading="lazy"
+                             width="64"
+                             height="64">
+                        <figcaption class="tech-name">jQuery</figcaption>
+                    </figure>
+                    
+                    <figure class="tech-item">
+                        <img src="./assets/techStack/npm.png" 
+                             alt="" 
+                             class="tech-icon"
+                             loading="lazy"
+                             width="64"
+                             height="64">
+                        <figcaption class="tech-name">npm</figcaption>
                     </figure>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    
-    <!--========== Tech Stack Secton. ==========-->
-    <!--👇🏿 This Is Probably The Coolest Thing I've Done In This Site, Thus Far...👇🏿 -->
-    <section id="techStack">
-        <div class="container">
-            <div class="row">
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+            <!--
+            This Area Of Code Is: Contact Section
+            Explanation: Provides contact information and call-to-action for potential clients
+            In Other Words: The section where people can find how to reach me.
+            -->
             
-                <!-- Tech Stack Header. -->
-                <h1 class="
-                    tech__section__title 
-                    whenUgotDaGlow">
-                    Tech. Stack
-                </h1>
-
-                <!-- List of My Technologies Exposure. -->
-                <div class="tech__list">
-
-                    <!--======== Adobe Creative Cloud to Bootstrap 5. ========-->  
-                    <!--  Adobe Creative Cloud. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="./assets/techStack/adobeCC.png" alt="Adobe Creative Cloud" class="tech__img"/>
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            Adobe&nbsp;Creative&nbsp;Cloud
-                        </span>
-                    </div>
-
-
-                    <!--  AngularJS. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="./assets/techStack/AngularJS.png" class="tech__img" alt="AngularJS" style="width: 65%;"/>
-                        </figure>
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            AngularJS
-                        </span>
-                    </div>
-
-
-                    <!--  MY FIRST AI CHATBOT!. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="./assets/techStack/aiTalks.png" class="tech__img" alt="My First AI Chatbot!" style="width: 70%; opacity: 1;"/>
-
-
-                            <p class="
-                                tech__img 
-                                topSpace 
-                                alt2groovy">
-
-                                <a href="https://drive.google.com/file/d/1eXWF_pZ7P2jyyR1V90noFHyxMjc2c-ef/view?usp=drive_link" target="_blank" style="font-weight: 900; font-size: 24px; opacity: 1;">
-                                    Click&nbsp;Me!
-                                </a>
-                            </p>
-                        </figure>
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="tech__name alt2groovy">AI&nbsp;Chatbot</span>
-                    </div>
-
-
-                    <!--  Bootstrap 5. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="https://images.seeklogo.com/logo-png/38/2/bootstrap-5-logo-png_seeklogo-386607.png" class="tech__img" alt="Bootstrap 5" style="width: 75%;"/>
-                        </figure>
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            Bootstrap&nbsp;5
-                        </span>
-                    </div>
-
-
-                    <!--======== Chart.js to express. ========--> 
-                    <!--  Chart.js. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="https://www.chartjs.org/media/logo-title.svg" class="
-                                tech__img 
-                                alt2groovy" alt="Chart.js" style="width: 82%;"/>
-                        </figure>
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            Chart.js
-                        </span>
-                    </div>
-
-
-                    <!--  CSS3. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-        
-                        <!-- Shows My Tech. Icon. -->  
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
-                            alt="CSS3" class="tech__img" style="width: 75%;"/>
-                        </figure>
-        
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            CSS3
-                        </span>
-                    </div>
-
-
-                    <!-- ES6 JavaScript. -->
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="./assets/techStack/JS.png"
-                            class="tech__img" alt="ES6 JavaScript" style="width: 70%;"/>
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            ES6&nbsp;JavaScript
-                        </span>
-                    </div>
-
-
-                    <!--  express. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" class="
-                                tech__img 
-                                express" alt="express"/>
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy" style="transform: scale(-1, 3);">
-                            express
-                        </span>
-                    </div>
-
-
-                    <!--======== Git to jQuery. ========--> 
-                    <!--  Git. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
-                            alt="Git" class="tech__img"/>
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy" style="transform: scale(1, 1);">
-                            Git
-                        </span>
-                    </div>
-
-              
-                    <!-- Heroku. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="./assets/techStack/Heroku.png"
-                            alt="heroku" class="tech__img" style="width: 45%;"/>
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            heroku
-                        </span>
-                    </div>
-
+            <div class="section-container">
+                <h2 id="contact-heading" class="section-title">Let's Build Together</h2>
                 
-                    <!-- HTML5. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-                            class="tech__img" alt="HTML5" style="width: 75%;"/>
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            HTML5
-                        </span>
-                    </div>
-
-
-                    <!-- jQuery. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="./assets/techStack/jQuery.png"
-                            class="tech__img" alt="jQuery" style="width: 75%;"/>
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            jQuery
-                        </span>
-                    </div>
-
-
-                    <!--======== mongoDB to Node Package Manager (NPM). ========--> 
-                    <!-- mongoDB. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
-                            alt="mongoDB" class="tech__img" />
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            mongoDB
-                        </span>
-                    </div>
-
-
-                    <!-- MySQL. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
-                            class="tech__img" alt="MySQL"/>
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            MySQL
-                        </span>
-                    </div>
-
-
-                    <!-- Node.js®. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
-                            alt="Node.js®" class="tech__img" />
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            Node.js®
-                        </span>
-                    </div>
-
-
-                    <!-- Node Package Manager (NPM). -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="./assets/techStack/npm.png"
-                            alt="Adobe Creative Cloud" class="tech__img" />
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            Node&nbsp;Package&nbsp;Manager
-                        </span>
-                    </div>
-
-
-                    <!--======== Postman to Saas & SCSS. ========-->
-                    <!-- Postman. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
-                            alt="Postman" class="tech__img" style="width: 90%;"/>
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            Postman
-                        </span>
-                    </div>
-
-
-                    <!-- Python. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img
-                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-                            alt="Python" class="tech__img" style="width: 80%;"/>
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            Python
-                        </span>
-                    </div>
-
-
-                    <!-- React. -->   
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-                            class="tech__img" alt="React" style="width: 65%;"/>
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            React
-                        </span>
-                    </div>
-
-
-                    <!-- Saas & SCSS. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
-                            class="tech__img" alt="Saas & SCSS" style="width: 75%;"/>
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            Saas & SCSS
-                        </span>
-                    </div>
-
-
-                    <!--======== Travis CI to webpak. ========-->
-                    <!-- Travis CI. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="https://www.vectorlogo.zone/logos/travis-ci/travis-ci-icon.svg"
-                            class="tech__img" alt="Travis CI" style="width: 90%;"/>
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            Travis&nbsp;CI
-                        </span>
-                    </div>
-
-                
-                    <!-- TypeScript-->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-                            alt="TypeScript" class="tech__img" style="width: 55%;"/>
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            TypeScript
-                        </span>
-                    </div>
-
-
-                    <!-- Vanilla JavaScript. -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="./assets/techStack/VanillaJS.webp"
-                            class="tech__img" alt="Vanilla JavaScript" style="width: 3.125;
-                            height: 3.125; border-radius: 50%; overflow: hidden;"/>
-                        </figure>
+                <div class="contact-content">
+                    <p class="contact-text">
+                        Ready to solve problems you didn't know existed? Let's connect.
+                    </p>
+                    
+                    <div class="contact-links">
+                        <!--
+                        This Area Of Code Is: Contact Links Container
+                        Explanation: Groups social and professional contact links with consistent styling
+                        In Other Words: Buttons to your LinkedIn, GitHub, Email, etc.
+                        -->
                         
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            Vanilla&nbsp;JavaScript
-                        </span>
-                    </div>
-
-
-                    <!-- webpack -->  
-                    <div class="addTech">
-                        <figure class="tech__img--wrapper">
-
-                            <!-- Shows My Tech. Icon. -->  
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/d00d0969292a6569d45b06d3f350f463a0107b0d/icons/webpack/webpack-original-wordmark.svg"
-                            alt="webpack" class="tech__img" style="width: 200px;"/>
-                        </figure>
-
-
-                        <!-- Shows My Tech.'s' Title. -->
-                        <span class="
-                            tech__name 
-                            alt2groovy">
-                            webpack
-                        </span>
+                        <a href="https://linkedin.com/in/discoverfrederickthomas" 
+                           class="contact-btn linkedin"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Connect on LinkedIn">
+                            <span class="contact-icon" aria-hidden="true">💼</span>
+                            LinkedIn
+                        </a>
+                        
+                        <a href="https://github.com/supercodingninja" 
+                           class="contact-btn github"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View GitHub Profile">
+                            <span class="contact-icon" aria-hidden="true">💻</span>
+                            GitHub
+                        </a>
+                        
+                        <a href="mailto:contact@scn.ninja" 
+                           class="contact-btn email"
+                           aria-label="Send Email">
+                            <span class="contact-icon" aria-hidden="true">✉️</span>
+                            Email
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-
-    <!--========== Projects' Secton. ==========-->
-    <!-- 👇🏿👇🏿👇🏿 Projects Secton (BE LIKE David Bragg: Make This Your Favorite Section- Go All Out!). 👇🏿👇🏿👇🏿 -->
-    <section id="projectSection">
-        <div class="container">
-            <div class="row">
-            
-                <h1>
-                    <i><span class="pj">Projects!
-                </h1>
-
-
-                <h2 class="project__sub-title">Tap/Hover Over Each Window and Explore my work!</h2>
-
-
-                <!--👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿 Begin Listing Project Here.👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿-->
-                <ul class="projects__list">
-                    <!-- My First GitHub Repository! -->
-                    <!-- This Class Is For The Entire INDIVIDUAL Project. Remember to pay attention to <li></li> tags! -->
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <!-- 👇🏿 Place Project's .gif/Image Here.👇🏿-->
-                            <img src="./assets/gif/HELLO-WORLD.gif" class="project__img" alt="My First GitHub Repository">
-                        
-                            <!-- 👇🏿 This Class Is For The Project's Title & TECHNOLOGY Description- Remember! 👇🏿 -->
-                            <div class="project__description">
-                                <!--👇🏿 My Awesome Project's Title Goes Here.👇🏿 -->
-                                <h3 class="project__title">
-                                    supercodingninja.github.io
-                                </h3>
-                        
-
-                                <!-- 👇🏿 LIst of Technologies I Used In The Project. 👇🏿 -->
-                                <h4 class="scn1">
-                                    <!-- Ref. for HTML code for info icon (instead of paying to use the same icon from fontawesome.com) https://stackoverflow.com/questions/33878539/is-there-an-html-entity-for-an-info-icon -->
-                                    <span class="technolgies">
-                                        <sup class="glow">
-                                            &#9432;
-                                        </sup>seigolonhceT
-                                    </span>
-                                </h4>
-
-
-                                <p class="
-                                    project__passage 
-                                    project__passage--dark">
-                                    My First GitHub Repository (worth the look): In every Developer's & Engineer's life, "Hello, World" is as special as a baby's first step- perhaps, not everyone is able to walk; but anyone can code: they just have to have stick-to-it-ness - GRIT! These were my first steps: "<span style="background: linear-gradient(to top, purple, rgb(255, 204, 7), gold);
-                                    -webkit-background-clip: text;
-                                    -webkit-text-fill-color: transparent;">HELLO</span>,&nbsp;<span style="background: linear-gradient(to top, purple, rgb(255, 204, 7), gold);
-                                    -webkit-background-clip: text;
-                                    -webkit-text-fill-color: transparent;">WORLD</span>!!!"
-                                </p>
-
-
-                                <div class="project__links">
-                                    <p>
-                                        <!-- 👇🏿 https://www.github.com/WhatEverRepoIpickThatIhaveDoneGoesHere 👇🏿 -->
-                                        <a href="https://github.com/supercodingninja/supercodingninja.github.io" target="_blank" style="text-decoration: none;">
-                                            <i class="
-                                                fa-brands 
-                                                fa-github 
-                                                project__links 
-                                                glow3" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-
-
-                                        <!-- 👇🏿 Deployed Application Goes Here (VITAL). 👇🏿 -->
-                                        <a href="https://supercodingninja.github.io/" target="_blank">
-                                            <!-- 👇🏿 Use Your Own Font Class From https://fontawesome.com/ Here. 👇🏿 -->
-                                            <i class="
-                                                fa-solid 
-                                                fa-link 
-                                                project__links 
-                                                glow2" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                
-                    <!-- My First Team Project! -->
-                    <!-- This Class Is For The Entire INDIVIDUAL Project. Remember to pay attention to <li></li> tags! -->
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <!-- 👇🏿 Place Project's .gif/Image Here.👇🏿-->
-                            <img src="./assets/gif/who.gif" class="project__img" alt="My First GitHub Repository">
-                        
-                            <!-- 👇🏿 This Class Is For The Project's Title & TECHNOLOGY Description- Remember! 👇🏿 -->
-                            <div class="project__description">
-                                <!--👇🏿 My Awesome Project's Title Goes Here.👇🏿 -->
-                                <h3 class="project__title">
-                                    Who's Outside?
-                                </h3>
-                        
-
-                                <!-- 👇🏿 LIst of Technologies I Used In The Project. 👇🏿 -->
-                                <h4 class="wo">
-                                    <!-- Ref. for HTML code for info icon (instead of paying to use the same icon from fontawesome.com) https://stackoverflow.com/questions/33878539/is-there-an-html-entity-for-an-info-icon -->
-                                    <span class="technolgies">
-                                        <sup class="glow">
-                                            &#9432;
-                                        </sup>seigolonhceT
-                                    </span>
-                                </h4>
-
-
-                                <p class="
-                                    project__passage 
-                                    project__passage--medium">
-                                    My First Team Project (worth the look): Shortly after I made my first GitHub repository, I soon found myself coding a game (mostly designed out of JavaScript) with a diverse and energized team!"
-                                </p>
-
-
-                                <div class="project__links">
-                                    <p>
-                                        <!-- 👇🏿 https://www.github.com/WhatEverRepoIpickThatIhaveDoneGoesHere 👇🏿 -->
-                                        <a href="https://github.com/supercodingninja/WhoIsOutside" target="_blank" style="text-decoration: none;">
-                                            <i class="
-                                                fa-brands 
-                                                fa-github
-                                                project__links 
-                                                glow3" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-
-
-                                        <!-- 👇🏿 Deployed Application Goes Here (VITAL). 👇🏿 -->
-                                        <a href="https://supercodingninja.github.io/WhoIsOutside/index.html" target="_blank">
-                                            <!-- 👇🏿 Use Your Own Font Class From https://fontawesome.com/ Here. 👇🏿 -->
-                                            <i class="
-                                                fa-solid 
-                                                fa-link 
-                                                project__links 
-                                                glow2" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                
-                    <!-- NASA Search Engine & NASAquery (Search Engine using API's)! -->
-                    <!-- This Class Is For The Entire INDIVIDUAL Project. Remember to pay attention to <li></li> tags! -->
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <!-- 👇🏿 Place Project's .gif/Image Here.👇🏿-->
-                            <img src="./assets/img/APIproj.png" class="project__img" alt="NASA Search Engine & NASAquery">
-                        
-                            <!-- 👇🏿 This Class Is For The Project's Title & TECHNOLOGY Description- Remember! 👇🏿 -->
-                            <div class="project__description">
-                                <!--👇🏿 My Awesome Project's Title Goes Here.👇🏿 -->
-                                <h3 class="project__title">
-                                    NASA Search Engine & NASAquery!
-                                </h3>
-                        
-
-                                <!-- 👇🏿 LIst of Technologies I Used In The Project. 👇🏿 -->
-                                <h4 class="nasa">
-                                    
-                                    <span class="technolgies">
-                                        <sup class="glow">
-                                            &#9432;
-                                        </sup>seigolonhceT
-                                    </span>
-                                </h4>
-
-                                <p class="
-                                    project__passage 
-                                    project__passage--special">
-                                    Explore The Universe With These Search Engines!  These Search Engines are a responsive web app that displays images and information about space, stars and planets. The user enters a desired word, and when the search button is pressed results appear using two NASA&nbsp;&nbsp;API's and one Wikipedia API. Hover the icons for detailed information.
-                                </p>
-
-
-                                <div class="addMat">
-                                    <p class="
-                                        pic
-                                        flag" style="display: inline-block;">
-                                        <i class="
-                                            fa-solid 
-                                            fa-rocket">
-
-                                        </i>
-
-                                        Explore More
-
-                                        <i class="
-                                            fa-solid
-                                            fa-shuttle-space">
-                                        </i>
-                                    </p>
-                                
-                                
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            
-                                    
-                                    <p class="
-                                        ur
-                                        flag" style="display: inline-block;">
-                                        <i class="
-                                            fa-solid
-                                            fa-shuttle-space">
-                                        </i>
-                                        
-                                        Landing!
-                                        
-                                        <i class="
-                                            fa-solid 
-                                            fa-globe">
-                                        </i>
-                                    </p>
-                                </div>
-
-
-                                <div class="project__links">
-                                    <p>
-                                        <!-- 👇🏿 https://www.github.com/WhatEverRepoIpickThatIhaveDoneGoesHere 👇🏿 -->
-                                        <a href="https://github.com/supercodingninja/NASAquery?tab=readme-ov-file" target="_blank" style="text-decoration: none;">
-                                            <i class="
-                                                fa-brands 
-                                                fa-github 
-                                                project__links 
-                                                glow2" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-
-
-                                        <!-- 👇🏿 Team's Deployed Application Goes Here (VITAL). 👇🏿 -->
-                                        <a href="https://am-white.github.io/Nasa-Search-Engine/" target="_blank">
-                                            <!-- 👇🏿 Use Your Own Font Class From https://fontawesome.com/ Here. 👇🏿 -->
-                                            <i class="
-                                                fa-solid 
-                                                fa-link 
-                                                project__links 
-                                                glow3" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-
-                                        <!-- 👇🏿 Personal Goals Achieved Deployed Application Goes Here (VITAL). 👇🏿 -->
-                                        <a href="https://supercodingninja.github.io/NASAquery/" target="_blank">
-                                            <!-- 👇🏿 Use Your Own Font Class From https://fontawesome.com/ Here. 👇🏿 -->
-                                            <i class="
-                                                fa-solid 
-                                                fa-link 
-                                                project__links 
-                                                glow4" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                
-                    <!-- My First AI Chatbot! -->
-                    <!-- This Class Is For The Entire INDIVIDUAL Project. Remember to pay attention to <li></li> tags! -->
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <!-- 👇🏿 Place Project's .gif/Image Here.👇🏿-->
-                            <img src="./assets/img/AIproj.png" class="project__img" alt="My First GitHub Repository">
-                        
-                            <!-- 👇🏿 This Class Is For The Project's Title & TECHNOLOGY Description- Remember! 👇🏿 -->
-                            <div class="project__description" style="display: block;">
-                                <!--👇🏿 My Awesome Project's Title Goes Here.👇🏿 -->
-                                <h3 class="project__title">
-                                    AI Chatbot
-                                </h3>
-                        
-
-                                <!-- 👇🏿 LIst of Technologies I Used In The Project. 👇🏿 -->
-                                <h4 class="aicb1">
-                                    
-                                    <span class="technolgies">
-                                        <sup class="glow">
-                                            &#9432;
-                                        </sup>seigolonhceT
-                                    </span>
-                                </h4>
-
-
-                                <p class="
-                                    project__passage 
-                                    project__passage--light">
-                                    My First GitHub AI Chatbot (worth the look): It's one thing to use API's, and make an AWesome Search Engine, but it's another thing to Create Articficial Intelligence that Thinks Like A Human!"
-                                </p>
-
-
-                                <div class="project__links">
-                                    <p>
-                                        <!-- 👇🏿 https://www.github.com/WhatEverRepoIpickThatIhaveDoneGoesHere 👇🏿 -->
-                                        <a href="https://github.com/supercodingninja/myFirstAIchatBot" target="_blank" style="text-decoration: none; display: inline-block;">
-                                            <i class="
-                                                fa-brands 
-                                                fa-github 
-                                                project__links 
-                                                glow3" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-
-
-                                        <!-- 👇🏿 Deployed Application Goes Here (VITAL). 👇🏿 -->
-                                        <a href="https://youtu.be/J0C0YLrUmLE?feature=shared" target="_blank" style="text-decoration: none; display: inline-block;">
-                                            <!-- 👇🏿 Use Your Own Font Class From https://fontawesome.com/ Here. 👇🏿 -->
-                                            <i class="
-                                                fa-solid 
-                                                fa-link 
-                                                project__links 
-                                                glow2" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                
-                    <!-- README Generator! -->
-                    <!-- This Class Is For The Entire INDIVIDUAL Project. Remember to pay attention to <li></li> tags! -->
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <!-- 👇🏿 Place Project's .gif/Image Here.👇🏿-->
-                            <img src="./assets/img/ReadMeGenerator2.png" class="project__img" alt="My First GitHub Repository">
-                        
-                            <!-- 👇🏿 This Class Is For The Project's Title & TECHNOLOGY Description- Remember! 👇🏿 -->
-                            <div class="project__description">
-                                <!--👇🏿 My Awesome Project's Title Goes Here.👇🏿 -->
-                                <h3 class="project__title">
-                                    ReadMeGenerator
-                                </h3>
-                        
-
-                                <!-- 👇🏿 LIst of Technologies I Used In The Project. 👇🏿 -->
-                               <h4 class="rmg">
-                                    
-                                    <span class="technolgies">
-                                        <sup class="glow">
-                                            &#9432;
-                                        </sup>seigolonhceT
-                                    </span>
-                                </h4>
-
-
-                                <p class="
-                                    project__passage 
-                                    project__passage--medium">
-                                    You have to view this project (over 3,100 views)!  Watch Me create an AWESOME README Generator (and the video and music at the end is slamm'N #justSayN).
-                                </p>
-
-                                <div class="project__links">
-                                    <p>
-                                        <!-- 👇🏿 https://www.github.com/WhatEverRepoIpickThatIhaveDoneGoesHere 👇🏿 -->
-                                        <a href="https://github.com/supercodingninja/ReadMeGenerator" target="_blank" style="text-decoration: none;">
-                                            <i class="
-                                                fa-brands 
-                                                fa-github 
-                                                project__links 
-                                                glow3" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-
-
-                                        <!-- 👇🏿 Deployed Application Goes Here (VITAL). 👇🏿 -->
-                                        <a href="https://www.youtube.com/watch?v=Pp9IG-prQjE" target="_blank">
-                                            <!-- 👇🏿 Use Your Own Font Class From https://fontawesome.com/ Here. 👇🏿 -->
-                                            <i class="
-                                                fa-solid 
-                                                fa-link 
-                                                project__links 
-                                                glow2" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-
-                    <!-- My NoteTaker! -->
-                    <!-- This Class Is For The Entire INDIVIDUAL Project. Remember to pay attention to <li></li> tags! -->
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <!-- 👇🏿 Place Project's .gif/Image Here.👇🏿-->
-                            <img src="./assets/img/NoteTaker.png" class="project__img" alt="My First GitHub Repository">
-                        
-                            <!-- 👇🏿 This Class Is For The Project's Title & TECHNOLOGY Description- Remember! 👇🏿 -->
-                            <div class="project__description">
-                                <!--👇🏿 My Awesome Project's Title Goes Here.👇🏿 -->
-                                <h3 class="project__title">
-                                    Note Taker (using express)
-                                </h3>
-                        
-
-                                <!-- 👇🏿 LIst of Technologies I Used In The Project. 👇🏿 -->
-                                <h4 class="ntue">
-                                    
-                                    <span class="technolgies">
-                                        <sup class="glow">
-                                            &#9432;
-                                        </sup>seigolonhceT
-                                    </span>
-                                </h4>
-
-
-                                <p class="
-                                    project__passage 
-                                    project__passage--dark">
-                                    An application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
-                                </p>
-
-                                <div class="project__links">
-                                    <p>
-                                        <!-- 👇🏿 https://www.github.com/WhatEverRepoIpickThatIhaveDoneGoesHere 👇🏿 -->
-                                        <a href="https://github.com/supercodingninja/NoteTaker" target="_blank" style="text-decoration: none;">
-                                            <i class="
-                                                fa-brands 
-                                                fa-github 
-                                                project__links 
-                                                glow3" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-
-
-                                        <!-- 👇🏿 Deployed Application Goes Here (VITAL). 👇🏿 -->
-                                        <!--<a href="https://yes-notetaker.herokuapp.com/" target="_blank">-->
-                                            <!-- 👇🏿 Use Your Own Font Class From https://fontawesome.com/ Here. 👇🏿 -->
-                                            <!--<i class="fa-solid fa-link project__links glow2" style="text-decoration: none;">
-                                            </i>
-                                        </a>-->
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-
-                    <!-- Employee-Tracker! -->
-                    <!-- This Class Is For The Entire INDIVIDUAL Project. Remember to pay attention to <li></li> tags! -->
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <!-- 👇🏿 Place Project's .gif/Image Here.👇🏿-->
-                            <img src="./assets/gif/employee-tracker.gif" class="project__img" alt="My First GitHub Repository">
-                        
-                            <!-- 👇🏿 This Class Is For The Project's Title & TECHNOLOGY Description- Remember! 👇🏿 -->
-                            <div class="project__description">
-                                <!--👇🏿 My Awesome Project's Title Goes Here.👇🏿 -->
-                                <h3 class="project__title">
-                                    Employee-Tracker
-                                </h3>
-                        
-
-                                <!-- 👇🏿 LIst of Technologies I Used In The Project. 👇🏿 -->
-                                <h4 class="e-t">
-                                    
-                                    <span class="technolgies">
-                                        <sup class="glow">
-                                            &#9432;
-                                        </sup>seigolonhceT
-                                    </span>
-                                </h4>
-
-
-                                <p class="
-                                    project__passage 
-                                    project__passage--dark">
-                                    Developers are often tasked with creating interfaces that make it easy for non-developers to view and even interact with information, stored in databases. Often, these interfaces are known as Content Management Systems (CMS). This is an architect and built solution for managing a company's employees (using node, inquirer, and MySQL).  This project includes Node.js, MySQL, and Inquirer!
-                                </p>
-
-
-                                <div class="project__links">
-                                    <p>
-                                        <!-- 👇🏿 https://www.github.com/WhatEverRepoIpickThatIhaveDoneGoesHere 👇🏿 -->
-                                        <a href="https://github.com/supercodingninja/Employee-Tracker" target="_blank" style="text-decoration: none;">
-                                            <i class="
-                                                fa-brands 
-                                                fa-github 
-                                                project__links 
-                                                glow3" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-
-
-                                        <!-- 👇🏿 Deployed Application Goes Here (VITAL). 👇🏿 -->
-                                        <!--<a href="https://supercodingninja.github.io/" target="_blank">-->
-                                            <!-- 👇🏿 Use Your Own Font Class From https://fontawesome.com/ Here. 👇🏿 -->
-                                            <!--<i class="fa-solid fa-link project__links glow2" style="text-decoration: none;">
-                                            </i>
-                                        </a>-->
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-
-                    <!-- Progressive Budget Tracker! -->
-                    <!-- This Class Is For The Entire INDIVIDUAL Project. Remember to pay attention to <li></li> tags! -->
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <!-- 👇🏿 Place Project's .gif/Image Here.👇🏿-->
-                            <img src="./assets/gif/budget.gif" class="project__img" alt="My First GitHub Repository">
-                        
-                            <!-- 👇🏿 This Class Is For The Project's Title & TECHNOLOGY Description- Remember! 👇🏿 -->
-                            <div class="project__description">
-                                <!--👇🏿 My Awesome Project's Title Goes Here.👇🏿 -->
-                                <h3 class="project__title">
-                                    Progressive Budget Tracker
-                                </h3>
-                        
-
-                                <!-- 👇🏿 LIst of Technologies I Used In The Project. 👇🏿 -->
-                                <h4 class="pbt">
-                                    
-                                    <span class="technolgies">
-                                        <sup class="glow">
-                                            &#9432;
-                                        </sup>seigolonhceT
-                                    </span>
-                                </h4>
-
-
-                                <p class="
-                                    project__passage 
-                                    project__passage--light">
-                                    A budgeting application that helps you keep track of your personal finances On & Offline(IndexedDB, cache API, and Service Workers enables this experience).
-                                </p>
-
-
-                                <div class="project__links">
-                                    <p>
-                                        <!-- 👇🏿 https://www.github.com/WhatEverRepoIpickThatIhaveDoneGoesHere 👇🏿 -->
-                                        <a href="https://github.com/supercodingninja/ProgressiveBudget" target="_blank" style="text-decoration: none;">
-                                            <i class="
-                                                fa-brands 
-                                                fa-github 
-                                                project__links 
-                                                glow3" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-
-
-                                        <!-- 👇🏿 Deployed Application Goes Here (VITAL). 👇🏿 -->
-                                        <a href="https://youtu.be/HfajJxcNv00" target="_blank">
-                                            <!-- 👇🏿 Use Your Own Font Class From https://fontawesome.com/ Here. 👇🏿 -->
-                                            <i class="
-                                                fa-solid 
-                                                fa-link 
-                                                project__links 
-                                                glow2" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-
-
-                                        <!-- 👇🏿 Deployed Application Goes Here (VITAL). 👇🏿 -->
-                                        <a href="https://v0-new-project-qiveidfld4q.vercel.app/" target="_blank">
-                                            <!-- 👇🏿 Use Your Own Font Class From https://fontawesome.com/ Here. 👇🏿 -->
-                                            <i class="
-                                                fa-solid 
-                                                fa-link 
-                                                project__links 
-                                                glow2" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-
-                    <!-- Joia! -->
-                    <!-- This Class Is For The Entire INDIVIDUAL Project. Remember to pay attention to <li></li> tags! -->
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <!-- 👇🏿 Place Project's .gif/Image Here.👇🏿-->
-                            <img src="./assets/img/joia.jpg" class="project__img" alt="My First GitHub Repository">
-                        
-                            <!-- 👇🏿 This Class Is For The Project's Title & TECHNOLOGY Description- Remember! 👇🏿 -->
-                            <div class="project__description">
-                                <!--👇🏿 My Awesome Project's Title Goes Here.👇🏿 -->
-                                <h3 class="project__title">
-                                    <i>Joia!</i>
-                                </h3>
-                        
-
-                                <!-- 👇🏿 LIst of Technologies I Used In The Project. 👇🏿 -->
-                                <h4 class="joia">
-                                    
-                                    <span class="technolgies">
-                                        <sup class="glow">
-                                            &#9432;
-                                        </sup>seigolonhceT
-                                    </span>
-                                </h4>
-
-
-                                <p class="
-                                    project__passage 
-                                    project__passage--light">
-                                    My First time using TypeScript (over 90% of the project).  I learned the basics within 2 Weeks! Joia is your jewel eCommerce website for local art, where you can find your gem for your Jewel or Jim!
-                                </p>
-
-
-                                <div class="project__links">
-                                    <p>
-                                        <!-- 👇🏿 https://www.github.com/WhatEverRepoIpickThatIhaveDoneGoesHere 👇🏿 -->
-                                        <a href="https://github.com/supercodingninja/Joia" target="_blank" style="text-decoration: none;">
-                                            <i class="
-                                                fa-brands 
-                                                fa-github 
-                                                project__links 
-                                                glow3" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-
-
-                                        <!-- 👇🏿 Deployed Application Goes Here (VITAL). 👇🏿 -->
-                                        <a href="https://v0-new-project-23txotdorwc.vercel.app/" target="_blank">
-                                            <!-- 👇🏿 Use Your Own Font Class From https://fontawesome.com/ Here. 👇🏿 -->
-                                            <i class="
-                                                fa-solid 
-                                                fa-link 
-                                                project__links 
-                                                glow2" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                
-                    <!-- My Older Portfolio in ReactJS -->
-                    <!-- This Class Is For The Entire INDIVIDUAL Project. Remember to pay attention to <li></li> tags! -->
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <!-- 👇🏿 Place Project's .gif/Image Here.👇🏿-->
-                            <img src="./assets/gif/DFT.gif" class="project__img" alt="My Portfolio in ReactJS">
-                        
-                            <!-- 👇🏿 This Class Is For The Project's Title & TECHNOLOGY Description- Remember! 👇🏿 -->
-                            <div class="project__description">
-                                <!--👇🏿 My Awesome Project's Title Goes Here.👇🏿 -->
-                                <h3 class="project__title">
-                                    DiscoverFrederickThomas-InReactJS
-                                </h3>
-                        
-
-                                <!-- 👇🏿 LIst of Technologies I Used In The Project. 👇🏿 -->
-                                <h4 class="DFT">
-                                    
-                                    <span class="technolgies">
-                                        <sup class="glow">
-                                            &#9432;
-                                        </sup>seigolonhceT
-                                    </span>
-                                </h4>
-
-
-                                <p class="
-                                    project__passage 
-                                    project__passage--medium">
-                                    A portfolio can land you a part-time position; or even a full-time career!  If you you create an effective portfolio, you'll soon discover that you highlighted your best projects (including your thought process behind it: don't just commit git).  Learn how to create a basic portfolio, with this repository.
-                                </p>
-
-
-                                <div class="project__links">
-                                    <p>
-                                        <!-- 👇🏿 https://www.github.com/WhatEverRepoIpickThatIhaveDoneGoesHere 👇🏿 -->
-                                        <a href="https://github.com/supercodingninja/DiscoverFrederickThomas-InReactJS/tree/main" target="_blank" style="text-decoration: none;">
-                                            <i class="
-                                                fa-brands 
-                                                fa-github 
-                                                project__links 
-                                                glow3" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-
-
-                                        <!-- 👇🏿 Deployed Application Goes Here (VITAL). 👇🏿 -->
-                                        <a href="https://v0-new-project-w6pvxc865ug.vercel.app/" target="_blank">
-                                            <!-- 👇🏿 Use Your Own Font Class From https://fontawesome.com/ Here. 👇🏿 -->
-                                            <i class="fa-solid 
-                                                fa-link 
-                                                project__links 
-                                                glow2" style="text-decoration: none;">
-                                            </i>
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
     
-    <!--========== Footer Secton. ==========-->
-    <footer id="footer">
-        <div class="
-            row 
-            footer__row">
-            
-            <a href="#about-me" class="footer__anchor">
-                <figure class="footer__logo">
-              
-                    <img src="./assets/gif/SCNcube.gif" class="footer__logo--img" alt="">
-                </figure>
-            
-            
-                <span class="footer__logo--popper">
-                    Top&nbsp;
-                    
-                    <span class="glow3">
-                        &#x21ee;
-                    </span>
-                </span>
-            </a>
-
-
-            <!-- "CONTACT ME!" AREA. -->
-            <div class="footer__social--list">
-                <!-- GitHub Link -->
-                <a href="https://github.com/supercodingninja" target="_blank" style="text-decoration: none;" 
-                    class="
-                    navEffect 
-                    footer__social--link
-                    link__hover-effect--adhs" 
-                    target="_blank">
-                    
-                    <!-- GitHub Icon -->
-                    <i class="
-                        icon 
-                        fa-brands 
-                        fa-github">
-                    </i>
-                </a>
-
-
-                <!-- LinkedIn Link -->
-                <a href="https://www.linkedin.com/in/discoverfrederickthomas/"  style="text-decoration: none;" 
-                    class="
-                    navEffect 
-                    footer__social--link
-                    link__hover-effect--adhs" 
-                    target="_blank">
-                    
-                    <!-- LinkedIn Icon. -->
-                    <i class="
-                        icon 
-                        fa-brands 
-                        fa-linkedin">
-                    </i>
-                </a>
-
-
-                <!-- Facebook Link. ---->
-                <a href="https://www.facebook.com/SuperCodingNinja" style="text-decoration: none;" class="
-                    navEffect 
-                    footer__social--link
-                    link__hover-effect--adhs" 
-                    target="_blank">
-                    
-                    <!-- Facebook Icon. ---->
-                    <i class="
-                        icon
-                        fa-brands 
-                        fa-facebook">
-                    </i>
-                </a>
-
-                <!-- Allows for simple viewing/view + download résumé-->
-                <a href="./assets/Résumé _Frederick-Thomas.pdf" class="
-                    navEffect
-                    résumé
-                    footer__social--link
-                    link__hover-effect--red-hot" target="_blank" style="font-weight: 700;">
-                    
-                    Résumé
-                </a>
-                    
-                <!-- Option to Download (in case software used to view my résumé does not allow, inability to access résumé due to company's restrictions). -->
-                <a href="./assets/Résumé _Frederick-Thomas.pdf" target="_blank" download style="text-decoration: none;">
-                    <i class="
-                        fa 
-                        fa-download
-                        icon
-                        link__hover-effect--red-hot">
-                    </i>
-                </a>
-
-                
-                <!-- X Link (new Twitter name). -->
-                <a href="https://x.com/SCN2014Est" style="text-decoration: none;" class="
-                    navEffect 
-                    footer__social--link
-                    link__hover-effect--adhs" 
-                    target="_blank">
-                    
-                    <!-- X Icon (new Twitter name). -->
-                    <i class="
-                        icon
-                        fa-brands 
-                        fa-x-twitter">
-                    </i>
-                </a>
-                
-                
-                <!-- CodePan.io Link.-->
-                <a href="https://codepen.io/SuperCodingNinja" style="text-decoration: none;" class="
-                    navEffect 
-                    footer__social--link
-                    link__hover-effect--adhs" 
-                    target="_blank">
-                    
-                    <!-- CodePan.io Icon.-->
-                    <i class="
-                        icon
-                        fa-brands 
-                        fa-codepen"></i>
-                </a>
-
-                <!-- Email Me -->
-                <a href="mailto:&#070;&#114;&#101;&#100;&#101;&#114;&#105;&#099;&#107;&#068;&#084;&#104;&#111;&#109;&#097;&#115;&#074;&#114;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" target="_blank" style="text-decoration: none; font-size: x-large" class="
-                    icon
-                    navEffect 
-                    footer__social--link
-                    link__hover-effect--adhs" target="_blank">
-                    
-                    <i class="
-                        fa-solid 
-                        fa-square-envelope">
-                    </i>
-                </a>
-            </div>
-
-
-            <div class="footer__copyright">
-                Copyright&nbsp;&copy;&nbsp;2025&nbsp;Frederick&nbsp;&middot;&nbsp;Thomas, The Super Coding Ninja&trade;
-            </div>
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <!--
+        This Area Of Code Is: Site Footer
+        Explanation: Contains copyright information and secondary links
+        In Other Words: The bottom section with copyright info
+        -->
+        
+        <div class="footer-container">
+            <p class="copyright">
+                © <span id="current-year">2024</span> Frederick Thomas. 
+                All rights reserved. 
+                <span class="trademark">The Super Coding Ninja™</span>
+            </p>
         </div>
     </footer>
-
-
-    <!-- How to track my ePortfolio's progress.  BEST REF. GOOGLE AI Overview (ASSIGNMENT ALREADY GRADED, FIRST VIEWED WEEKS, BEFORE, and i was complimented and told that I did a good job: these are my notes that I got out of the tutorial concerning my recent topic of interests).
     
-    SOME BIG AND  IMPORTANT REMINDERS/KNOWLEDGE TO HAVE:
-        1. Server-Side Implementation (Optional): For more robust tracking, you can implement server-side tracking in addition to or instead of client-side tracking.
-
-        2. User Experience: Avoid overly aggressive tracking techniques that might annoy users.
-
-        3. Browser Compatibility: Ensure your code is compatible with different browsers.
-
-        4. Privacy: Be mindful of user privacy and comply with relevant regulations (e.g., GDPR) when using cookies and local storage.
-
-        5. Analytics: Consider using a web analytics platform (e.g., Google Analytics) for more comprehensive website traffic analysis.  -->
+    <!-- Service Worker Registration -->
+    <script src="./register-sw.js"></script>
+    <!--
+    This Area Of Code Is: Service Worker Registration Script
+    Explanation: Loads the script that registers the PWA service worker for offline functionality
+    In Other Words: The script that makes my site work offline like an app
+    -->
+    
+    <!-- Main JavaScript -->
     <script>
-        // USE COOKIES (that's what they're for 😂)! //
-        document.cookie = "visitor_id=" + Math.random().toString(36).substring(2, 15);
-
-        if (document.cookie.indexOf("visitor_id=") > -1) {
+        /*
+        ================================================================
+        This Area Of Code Is: Inline JavaScript for Critical Functionality
+        Explanation: Handles immediate UI interactions before external scripts load
+        In Other Words: Quick JavaScript for things that need to work right away
+        ================================================================
+        */
         
-        // User is returns (😎) //
-        console.log("Returning user");
+        // This Area Of Code Is: Current Year Updater
+        // Explanation: Automatically updates the copyright year to the current year
+        // In Other Words: Makes sure the copyright year is always correct
+        document.getElementById('current-year').textContent = new Date().getFullYear();
         
-        } else {
-
-            // User is new (👏🏿). //
-            console.log("New user");
-        }
-
-        // Retrieving the Cookie. //
-        var cookieValue = document.cookie.split(';').map(c => c.split('=').map(decodeURIComponent)).find(c => c[0] === 'visitor_id')[1];
+        // This Area Of Code Is: Mobile Menu Toggle Logic
+        // Explanation: Controls the hamburger menu open/close state and accessibility attributes
+        // In Other Words: Makes the hamburger button open and close the menu
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.getElementById('main-nav');
         
-        console.log("Visitor ID:", cookieValue);
-
-
-        // Sets the unique identifier to local storage (CRUCIAL, don't forget!). //
-        localStorage.setItem("visitor_id", Math.random().toString(36).substring(2, 15));
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            menuToggle.classList.toggle('active');
+            mainNav.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
         
-        // CHECK FOR LOCAL STORAGE: YOU NEED LOCAL STORAGE (large help and crucial part- probably the most fundamental). //
-        if (localStorage.getItem("visitor_id")) {
-       
-            // User is returns (Whoot-Whoot!). //
-            console.log("Returning user");
-        
-        } else {
-        // User is new (my name is out- YE-AH!). //
-        console.log("New user");
-        }
-
-        // Retrieves the value in local storage. //
-        var visitorId = localStorage.getItem("visitor_id");
-        
-        console.log("Visitor ID:", visitorId);
-
-
-        // HOW TO SHOW OTHER USERS HOW MANY TIMES MY PAGE HAS BEEN VISITED. //
-        var url = window.location.href;
-        
-        $.getJSON('https://scn.ninja/' + encodeURIComponent(url), function(data) {
-    
-        $('#online-now').addClass('visible').find('.visitors').text(data.visitors);
+        // This Area Of Code Is: Close Menu on Link Click
+        // Explanation: Automatically closes mobile menu when a navigation link is clicked
+        // In Other Words: Closes the menu when the user tap a link on mobile
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
         });
     </script>
 </body>
-
 </html>
