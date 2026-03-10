@@ -1,11 +1,4 @@
-/*
-================================================================================
-FILE: matrix-bg.js
-PROJECT: ePortfolio PWA Refactor
-AUTHOR: Frederick Thomas (The Super Coding Ninja™)
-DESCRIPTION: Matrix rain + Space travel effect - traveling THROUGH the code
-================================================================================
-*/
+/* Matrix + Space Travel Effect - The Super Coding Ninja™ */
 
 (function() {
     'use strict';
@@ -22,22 +15,23 @@ DESCRIPTION: Matrix rain + Space travel effect - traveling THROUGH the code
 
     let width, height, animationId, frame = 0, isActive = true;
 
+    // Your binary sequences
     const binarySequences = ["11110000 10011101 10010000 10111001","11110000 10011101 10010001 10011111","11110000 10011101 10010001 10010010","11110000 10011101 10010001 10010001","11110000 10011101 10010001 10010010","11110000 10011101 10010001 10011111","11110000 10011101 10010001 10010110","11110000 10011101 10010001 10010000","11110000 10011101 10010001 10011000","00100000","11110000 10011101 10010001 10000111","11100010 10000100 10001110","11110000 10011101 10010001 10011100","11110000 10011101 10010001 10011010","11110000 10011101 10010001 10001110","11110000 10011101 10010001 10100000","00100000","01111100","00100000","11110000 10011101 10010001 10000111","11100010 10000100 10001110","11110000 10011101 10010001 10010010","00100000","11110000 10011101 10010001 10000110","11110000 10011101 10010001 10100010","11110000 10011101 10010001 10011101","11110000 10011101 10010001 10010010","11110000 10011101 10010001 10011111","00100000","11110000 10011101 10010000 10110110","11110000 10011101 10010001 10011100","11110000 10011101 10010001 10010001","11110000 10011101 10010001 10010110","11110000 10011101 10010001 10011011","11110000 10011101 10010001 10010100","00100000","11110000 10011101 10010001 10000001","11110000 10011101 10010001 10010110","11110000 10011101 10010001 10011011","11110000 10011101 10010001 10010111","11110000 10011101 10010001 10001110","11100010 10000100 10100010"];
 
     const colors = {
         head: '#ffffff',
-        primary: '#00d4ff',
-        secondary: '#6b4ee6',
-        gold: '#d4af37'
+        primary: '#00d4ff',    // Your cyan
+        secondary: '#6b4ee6',  // Your purple
+        gold: '#d4af37'        // Your gold
     };
 
     const config = {
         fontSize: 16,
-        columnCount: 60,
-        speed: 2.5,
-        perspective: 600,
-        forwardSpeed: 4,
-        trailLength: 25
+        columnCount: 60,       // More columns = denser rain
+        speed: 2.5,            // Falling speed
+        perspective: 600,      // 3D depth
+        forwardSpeed: 4,       // Speed through space
+        trailLength: 25        // Long trails like Matrix movie
     };
 
     class MatrixStream {
@@ -63,7 +57,9 @@ DESCRIPTION: Matrix rain + Space travel effect - traveling THROUGH the code
         }
 
         update() {
+            // Move forward through space
             this.z += config.forwardSpeed * 0.008;
+            
             if (this.z > 1.2) {
                 this.z = 0;
                 this.x = (Math.random() - 0.5) * 2.5;
@@ -71,30 +67,54 @@ DESCRIPTION: Matrix rain + Space travel effect - traveling THROUGH the code
                 this.chars = binarySequences[Math.floor(Math.random() * binarySequences.length)].split('');
                 this.trail = [];
             }
+
+            // Fall down (Matrix rain)
             this.y += this.speed * (0.5 + this.z * 0.5);
+
             if (this.y > height / this.project().scale + 50) {
                 this.y = -30;
                 this.charIndex = 0;
                 this.trail = [];
             }
-            this.trail.unshift({ char: this.chars[this.charIndex], isGold: Math.random() < 0.03 });
+
+            // Build trail
+            this.trail.unshift({
+                char: this.chars[this.charIndex],
+                isGold: Math.random() < 0.03
+            });
+
             if (this.trail.length > this.maxTrailLength) this.trail.pop();
             this.charIndex = (this.charIndex + 1) % this.chars.length;
         }
 
         draw() {
             const proj = this.project();
+            
             this.trail.forEach((item, index) => {
                 const trailY = (this.y - index * proj.size * 0.8) * proj.scale;
                 const isHead = index === 0;
+                
                 let alpha = proj.alpha;
                 if (!isHead) alpha *= (1 - index / this.trail.length) * 0.6;
+
                 let color, glow = 0;
-                if (isHead) { color = colors.head; glow = 20; }
-                else if (item.isGold) { color = colors.gold; glow = 15; alpha = Math.min(1, alpha * 2); }
-                else if (index < 4) { color = colors.primary; glow = 10; }
-                else if (index < 10) { color = colors.secondary; }
-                else { color = `rgba(0, 212, 255, ${alpha})`; }
+                
+                if (isHead) {
+                    color = colors.head;
+                    glow = 20;  // Strong glow on head
+                } else if (item.isGold) {
+                    color = colors.gold;
+                    glow = 15;
+                    alpha = Math.min(1, alpha * 2);
+                } else if (index < 4) {
+                    color = colors.primary;
+                    glow = 10;
+                } else if (index < 10) {
+                    color = colors.secondary;
+                } else {
+                    color = `rgba(0, 212, 255, ${alpha})`;
+                }
+
                 if (trailY > -50 && trailY < height + 50) {
                     ctx.font = `${isHead ? 'bold' : 'normal'} ${proj.size}px "JetBrains Mono", monospace`;
                     ctx.fillStyle = color;
@@ -103,6 +123,7 @@ DESCRIPTION: Matrix rain + Space travel effect - traveling THROUGH the code
                     ctx.fillText(item.char, proj.x, trailY);
                 }
             });
+            
             ctx.shadowBlur = 0;
         }
     }
@@ -113,6 +134,7 @@ DESCRIPTION: Matrix rain + Space travel effect - traveling THROUGH the code
         const rect = hero.getBoundingClientRect();
         width = canvas.width = rect.width;
         height = canvas.height = rect.height;
+        
         streams = [];
         for (let i = 0; i < config.columnCount; i++) {
             streams.push(new MatrixStream((Math.random() - 0.5) * 2.5, Math.random()));
@@ -121,14 +143,24 @@ DESCRIPTION: Matrix rain + Space travel effect - traveling THROUGH the code
 
     function animate() {
         if (!isActive) return;
+        
+        // Fade effect for trails
         ctx.fillStyle = 'rgba(10, 10, 10, 0.12)';
         ctx.fillRect(0, 0, width, height);
+
+        // Sort by depth (draw far first)
         streams.sort((a, b) => a.z - b.z);
-        streams.forEach(stream => { stream.update(); stream.draw(); });
+
+        streams.forEach(stream => {
+            stream.update();
+            stream.draw();
+        });
+
         frame++;
         animationId = requestAnimationFrame(animate);
     }
 
+    // Controls
     function handleVisibility() {
         isActive = !document.hidden;
         if (isActive) animate(); else cancelAnimationFrame(animationId);
