@@ -1098,3 +1098,87 @@ In Other Words: Makes the page look good when printed
         border: 0.0625rem solid #ccc;
     }
 }
+/* 
+================================================================================
+MATRIX BACKGROUND ADDITIONS
+================================================================================
+*/
+
+/*
+This Area Of Code Is: Matrix Canvas Background Styles
+Explanation: Positions the canvas behind hero content
+In Other Words: Makes the Matrix animation appear behind your photo
+*/
+.hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+/*
+This Area Of Code Is: Matrix Canvas Element
+Explanation: The HTML5 canvas that renders the binary rain
+In Other Words: Where the falling code is drawn
+*/
+#matrix-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    pointer-events: none;
+}
+
+/*
+This Area Of Code Is: Matrix Overlay
+Explanation: Cinematic glow and color effects
+In Other Words: Makes it look like the movie
+*/
+.matrix-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(ellipse at center, transparent 0%, rgba(10, 10, 10, 0.4) 70%, rgba(10, 10, 10, 0.9) 100%),
+        linear-gradient(180deg, rgba(0, 212, 255, 0.02) 0%, transparent 50%, rgba(107, 78, 230, 0.02) 100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/*
+This Area Of Code Is: Matrix Vignette
+Explanation: Darkens edges for focus
+In Other Words: Movie-style dark corners
+*/
+.matrix-vignette {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, transparent 30%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/*
+This Area Of Code Is: Hero Content Layer
+Explanation: Keeps content above matrix
+In Other Words: Your photo/text stays on top
+*/
+.hero-container {
+    position: relative;
+    z-index: 1;
+}
+
+/*
+This Area Of Code Is: Hide Old Binary
+Explanation: Removes static binary text
+In Other Words: Hides the old decoration
+*/
+.binary-decoration {
+    display: none;
+}
